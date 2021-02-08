@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+ <head>
+     <meta charset= "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/znaczki-blablacar.png" alt="znaczki blablacar" height="10%" width="10%" /> 
+
+    <title>Wspolne przejazdy dla kierowcow i pasazerow podrozujacych w te sama strone | BlaBlaCar
+    </title>
+    <link rel="stylesheet" type="text/css" href="960-Grid-System-master/code/css/960_12_col.css" />
+    <style type="text/css">
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        color:rgb(136, 133, 133);
+        margin: 0px;
+        font-weight:400;
+      }
+
+
+    #rodzic3 {
+        width:100%;
+        position: relative;
+        height:390px;
+        margin:-15px 0px 0px 0px;
+        background-color:rgb(206, 59, 120);
+        line-height: 0.8em;}
+      #rodzic3>div {
+        position: absolute;
+        max-width:500px;
+        max-height:310px;
+        background-color:#FDD700;
+        font-size:1.1em;}
+      #dziecko1 {
+        top:50px;
+        left:280px;}
+      #dziecko2 {
+        top:120px; 
+        right:310px;}
+                                /*  BYLO:  #dziecko2>h2 {font-size: 1em;} */    /* #dziecko2>h4 {font-size:0.5em;} */ 
+      #dziecko2>a>h5 {
+          color: white;
+          background-color:rgb(0, 183, 255);
+          border-radius: 25px 25px 25px 25px;
+          border:none;
+          margin:20px 310px 0px 0px;
+          padding: 20px 25px 20px 25px;
+          }
+      
+      #rodzic4 {
+        position:relative; 
+        width:100%;
+        height:150px;
+        margin: 0px;                                /* BYLO 31.01 margin:0px 0px 0px 0px; */
+        background-color:#0faaf1;
+      }
+      #rodzic4 > div {
+        position:absolute; 
+        max-width:960px;
+        max-height:30px;                       
+        background-color:#15fd00;
+           }
+                                       /* BYLO 31.01 padding: 5px; */          /* line-height:40px; */
+   
+      #dziecko3 {
+        top:25px;
+        left:280px;
+        font-size:1.7em;}                   /* BYLO:   width: auto; */
+      
+      #dziecko4 {
+        top:15px;
+        right:300px;
+        text-decoration: none;
+        }                        
+                                       /* BYLO:  width:auto; */
+  
+           #dziecko4>a{
+             text-decoration: none;
+             }
+           
+              #dziecko4>a>p{
+                background-color:#15fd00;
+                font-size: 1em;}
+      
+     /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
+      #dziecko5 {
+        font-size: 1.5em;
+        bottom:20px;
+        left:280px;
+        text-decoration: none; 
+        display: flex;
+        margin: 30px 0px 30px 0px; 
+           /* BYLO:  max-width:600px; */
+       }
+   
+           #dziecko5>a{
+             text-decoration: none;
+             margin: 0px 2px 2px 0px;
+             }
+
+           #dziecko5>a>p{
+             background-color: white;
+             border-radius: 15px 15px 15px 15px;}
+       /* ;border:none; PRZYDA SIE do dziecka5 */
+
+
+</style>
+</head>
+<body>
+<div id="rodzic3">rodzic3
+        <div id="dziecko1"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/kierowca.jpg" alt="driver"></div>
+        <div id="dziecko2">
+            <h2>Dokad jedziesz?</h2>
+            <h5>Wybierz sie w najoszczedniejsza podroz swojego zycia.</h5>
+            <a href=""><h5>Dodaj przejazd</h5></a>
+        </div>
+     </div>         
+    
+     <div id="rodzic4">rodzic4
+        <div id="dziecko3">Dokad chcesz jechac</div>
+        <div id="dziecko4">
+                <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div>
+        <div id="dziecko5">
+            <a href=""><p>Twoja wlasna ramka z napisem i znaczkiem</p></a>
+            <a href=""><p>Twoja wlasna ramka z napisem i znaczkiem</p></a>
+            <a href=""><p>Twoja wlasna ramka z napisem i znaczkiem</p></a>
+        </div>
+     </div>   
+</body>
+</html>
+
+
+
+
+
+<!-- skopiowane z wersji 3
+        div class="searchField" style="position:absolute; right:420px; top:230px; display:inline-block;" width="100%"
+          <div><span class="LocationFrom">○</span><input type="text" placeholder="Miasto wyjazdu"></div
+          <div><span class="LocationTo">○</span><input type="text" placeholder="Miasto docelowe" ></div
+          <div><span class="departureDateTime">○</span><input type="datetime-local" maxlength="30"></div
+          <div><span class="d"></span><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"></div
+          <div><span class="button icon-loop"></span><button type="submit" class="icon-loop" tabindex="15" height="30" maxlength="8"></button></div
+     /div>
+          --te wymiary obok to archiwalne sa-> h1 width:100%; height:150px;--  /div koniec kopii z wersji 3 -->
+
+
+
+
+/* -------- dotyczy firma ---------------------------------------------------------------------------------------------- */
+          <div id="firma">FIRMA 
+            <div class="prezes-1">
+              <div class="wiceprezes-pierwszy">
+                <div class="dzial-ksiegowosci">
+                  <section class="dzial-1">
+                    <nav class="dolna-navigacja">
+                      <ul class="dolna-navigacja-spis-tresci">
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Jak to działa?</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Autobusy</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Wszystkie połączenia autobusowe</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">O nas</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Często zadawane pytania (FAQ)</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Kontakt</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Regulamin</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Prasa</a></li>
+                        <li class="odnosnik-dolnej-nawigacji"><a href="">Praca w BlaBlaCar</a></li>
+                      </ul>
+                    </nav>
+                  </section>
+                  <section class="dzial-2">
+                    <div class="wybor-jezyka"></div>
+                    <ul class="pasek-do-witryn">
+                      <li class="link-do-witryny"><a href="">FB</a></li>
+                      <li class="link-do-witryny"><a href="">Twitter</a></li>
+                      <li class="link-do-witryny"><a href="">YouTube</a></li>
+                      <li class="link-do-witryny"><a href="">Instagram symbol</a></li>
+                    </ul>
+                  </section>
+      
+                </div>            
+                <div class="dzial sekretariat-czyli footer copyright">
+                  <div class="footer-copyright-text">BlaBlaCar, 2021&copy;</div>
+                </div>
+              </div>
+            </div>
+            <div class="prezes2-czyli footer baseline ten dlugi napis na koncu">
+              <div class="wiceprezes drugi"></div>
+            </div>    
+        </div>
+
+          #firma{
+            width:100%;
+            min-height:450px;
+            height: auto;
+            position: relative;
+            margin:0px;
+            padding-top:25px; /*dodalam padding-top:45px i zmniejszylam z 45px na 25px */
+            margin-top:25px;  /*zmniejszylam z 45px na 25px */
+            margin-bottom: 45px;
+             background-color:rgb(166, 91, 196); 
+          }
+          #firma>div {
+            display: block;
+            max-width:100%;
+            background-color: thistle;
+           /* text-size-adjust: 100%;*/
+          }
+              #prezes-1{
+                margin-bottom: 16px;
+                background-color: yellow;
+              }
+              @media (min-width: 800px){
+               .wiceprezes-pierwszy {
+               max-width: 1100px;
+               margin-left:auto;
+                margin-right:auto;}
+              }
+              .wiceprezes-pierwszy{
+                padding-left: 25px;
+                padding-right: 25px;
+                background-color: teal;        
+              }
+              @media (min-width: 800px){
+                  .dzial-ksiegowosci{
+                   display:flex;             
+                   text-align: left; 
+                   background-color: orangered;                      
+                  }
+              }
+              .dzial-1 {
+               padding: 0px 0px;
+               margin: 10px 10px;
+               background-color: blanchedalmond;
+              }
+                   
+              @media (min-width: 800px){
+                  .dzial-1{           
+                    column-count:3;
+                    /*flex-grow:3;
+                    flex-shrink:0;*/
+                  
+                   
+                   }
+               }
+              /* nav{
+                 display:block;
+               } */
+  /( --------------------------- dotyczy firma- to powyzej -------------------------------------------------- */           

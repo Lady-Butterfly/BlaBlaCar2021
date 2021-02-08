@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pl-PL">        <!-- BlaBlaCar-wersja-4 (to jest wersja oryginalna, nie kopia!!!)   -->
+ <head>
+    <meta charset= "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/znaczki-blablacar.png" alt="znaczki blablacar" height="10%" width="10%" /> 
+    <title>Wspolne przejazdy dla kierowcow i pasazerow podrozujacych w te sama strone | BlaBlaCar</title>
+    <link rel="stylesheet" type="text/css" href="960-Grid-System-master/code/css/960_12_col.css" />
+    <style type="text/css">
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        color:rgb(136, 133, 133);
+        margin: 0px;
+        font-weight:400;
+      }
+        /* @font-face {/* z internetu z ich strony page source 
+         font-family:'gt-eesti'; font-weight:400; src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2');} */                            
+                            
+                     /* img, li, a {color: rgb(22, 172, 241); text-decoration: none; z-index: 10;}
+                              li {font-size: 1vw; margin: 0px; display: inline;   background-color:rgb(231, 181, 181); } */
+
+      .menu{
+        background-color: rgb(255, 255, 255); 
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        margin:0px;                                 /* bylo: margin: 0px 0px 0px -30px;   */
+        z-index: 10;
+        position: fixed;
+      }
+      .logo{
+        padding: 10px;          /* zmieniam 170px druga pozycje na inne wartosci */
+        text-align: left;  
+        float: left;
+        margin-left:120px;      /* margin-top: 10px; margin-bottom: 20px;  */
+      }
+      /* poczatek prawej nawigacji */                  /*BYLO .nav>.nav-item { float: right; padding:20px 10px 20px 10px; text-align: right;} */
+      .rightnav ul {                                /* BYLO  width: 100%; */                      /* padding: 5px 0px -5px 0px;  */
+        padding: 10px;                         /* bylo: padding: -20px 0px -5px 0px; */
+        margin: 15px 110px;
+        list-style-type: none;
+        text-align: right;              /* BYLO  .nav-item>a{ text-decoration: none; color: rgb(20, 183, 233); font-weight: bold;}  */   /*   Bylo: padding: 0px 2px 20px 2px; */
+        position: absolute;                
+      }                   
+      .rightnav ul li {               /* bylo: li>a */
+        display: inline;
+        padding-right: 15px;
+      }                                   /* bylo: float: right; right: 20px; font-size: 1vw; width: 100px;     */                          
+      .rightnav ul li a{
+        text-decoration: none;  
+        color: rgb(53, 193, 248);
+        font-weight: bold;
+      }        
+      li a:hover {                      /*kolor to taki dodatek do arkusza */
+        color: rgb(248, 39, 154);
+      }                                         /* z internetu skopiowane, moze sie kiedys przyda background-color: blue;
+                                             margin: 0px 1px 1px 0px;
+                                             border: 1px solid rgb(6, 247, 26);
+                                             border-radius: 3px;
+                                            -moz-border-radius: 5px;
+                                            -webkit-border-radius: 5px;
+                                             box-shadow: 0px 2px 3px gray;
+                                            -moz-box-shadow: 0px 2px 3px gray;
+                                            -webkit-box-shadow: 0px 2px 3px gray; */
+      /* koniec prawej nawigacji */
+      .intro{
+        background-color: rgb(228, 231, 231);
+        color:rgb(136, 138, 137);
+        text-align:center; 
+        padding:15px; 
+        margin: 70px -20px 0px -30px;
+        font-size: 1.2vw;
+        width: 100%;
+        height: 25px;
+        position: relative;
+      }                                    
+      .intro>a {
+        color:rgb(20, 183, 233);
+        text-decoration: none;
+      }
+                      /* .header { width:100%; position: relative;} */      
+                      /* background-image:url("C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/autobus1.jpg"); 
+                         background-repeat: no-repeat; 
+                       background-attachment:fixed; 
+                       position: 50% 50%; 
+                        right: 200px;  */                                
+      .header1{
+        color: rgb(214, 36, 36);                 /* padding: -40px; */ 
+        font-weight: bold;                         /* wykasowalam  position:absolute; */
+        font-size: 4vw;                            /* overflow:visible; */
+        width:100%; 
+        position: relative;
+      } 
+      .background{
+        width: 100%;
+        height: 330px;  
+      }
+/* ------ RODZIC 3 ------------ */ 
+      #rodzic3 {
+        width:100%;
+        height:390px;
+        position: relative;
+        margin:-15px 0px 0px 0px;
+        background-color:rgb(206, 59, 120);
+        line-height: 0.8em;
+      }
+      #rodzic3>div {
+        position: absolute;
+        max-width:500px;
+        max-height:310px;
+        background-color:#FDD700;
+        font-size:1.1em;
+      }
+      #dziecko1{
+        top:50px;
+        left:280px;
+      }
+      #dziecko2{
+        top:120px; 
+        right:310px;
+      }             
+          #dziecko2>a{
+            text-decoration: none;
+          }                  /*  BYLO:  #dziecko2>h2 {font-size: 1em;} */    /* #dziecko2>h4 {font-size:0.5em;} */ 
+          #dziecko2>a>h5 {
+            color: rgb(1, 255, 22);
+            background-color:rgb(0, 183, 255);
+            border-radius: 25px 25px 25px 25px;
+            border:none;
+            margin:20px 310px 0px 0px;
+            padding: 20px 25px 20px 25px;
+          }
+/* ---------poczatek: RODZIC4 --------------------------- */          
+      #rodzic4 {
+        position:relative; 
+        width:100%;
+        height:170px;
+        margin: 0px;                      /* BYLO 31.01 margin:0px 0px 0px 0px; */
+        background-color:#0faaf1;
+      }
+      #rodzic4 > div {
+        position:absolute; 
+        max-width:1000px;
+        max-height:55px;                       
+        background-color:#15fd00;
+      }                                 /* BYLO 31.01 padding: 5px; */   /* line-height:40px; */   
+      #dziecko3 {
+        top:30px;
+        left:280px;
+        width:280px;
+        font-size:1.6em;
+        font-weight: bold;
+        color: rgb(255, 5, 121);  /* BYLO:   width: auto; */
+      }                                              
+      #dziecko4 {
+        top:40px;
+        right:300px;
+        font-weight: bold;   /* BYLO:  width:auto; */
+      }                         
+          #dziecko4>a{
+            text-decoration: none;
+            background-color:#15fd00;   /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }  */
+            font-size: 0.9em; 
+            color: white; 
+          }                          
+                              /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
+      #dziecko5 {
+        width:1000px;
+        height: 55px;  /* ta wysokosc 55px jest idealna */
+        display: flex;
+        font-size: 1.5em;
+        text-decoration: none; 
+        bottom:30px;                                           
+        left: 260px; 
+        margin:0px;
+      }
+          #dziecko5>a{
+            text-decoration: none;
+            margin:auto;                /* aby rozszerzyc te 3 biale tabelki, to wpisalam flex-basis w %, i zmienialam margin i padding w tym "#dziecko5 a" */
+            flex-basis: 30%;
+          }
+          #dziecko5>a>p{
+            border-radius: 5px 5px 5px 5px;
+            background-color: white;
+            margin-left:3px;
+            margin-right:3px;
+          }        /* ;border:none; PRZYDA SIE do dziecka5 */
+/*--------- koniec RODZIC4 ----- */
+/* --------  poczatek RODZIC5 ----------*/
+      #rodzic5{
+        width:100%;
+        height:250px;
+        position: relative;
+        margin:0px;
+        background-color:rgb(255, 187, 0); 
+      } 
+      #rodzic5 > div {
+        position:absolute; 
+        max-width:1000px;
+        max-height:250px;                      
+        background-color:#ec60ff;
+      }
+      #rodzic5>#dziecko1{
+        display: flex;
+        top: 20px;
+        font-weight: bold;
+      }
+          #rodzic5>#dziecko1>.text1 {
+            color:rgb(5, 66, 46);
+            font-size:1.7em;
+          }
+          #rodzic5>#dziecko1>.text2{
+            float:right;
+            margin-left:285px;
+            font-size: 0.9em;
+          }
+          #rodzic5>#dziecko1>.text2>a {
+            color: #089e0f;
+            text-decoration: none;  
+          }
+      #rodzic5>#dziecko2{
+        display:flex;
+        top: 55px;
+        margin-left: 280px;
+        margin-right: -35px;
+        }
+          #rodzic5>#dziecko2>.article1, .article2, .article3 {
+            font-size: 1em;   
+            width:30%;   
+            background-color:rgb(251, 255, 0);                                 
+          }
+          .article2 {  /* tu NIE bylo napisu #rodzic5 */
+          margin-left: 40px;
+          margin-right: 45px;
+          }
+          #dziecko2 h3{   /* tu NIE bylo napisu #rodzic5 */
+           color: rgb(5, 66, 46);
+          }
+/* -------- koniec RODZIC5 ------------------ */     
+
+/*---------POCZATEK dom ---------------------- */
+      #dom{
+        width:100%;
+        height:400px;
+        position: relative;
+        margin:0px;
+        background-color:rgb(233, 84, 133); 
+      } 
+      #dom > div {
+        position:absolute; 
+        max-width:1000px;
+        max-height:400px;               
+        background-color:#c027d4;
+      }
+      #dom>#pokoj1{
+        display: flex;
+        top:0px;
+        font-weight: bold;
+        margin-left:280px;
+      }
+          #dom>#pokoj1>.podpokoj1 {
+            color:rgb(5, 66, 46);
+            font-size:1.7em;
+          }
+      #dom>#pokoj2{
+        display: flex;
+        top: 45px;                   
+        margin-left: 280px;
+        margin-right: -35px;
+        width:100%;
+        height: 20%;
+      }                                                                               
+          #dom>#pokoj2>.sign1, .sign2, .sign3{
+            width: 30%; 
+            background-color: cadetblue;   
+            margin-right:40px;                 
+          }
+          .sign2{ 
+            margin-left: 0px;
+            margin-right:40px;
+          }
+          #pokoj2 img{
+            width:20%;
+            height:100%;             
+          }               
+      #dom>#pokoj3{
+        display:flex;
+        top: 105px;
+        margin-left: 280px;
+        margin-right: -35px;     /*   width:100%; */
+      }
+          #dom>#pokoj3>.span4, .span5, .span6 {                    
+            font-size: 1em;
+            width:30%; 
+            margin-right:40px;
+            background-color: #FDD700;       
+          }
+          .span5 {      
+            margin-left: 0px;
+            margin-right:40px;
+          }
+          #pokoj3 h3 {
+            color: rgb(5, 66, 46);                       
+          }                                                                                                        
+/* -------------koniec dom ----------------- */
+/* -------------POCZATEK klasa1 ------------ */
+
+      #klasa1{                                                 /* margin:0px; padding:5px; height: auto;  border: none;  vertical-align: baseline; */
+        max-width:100%; /* 3 lutego dodalam na chwile slowo max- */             
+        min-height:300px;
+        max-height:450px;
+        margin-top:10px;  
+        margin-bottom:10px;
+        background-color: brown;                         
+      }
+      #klasa1>.pictureText-panel{
+        max-width:100%;              /* 3 lutego dodalam na chwile slowo max- */
+        min-height:300px;
+        max-height:450px;
+        background-color: rgb(226, 151, 52);       
+      }
+          #klasa1>.pictureText-panel>.section-content {
+            max-width:1000px;
+            min-height: 300px; 
+            max-height:450px;     /* 2 lutego sprawdzalam position: relative; */                                               
+            margin-left:280px;
+            background-color: chartreuse;
+          }
+          #klasa1>.pictureText-panel>.section-content>.monika-picture-text{
+            list-style-type: none;
+            max-width: 100%;    /* 3 lutego   skasowalam max-width:90%;  a wpisalam max-width: 100%; */              
+            min-height:300px;
+            max-height:450px;
+            background-color: rgb(46, 34, 11);                            
+          }
+          .monika-picture-text{ /* 3 lutego dopisalam .monika-picture-text */            
+            list-style-type: none;
+            max-width:100%;
+          }
+          /* ----- ponizej dotyczy panelu li.monika-picture */
+            .monika-picture-text>.monika-picture{              
+              list-style-type: none;
+              width:50%;       /* 3 lutego dopisalam display:flex i float:left, lecz float:left nie dzialalo, ale chyba dziala juz */
+              float:left;
+              background-color: cornflowerblue;
+              margin-left: -40px;             
+              /* min-height:300px;
+              max-height:450px; */
+            }
+              .monika-picture .monika-picture-1{
+                background-image:url("C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/kolorowa-mapa.jpg"); 
+                background-repeat: no-repeat; 
+                background-size: cover; 
+                /* position: 50% 30%; */                                                   
+                max-width:90%;                                           
+                min-height:300px;
+                max-height:450px;
+                list-style-type: none;                                                                                            
+              }  
+          /* ----- ponizej dotyczy panelu li.monika-text */
+            .monika-picture-text>.monika-text{                                                       
+              float:right;                                                          
+              width:50%;
+              margin-right:40px;
+              margin-top:30px;
+              background-color: rgb(216, 237, 100);
+            }    
+              .monika-text .monika-text-1{
+                font-size:1.7em;
+                font-weight: bold;
+                text-align: left;
+                color: rgb(5, 66, 46);
+                background-color: #c041d1;              
+              }
+              .monika-text .monika-text-1-dlugi{
+                font-size:1em;
+                color: rgb(112, 140, 145);
+                text-align:left;
+                background-color: #ec60ff;
+              }                                            
+              .przycisk-odkryj-autobusy{
+                color: white;
+                text-decoration: none;
+                border:none;
+                display:inline-flex;  /*  font-size:1em;*/
+                background-color:rgb(0, 183, 255);
+                border-radius: 25px 25px 25px 25px;
+                list-style-type: none;
+                padding:20px 25px 20px 25px;
+                margin:0px;                
+              }
+              .przycisk-odkryj-autobusy:hover{
+                color:yellow;
+                font-weight: bold;
+                background-color: blue;
+                cursor: pointer;
+              }
+/* -----------POCZATEK kura --------------- */
+      #kura{
+        width:100%;
+        height:550px;
+        position: relative;
+        margin:0px;
+        background-color:rgb(5, 114, 23); 
+      } 
+      #kura > div {
+        position:absolute; 
+        max-width:1000px;
+        max-height:550px;                      
+        background-color:#58225f;
+      }
+      #kura>#kurczak1{
+        display: flex;
+        top: 20px;
+        font-weight: bold;
+        margin-left: 280px;                    
+      }
+          #kura>#kurczak1>.ziarno1 {
+            color:rgb(5, 66, 46);
+            font-size:1.7em;                  
+          }
+          #kura>#kurczak1>.ziarno2{
+            float:right;
+            margin-left:610px;
+            font-size: 0.9em;
+            vertical-align: 150px; 
+          }
+          #kura>#kurczak1>.ziarno2>.interaktywny-napis {
+            color: #ffffff;
+            text-decoration: none; 
+          }
+      #kura>#kurczak2{
+        display:flex;
+        top: 55px;
+        margin-left: 280px;
+        margin-right: -35px;                    
+      }
+          #kura>#kurczak2>.ziarno3, .ziarno4, .ziarno5 {
+            font-size: 1em;   
+            width:30%;   
+            background-color:rgb(251, 255, 0); 
+            margin-top: 15px;                                
+          }
+          .ziarno4 {  /* tu NIE bylo napisu #kura */
+            margin-left: 40px;
+            margin-right: 45px;
+          }
+          #kurczak2 h3{   /* tu NIE bylo napisu #kura */
+          color: rgb(50, 58, 2);
+          margin-top:2px;
+          margin-bottom:3px;                          
+          }
+          #kurczak2 .Przeczytaj-wiecej{
+            color:rgb(14, 207, 241);
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+          }
+/* -------- koniec kura ------------------ */     
+
+/*---------poczatek firma ---------------- */
+      #firma{
+        width:100%;
+        min-height:300px;
+        position: relative;
+        margin:0px;
+        padding:0px;
+        margin-top:40px;
+        margin-bottom:0px;     
+        background-color:rgb(114, 5, 10); 
+      }             
+      #firma>#prezes-1{
+        max-width: 100%;
+        min-height:220px;
+        background-color: rgb(81, 255, 255);
+        margin-top:20px;
+        margin-bottom:20px;                   
+      }          
+      #firma>#prezes-1>.wiceprezes-1{
+        max-width:100%;
+        min-height:180px;       
+        background-color: rgb(110, 81, 75);          
+      } 
+      #firma>#prezes-1>.wiceprezes-1>.ksiegowosc{
+        max-width:1000px; 
+        height:150px;                                     
+        background-color: rgb(218, 235, 62);  
+        display:flex;
+        margin-left:280px;
+      }
+          #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
+            background-color: orangered; 
+            height:110px;
+          }
+              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja{
+                list-style: none;
+                column-count: 3;
+                flex-grow: 3;
+                flex-shrink: 0;   
+                padding-left:0px;             /* dopisalam padding:0px; w dniu 8luty o 13.00 */
+              }
+              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik{              
+                margin-bottom:20px;
+                background-color: rgb(51, 131, 151);    
+                                                                    
+              }
+              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik>.hiperlacze{
+                text-decoration: none;
+                font-size: 1em;
+              }
+          #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2{
+            background-color: purple; 
+            column-count:1;
+            flex-grow: 1;  
+            height:140px;
+            text-align: left;   
+            flex:1; /* dopisalam flex:1 w dniu 8luty 0 12.40 */                                                                           
+          }
+              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage{
+                height:60px;
+                background-color: rgb(52, 235, 52);
+                margin-top:15px;
+                margin-bottom:15px;                                                           
+                max-width: 340px; /* dodalam teraz i sprawdzam */                                           
+                position: relative; /* dodalam teraz i sprawdzam*/
+              }    
+/*terazPisze*/#firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select{ /* zamiast select to tu bylo #SelectLanguageID */
+                width:100%;
+                height:48px;
+                font-size:1em;
+                color:#054752;
+                border-radius: 4px;
+                padding:18px 8px 0px;
+                position:relative;
+                z-index:1;
+                background-color:palevioletred; /* bylo transparent; */                                                                                                                     
+              }
+/*terazPisze*/#firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select label{  /* dodalam >select */
+                position:absolute;                                                          
+                top:0px;
+                left:0px;
+                right:45px;
+                z-index: 1;            
+                background-color: purple;
+                                                                    
+              }
+            /* byl taki kod #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage */                                               
+            /* byl taki kod #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>label */
+                                                                                     /* #SelectLanguageID */                                                          
+                /* #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select */
+              label  .klasa-jezyk{
+                position: absolute;
+                top:8px;
+                left: 9px;
+                width: 100%;
+                                     /*bylo  white-space: nowrap; */
+                                     /*bylo  overflow: hidden; */
+                font-size: 0.7em;
+                color:#cf1515;   
+                background-color: darkblue; 
+                z-index: 1;   /* <--- tu obok cos jest NIE TAK bo kolor sie nie zmienia, a powinien */
+                              /* dopisalam zatem  z-index:1 i juz kolor sie zmienia */                        
+              }
+      /* -----------ponizej jest kod na pasek do witryn ikonek ------- */
+              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn{                                                          
+                list-style: none;
+                column-count: 4;   
+                flex-grow: 4; 
+                margin-top:10px; 
+                padding:0px;                                                
+                background-color: rgb(11, 13, 107);
+              }
+              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn>.witryna{
+                background-color: rgb(221, 38, 38);                                                                                                                                                                                                                                                                                                
+                } 
+      /* ------------ koniec kodu na pasek do witryn ikonek ----------- */
+      #firma>#prezes-1>.wiceprezes-1>.sekretariat{
+        max-width:1000px; 
+        height:20px; 
+        margin-top:20px;
+        margin-bottom: 20px;
+        background-color: rgb(35, 49, 53);  
+        display: flex;
+        margin-left: 280px;                                                                       
+      }
+          #firma>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
+            font-size: 0.8em;
+            margin-left:0%;
+          }             
+      #firma>#prezes-2{
+        max-width: 1000px; /* bylo max-width:100%; w dniu 6 luty godz.23.00 */
+        min-height:20px;
+        margin-top:5px;
+        background-color: rgb(150, 173, 16);
+        margin-left: 280px;    
+      }
+          #firma>#prezes-2>.wiceprezes-2{
+            padding: 16px 0;
+            background:violet;
+          }
+          #firma>#prezes-2>.wiceprezes-2>.page-footer-long{
+            font-size: 0.8em;
+            margin-left: 0%;
+            text-align: justify;
+            color:rgb(65, 6, 52);
+          }
+
+      /*najwieksza rozdzielczosc laptopów*/
+      @media only screen and (max-width: 1100px) {
+      .menu, .intro, .header1, #rodzic3, #rodzic4, #rodzic5, #DOM, #klasa1, #kura, #firma  { 
+                                display: block;}
+      }
+      @media only screen and (max-width: 680px) {
+      /* for medium mobile phones or IPad*/
+      .intro {
+              display: none;}
+      }
+    </style>
+ </head>
+ <body>
+    <!--   div class="page container_12 clearfix" -- Moze -->  
+    <div class="menu container_12">
+            <div class="logo">    <!-- bylo grid_3 -->
+              <a href=""><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/logo-BlaBlaCar.png" alt="blablacar" height="20%" width="25%" /></a> <!-- bylo class="logo" -->
+            </div>
+                                      <!--  bylo <div id="navmenu">  -->
+            <div class="rightnav">   <!-- bylo grid_9--> <!-- bylo <ul class="nav1">-->
+              <ul>  
+              <li><a href=""><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/search.png" alt="search button" height="2%" width="2%" style="vertical-align: middle" />  Szukaj przejazdu</a></li>
+              <li><a href=""><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/plus.png" alt="plus button" height="2%" width="2%" style="vertical-align: middle" />  Dodaj przejazd</a></li>
+              <li><a href="">Zarejestruj się</a></li>
+              <li><a href="">Zaloguj się</a></li>
+              </ul>
+            </div>
+          
+    </div>
+    <div class="intro">Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a href="">FAQ</a>)
+    </div>
+                <!--BYLO <div class="header container_12"-->  <!-- bylo: wrapper grid_12-->  <!--  ; height:auto-->
+    <div class="header1 container_12">   <!-- BYLO style="position:relative"--> <!-- wstawiam tutaj container_12" i zobaczymy -->
+        <img class="background" src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/autobus1.jpg" alt="autobus" />  <!-- w img bylo style="width:100%"-->
+        <div style="position:absolute; right:350px; top:20px;">Twój przejazd. Twój wybór.</div>  
+        
+        <span class="ticket-search" style="position:absolute; right:350px; top:250px; height:300px; display:inline-block;">
+            <label class="LocationFrom"><input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"></label>
+            <label class="LocationTo"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"></label>
+            <label class="c"><input type="datetime-local" maxlength="30"></label>
+            <label class="d"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"></label>
+            <label class="button holder"><input type="button" value="search"></label>
+        </span>    <!-- h1 width:100%; height:150px;-->   
+    </div>
+
+       <!-- sprawdz ta strone do stworzenia panelu wyszukiwania dla biletow SKAD  i DOKAD na obrazku 
+        https://www.p-programowanie.pl/strony-internetowe/strona-responsywna#podgl%C4%85d-responsywny-strony-->
+
+    <div id="rodzic3">rodzic3
+        <div id="dziecko1"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/kierowca.jpg" alt="driver"></div>
+        <div id="dziecko2">
+            <h2>Dokad jedziesz?</h2>
+            <h5>Wybierz sie w najoszczedniejsza podroz swojego zycia.</h5>
+            <a href=""><h5>Dodaj przejazd</h5></a>
+        </div>
+    </div>         
+    
+    <div id="rodzic4">rodzic4
+        <div id="dziecko3">Dokad chcesz jechac?</div>
+        <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>       <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
+        <div id="dziecko5">
+            <a href=""><p>Warszawa  »  Gdansk   35zl    ></p></a>
+            <a href=""><p>Lublin    »  Warszawa 15zl    ></p></a>
+            <a href=""><p>Katowice  »  Berlin   15zl    ></p></a>
+        </div>
+    </div>   
+    <div id="rodzic5">rodzic5
+        <div id="dziecko1">
+              <span class="text1">Skąd chcesz. Dokąd chcesz. Czym chcesz.</span>
+              <span class="text2"><a href="">Dowiedz sie wiecej</a></span>
+        </div>
+        <div id="dziecko2">
+              <div class="article1"><h3>Autobusem</h3>Ponad 100 przewoźników w jednym miejscu. Bilety dostępne online kilka tygodni przed datą podróży.</div>
+              <div class="article2"><h3>Samochodem</h3>Kierowcy z BlaBlaCar jeżdżą wszędzie. Dosłownie w tysiące miejsc. Wszędzie tam, gdzie prowadzi droga.</div>
+              <div class="article3"><h3>Wybór należy do Ciebie</h3>Jedno miejsce, jedno wyszukanie, setki wyników. Wybierz na podstawie ceny, długości podróży lub po prostu Twojego nastroju.</div>
+        </div>
+    </div>
+    
+    <div id="dom">DOM
+          <div id="pokoj1">
+            <span class="podpokoj1">3 rzeczy, za które pokochasz wspólne przejazdy BlaBlaCar.</span>
+          </div>
+          <div id="pokoj2">
+            <span class="sign1"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/location.jpg" alt="location1" /></span>
+            <span class="sign2"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/location.jpg" alt="location2" /></span>
+            <span class="sign3"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/location.jpg" alt="location3" /></span>
+          </div>
+          <div id="pokoj3">
+            <div class="span4"><h3>Społeczność</h3>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
+            <div class="span5"><h3>Podróżuj szybciej</h3>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
+            <div class="span6"><h3>Elastyczność</h3>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
+          </div>
+    </div>
+<!------------------------------------------  
+    <div id="klasa1">to byl rodzic3
+      <div id="dziecko1"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/kierowca.jpg" alt="driver"></div>
+      <div id="dziecko2">
+          <h2>Dokad jedziesz?</h2>
+          <h5>Wybierz sie w najoszczedniejsza podroz swojego zycia.</h5>
+          <a href=""><h5>Dodaj przejazd</h5></a>
+      </div>
+      
+  </div>  
+  ------------------------------------------>
+    <div id="klasa1">KLASA1
+      <div class="pictureText-panel">
+        <article class="section-content">
+          <ul class="monika-picture-text">
+                <li class="monika-picture">
+                  <div class="monika-picture-1" ></div>     <!-- BYLO style="width:100%"-->
+                </li>
+                <li class="monika-text">
+                  <span class="monika-text-1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</span>
+                  <p class="monika-text-1-dlugi">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. 
+                                                Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
+                  <a class="przycisk-odkryj-autobusy" href="#"> Odkryj autobusy na BlaBlaCar</a>
+                </li>                                              
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div id="kura">KURA
+      <div id="kurczak1">
+            <span class="ziarno1">Odwiedź nasz blog </span>
+            <span class="ziarno2"><a class="interaktywny-napis" href=""> Odwiedź nasz blog</a></span>
+      </div>
+      <div id="kurczak2">
+            <div class="ziarno3"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/przytulaski.jpg" alt="przytulaski" /><h3>Czy rozwiązanie problemu wykluczenia transportowego istnieje już od lat?</h3>Serwis BlaBlaCar chce pokazać, jak łatwo, szybko i wygodnie można znaleźć transport jeszcze bliżej siebie.<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="ziarno4"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/las.jpg" alt="las" /><h3>6 patentów na komfort podróży jesienią</h3><br />Poznaj jesienne patenty podróżnych🍂<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="ziarno5"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/twarz.jpg" alt="twarz" /><h3>Co zrobić, żeby znaleźć pasażerów i wypełnić wolne miejsca w samochodzie?</h3>To łatwiejsze niż myślisz… Poniżej znajdziesz nasze porady :)<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+      </div>
+  </div>
+  
+  <div id="firma">FIRMA 
+      <div id="prezes-1">
+        <div class="wiceprezes-1">
+          <div class="ksiegowosc">
+            <span class="dzial-1">  
+                <ul class="dolna-nawigacja">
+                  <li class="odnosnik"><a class="hiperlacze" href="">Jak to działa?</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Autobusy</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Wszystkie połączenia autobusowe</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">O nas</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Często zadawane pytania (FAQ)</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Kontakt</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Regulamin</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Prasa</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="">Praca w BlaBlaCar</a></li>
+                </ul>
+              
+            </span>
+            <span class="dzial-2">
+              <div class="SelectLanguage">
+              <!-- moze --  ::before  -->
+                <select id="SelectLanguageID">
+                  <option value="pl_PL">Polski</option>
+                  <option value="en_GB">English</option>
+                </select>
+                <label for="SelectLanguageID">
+                  <span class="klasa-jezyk">Język</span>
+                </label>
+              <!-- moze --  ::after  --->
+              </div>
+              <ul class="pasek-do-witryn">
+                <li class="witryna">
+                  <a href="https://m.facebook.com/BlaBlaCarPL">
+                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="false">
+                         <path fill-rule="evenodd" clip-rule="evenodd" fill="#00AFF5" d="M12 0C5.37 0 0 5.4 0 12.07 0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07 24 5.41 18.63 0 12 0z">
+                         </path>
+                         </svg>                    
+                  </a>
+                </li>
+                <li class="witryna">
+                  <a href="https://twitter.com/BlaBlaCarPL">
+                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="false">
+                         <path fill="#00AFF5" d="M22 6.167c-.75.333-1.5.583-2.333.666.833-.5 1.5-1.333 1.833-2.25-.833.5-1.667.834-2.583 1a4.034 4.034 0 0 0-3-1.333 4.09 4.09 0 0 0-4.084 4.083c0 .334 0 .667.084.917-3.5-.167-6.5-1.833-8.5-4.333C3 5.583 2.833 6.25 2.833 7c0 1.417.75 2.667 1.834 3.417-.667 0-1.334-.167-1.834-.5V10c0 2 1.417 3.667 3.25 4-.333.083-.666.167-1.083.167-.25 0-.5 0-.75-.084.5 1.667 2 2.834 3.833 2.834C6.667 18 4.917 18.667 3 18.667c-.333 0-.667 0-1-.084 1.833 1.167 4 1.834 6.25 1.834 7.583 0 11.667-6.25 11.667-11.667v-.5c.833-.583 1.5-1.333 2.083-2.083z">
+                         </path>
+                         </svg> 
+                  </a>
+                </li>
+                <li class="witryna">
+                  <a href="https://m.youtube.com/c/BlaBlaCarPL">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="false">
+                    <path fill="#00AFF5" d="M21.833 8S21.667 6.583 21 6c-.75-.833-1.583-.833-2-.833C16.167 5 12 5 12 5s-4.167 0-7 .167C4.583 5.25 3.75 5.25 3 6c-.583.583-.833 2-.833 2S2 9.583 2 11.25v1.5c0 1.583.167 3.25.167 3.25s.166 1.417.833 2c.75.833 1.75.75 2.167.833C6.75 19 12 19 12 19s4.167 0 7-.25c.417-.083 1.25-.083 2-.833.583-.584.833-2 .833-2s.167-1.584.167-3.25v-1.5C22 9.583 21.833 8 21.833 8zM9.917 14.583V9l5.416 2.833-5.416 2.75z">
+                    </path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="witryna">
+                  <a href="https://www.instagram.com/blablacar_pl/">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="false">
+                      <g fill-rule="nonzero">
+                      <path fill="#00AFF5" d="M12 3.802c2.67 0 2.987.01 4.042.058 1.137.052 2.193.28 3.005 1.092.813.813 1.042 1.869 1.092 3.008.05 1.053.059 1.37.059 4.04s-.009 2.987-.059 4.042c-.05 1.137-.279 2.193-1.091 3.005s-1.869 1.042-3.007 1.092c-1.055.05-1.372.059-4.042.059s-2.987-.009-4.042-.059c-1.137-.05-2.193-.279-3.005-1.091S3.91 17.178 3.86 16.04c-.05-1.055-.058-1.372-.058-4.042s.008-2.987.058-4.042c.05-1.137.28-2.193 1.092-3.005S6.82 3.91 7.958 3.86C9.013 3.81 9.33 3.802 12 3.802zM12 2c-2.717 0-3.057.012-4.123.06-1.625.075-3.052.473-4.199 1.618C2.533 4.825 2.133 6.252 2.06 7.877 2.012 8.943 2 9.285 2 12c0 2.717.012 3.057.06 4.123.075 1.625.472 3.053 1.618 4.199 1.146 1.146 2.574 1.544 4.199 1.618 1.066.048 1.408.06 4.123.06s3.057-.012 4.123-.06c1.625-.075 3.053-.472 4.199-1.618 1.146-1.146 1.544-2.574 1.618-4.199.048-1.066.06-1.408.06-4.123s-.012-3.057-.06-4.123c-.075-1.625-.472-3.053-1.618-4.199-1.147-1.145-2.574-1.545-4.199-1.618C15.057 2.012 14.715 2 12 2z">
+                      </path>
+                      <path fill="#00AFF5" d="M12 6.865a5.136 5.136 0 1 0 .001 10.271A5.136 5.136 0 0 0 12 6.865zm0 8.468a3.332 3.332 0 1 1 0-6.666 3.332 3.332 0 1 1 0 6.666z"></path>
+                      <circle fill="#00AFF5" fill-rule="nonzero" cx="17.338" cy="6.662" r="1.2">
+                      </circle>
+                      </g>
+                      </svg>     
+                  </a>
+                </li>
+              </ul>
+            </span>
+
+          </div>            
+          <div class="sekretariat">
+            <div class="copyright-text">BlaBlaCar, 2021&copy;</div>
+          </div>
+        </div>
+      </div>
+      <div id="prezes-2">
+        <div class="wiceprezes-2">
+          <span class="page-footer-long">BlaBlaCar to największy serwis wspólnych przejazdów. Łączymy ludzi, by mogli razem podróżować skądkolwiek dokądkolwiek. Nie tylko z centrum wielkiego miasta.</span>
+        </div>
+      </div>    
+  </div>
+
+</body>
+</html>
+
+
+<!-------------------- tu na dole jest dobra wersja stopki   
+                           stare dobre div class footer nav tutaj np.: tabela z wyborem Jezyka i ikony do aplikacji( facebook,itd.) </div    
+    d i v id="clear"> BlaBlaCar, 2021&copy;/div
+    d i v id="f o o t e r bottom container_12">
+            <p>BlaBlaCar to najwiekszy serwis wspolnych przejazdow. Laczymy ludzi, by mogli razem podrozowac skadkolwiek dokadkolwiek. Nie tylko z centrum wielkiego miasta./p
+    /d i v> 
+    p#clear {  /* DZIS 1 lutego 2021 dopisalam tutaj obok litere p */
+        background-color: rgb(232, 231, 233);
+        text-align: left;
+        padding: 10px 10px 10px 120px;        
+      }
+      #footer-bottom, p{
+        background-color: #cccaca; 
+        text-align:center; 
+        padding: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px; 
+        font-size:1vw;     ------------>
