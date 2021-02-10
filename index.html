@@ -1,104 +1,65 @@
 <!DOCTYPE html>
-<html lang="pl-PL">    <!-- BlaBlaCar-wersja-4 - dla Marcina -->  <!-- https://github.com/Lady-Butterfly/BlaBlaCar2021.git MOJE KONTO I STRONA  -->
+<html lang="pl-PL">    <!--dla Marcina --teraz index.html, kiedys BlaBlaCar-wersja-4 -->  <!-- https://github.com/Lady-Butterfly/BlaBlaCar2021.git MOJE KONTO I STRONA  -->
 <head>
     <meta charset= "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="znaczki-blablacar.png" alt="znaczki blablacar" height="10%" width="10%" /> 
     <title>Wspolne przejazdy dla kierowcow i pasazerow podrozujacych w te sama strone | BlaBlaCar</title>
-    <link rel="stylesheet" type="text/css" href="960-Grid-System-master/code/css/960_12_col.css" />
+    
     <style type="text/css">
 
-   /* poczatek "ze strony chlopaka" to ponizej 
-
-      @font-face{
-       font-family:'gt-eesti';
-       font-weight:400;
-       src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2'),
-       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff') format('woff'),
-       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.ttf') format('truetype');
-       font-style:normal;}
-       
-      @font-face{
-       font-family:'gt-eesti';
-       font-weight:500;
-       src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Medium.woff2') format('woff2'),
-       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Medium.woff') format('woff'), 
-       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Medium.ttf') format('truetype');
-       font-style:normal;} 
-       html{font-family:gt-eesti,'Helvetica Neue',Helvetica,Arial,sans-serif;
-       quotes:'“' '”';
-       -webkit-text-size-adjust:100%;}
-        :lang(de){quotes:'„' '“';} 
-        :lang(fr){quotes:'« ' ' »';} 
-        :lang(es-ES){quotes:'«' '»';} 
-        :lang(hu){quotes:'„' '“';} 
-        :lang(pl){quotes:'„' '“';} 
-        :lang(ru){quotes:'« ' ' »';}
-    koniec "ze strony chlopaka" */
-
-
-   /* poczatek "od Martyny"- to ponizej 
-      @font-face {
-      font-family: "gt-eesti";
-      src: url("GT-Eesti.eot");
-      src: url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), 
-           url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.woff2") format("woff2"),
-           url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.woff") format("woff"),
-           url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.ttf") format("truetype");}
-    * koniec "od Martyny" */
-
-/*moje*/
       @font-face {
         font-family:"GTEestiProText-Regular";
-        src:url("fonts/GTEestiProText-Regular.eot");
-        /* src:url("https://en.bestfonts.pro/font/gt-eesti-pro"); to jest strona zrodlowa czcionki gt-eesti */
-        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProDisplay-Regular.ttf") format("ttf"),
-            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProDisplay-Regular.eot") format("eot"),
-            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProDisplay-Regular.woff") format("woff"),
-            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProDisplay-Regular.woff2") format("woff2"); 
+        src:url("fonts/GTEestiProText-Regular");        /* src:url("https://en.bestfonts.pro/font/gt-eesti-pro"); strona zrodlowa czcionki gt-eesti */
+        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular") format("ttf"),
+            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.eot") format("eot"),
+            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff") format("woff"),
+            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff2") format("woff2"); 
       }
-      /*  src:url("http://blablacar.pl/fonts/GTEestiProDisplay-Regular.ttf") format("ttf"),
-            url("http://blablacar.pl/fonts/GTEestiProDisplay-Regular.eot") format("eot"), 
-            url("http://blablacar.pl/fonts/GTEestiProDisplay-Regular.woff") format("woff"),
-            url("http://blablacar.pl/fonts/GTEestiProDisplay-Regular.woff2") format("woff2");} */
-/* sprawdzam teraz dzialanie czcionki nowej */
-      body {
+
+      * {
+        margin:0px 0px 0px 0px;
+        padding:0px 0px 0px 0px;
         font-family: "GTEestiProText-Regular", Helvetica;
+        box-sizing: border-box;
+      }
+      /*body {
         font-style: normal;
         color:rgb(136, 133, 133);
-        margin: 0px;
-        font-weight:400;
+        /*font-weight:normal;} */
+      #wrapper {
+        max-width:1000px;
+        margin: 0px auto 0px auto;
       }
-        /* @font-face {/* z internetu z ich strony page source 
-         font-family:'gt-eesti'; font-weight:400; src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2');} */                     
-        /* img, li, a {color: rgb(22, 172, 241); text-decoration: none; z-index: 10;}  li {font-size: 1vw; margin: 0px; display: inline;   background-color:rgb(231, 181, 181); } */
+
       .menu{
-        background-color: rgb(255, 255, 255); 
+        background-color: rgb(197, 8, 166); 
         width: 100%;
         height: 70px;
-        top: 0px;
-        margin:0px;                                 /* bylo: margin: 0px 0px 0px -30px;   */
-        z-index: 10;
+        top: 0px; 
+        margin:0px auto 0px auto;                     /* bylo: margin: 0px 0px 0px -30px;   */
+        z-index: 1;
         position: fixed;
       }
+                     /* .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} */
       .logo{
-        padding: 10px;          /* zmieniam 170px druga pozycje na inne wartosci */
+        padding: 10px;                         /* zmienilam 170px druga pozycje na inne wartosci */
         text-align: left;  
         float: left;
-        margin-left:120px;      /* margin-top: 10px; margin-bottom: 20px;  */
+       margin-left:0px;                  /* margin-top: 10px; margin-bottom: 20px;  */
       }
-      /* poczatek prawej nawigacji */                  /*BYLO .nav>.nav-item { float: right; padding:20px 10px 20px 10px; text-align: right;} */
-      .rightnav ul {                                /* BYLO  width: 100%; */                      /* padding: 5px 0px -5px 0px;  */
-        padding: 10px;                         /* bylo: padding: -20px 0px -5px 0px; */
-        margin: 15px 110px;
+      /* poczatek prawej nawigacji */                    /*BYLO .nav>.nav-item { float: right; padding:20px 10px 20px 10px; text-align: right;} */
+      .rightnav ul {                                    /* BYLO  width: 100%; */                      /* padding: 5px 0px -5px 0px;  */
+        padding: 10px;                                 /* bylo: padding: -20px 0px -5px 0px; */
+        margin: 15px 15px;
         list-style-type: none;
-        text-align: right;              /* BYLO  .nav-item>a{ text-decoration: none; color: rgb(20, 183, 233); font-weight: bold;}  */   /*   Bylo: padding: 0px 2px 20px 2px; */
+        text-align: right;   /* BYLO  .nav-item>a{ text-decoration: none; color: rgb(20, 183, 233); font-weight: bold;}  */   /*   Bylo: padding: 0px 2px 20px 2px; */
         position: absolute;                
       }                   
-      .rightnav ul li {               /* bylo: li>a */
+      .rightnav ul li {                          /* bylo: li>a */
         display: inline;
-        padding-right: 15px;
-      }                                   /* bylo: float: right; right: 20px; font-size: 1vw; width: 100px;     */                          
+        padding-right: 10px; /*to sa spacje w nawigacji prawej gornej */ 
+      }                                               /* right: 20px; width: 100px;     */                          
       .rightnav ul li a{
         text-decoration: none;  
         color: rgb(53, 193, 248);
@@ -106,49 +67,48 @@
       }        
       li a:hover {                      /*kolor to taki dodatek do arkusza */
         color: rgb(248, 39, 154);
-      }                                         /* z internetu skopiowane, moze sie kiedys przyda background-color: blue;
-                                             margin: 0px 1px 1px 0px;
-                                             border: 1px solid rgb(6, 247, 26);
-                                             border-radius: 3px;
-                                            -moz-border-radius: 5px;
-                                            -webkit-border-radius: 5px;
-                                             box-shadow: 0px 2px 3px gray;
-                                            -moz-box-shadow: 0px 2px 3px gray;
-                                            -webkit-box-shadow: 0px 2px 3px gray; */
+      }                                      
       /* koniec prawej nawigacji */
       .intro{
+        width: 100%;
+        height: 35px;
+        position: relative;
         background-color: rgb(228, 231, 231);
         color:rgb(136, 138, 137);
         text-align:center; 
-        padding:15px; 
-        margin: 70px -20px 0px -30px;
-        font-size: 1.2vw;
-        width: 100%;
-        height: 25px;
-        position: relative;
+        padding:15px;  
+        margin: 70px auto 0px auto; 
+        font-size: 1em;        
       }                                    
       .intro>a {
         color:rgb(20, 183, 233);
         text-decoration: none;
       }
-                      /* .header { width:100%; position: relative;} */      
-                      /* background-image:url("C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/autobus1.jpg"); 
-                         background-repeat: no-repeat; 
-                       background-attachment:fixed; 
-                       position: 50% 50%; 
-                        right: 200px;  */                                
-      .header1{
-        color: rgb(214, 36, 36);                 /* padding: -40px; */ 
-        font-weight: bold;                         /* wykasowalam  position:absolute; */
-        font-size: 4vw;                            /* overflow:visible; */
-        width:100%; 
-        position: relative;
+      .header1 { 
+      width:100%;  
+      /*position: relative; */   
+      background-image:url("C:/projects/BlaBlaCar2021/autobus1.jpg"); 
+      background-repeat: no-repeat;  /*background-attachment:fixed; */
+      background-position: 50% 20%; 
+      background-size:cover;                                     /* nie wiem o co chodzi w tym  right: 200px; */                                
+      height:400px;                                                           /* padding: -40px; */ 
+                                                                /* overflow:visible; */        
       } 
-      .background{
-        width: 100%;
-        height: 330px;  
+      h1{ /*dopisalam 10luty*/
+        width:100%;
+        height:100px;
+        color: rgb(214, 36, 36); 
+        font-weight: bold;
+        font-size:3em;
+        text-align: center;                         /* wykasowalam  position:absolute; */
       }
-/* ------ RODZIC 3 ------------ */ 
+     input {
+       object-position:center;
+       background-color: rgb(235, 252, 1);
+       text-align: center;
+     }
+
+/* ------poczatek RODZIC 3 ------------ */ 
       #rodzic3 {
         width:100%;
         height:390px;
@@ -160,13 +120,13 @@
       #rodzic3>div {
         position: absolute;
         max-width:500px;
-        max-height:310px;
+        max-height:400px;
         background-color:#FDD700;
         font-size:1.1em;
       }
       #dziecko1{
         top:50px;
-        left:280px;
+        /*left:280px;*/
       }
       #dziecko2{
         top:120px; 
@@ -180,7 +140,8 @@
             background-color:rgb(0, 183, 255);
             border-radius: 25px 25px 25px 25px;
             border:none;
-            margin:20px 310px 0px 0px;
+            text-align: center;
+            margin:20px 150px 0px 0px;
             padding: 20px 25px 20px 25px;
           }
 /* ---------poczatek: RODZIC4 --------------------------- */          
@@ -199,7 +160,7 @@
       }                                 /* BYLO 31.01 padding: 5px; */   /* line-height:40px; */   
       #dziecko3 {
         top:30px;
-        left:280px;
+       /* left:280px;*/
         width:280px;
         font-size:1.6em;
         font-weight: bold;
@@ -218,13 +179,11 @@
           }                          
                               /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
       #dziecko5 {
-        width:1000px;
+        max-width:1100px; 
         height: 55px;  /* ta wysokosc 55px jest idealna */
-        display: flex;
-        font-size: 1.5em;
-        text-decoration: none; 
+        display: flex;   
         bottom:30px;                                           
-        left: 260px; 
+       /* left: 260px;*/ 
         margin:0px;
       }
           #dziecko5>a{
@@ -235,8 +194,9 @@
           #dziecko5>a>p{
             border-radius: 5px 5px 5px 5px;
             background-color: white;
-            margin-left:3px;
-            margin-right:3px;
+            font-size: 1.2em;
+            /*margin-left:1px;*/
+            /*margin-right:1px;*/
           }        /* ;border:none; PRZYDA SIE do dziecka5 */
 /*--------- koniec RODZIC4 ----- */
 /* --------  poczatek RODZIC5 ----------*/
@@ -264,7 +224,7 @@
           }
           #rodzic5>#dziecko1>.text2{
             float:right;
-            margin-left:285px;
+        /*    margin-left:285px;*/
             font-size: 0.9em;
           }
           #rodzic5>#dziecko1>.text2>a {
@@ -274,8 +234,8 @@
       #rodzic5>#dziecko2{
         display:flex;
         top: 55px;
-        margin-left: 280px;
-        margin-right: -35px;
+       /* margin-left: 280px;*/
+        margin-right: -35px; 
         }
           #rodzic5>#dziecko2>.article1, .article2, .article3 {
             font-size: 1em;   
@@ -309,7 +269,7 @@
         display: flex;
         top:0px;
         font-weight: bold;
-        margin-left:280px;
+      /*  margin-left:280px;*/
       }
           #dom>#pokoj1>.podpokoj1 {
             color:rgb(5, 66, 46);
@@ -318,8 +278,8 @@
       #dom>#pokoj2{
         display: flex;
         top: 45px;                   
-        margin-left: 280px;
-        margin-right: -35px;
+      /*  margin-left: 280px;*/
+        margin-right: -35px; 
         width:100%;
         height: 20%;
       }                                                                               
@@ -339,7 +299,7 @@
       #dom>#pokoj3{
         display:flex;
         top: 105px;
-        margin-left: 280px;
+    /*    margin-left: 280px;*/
         margin-right: -35px;     /*   width:100%; */
       }
           #dom>#pokoj3>.span4, .span5, .span6 {                    
@@ -376,7 +336,7 @@
             max-width:1000px;
             min-height: 300px; 
             max-height:450px;     /* 2 lutego sprawdzalam position: relative; */                                               
-            margin-left:280px;
+       /*     margin-left:280px;*/
             background-color: chartreuse;
           }
           #klasa1>.pictureText-panel>.section-content>.monika-picture-text{
@@ -466,7 +426,7 @@
         display: flex;
         top: 20px;
         font-weight: bold;
-        margin-left: 280px;                    
+        /*margin-left: 280px;*/                    
       }
           #kura>#kurczak1>.ziarno1 {
             color:rgb(5, 66, 46);
@@ -485,7 +445,7 @@
       #kura>#kurczak2{
         display:flex;
         top: 55px;
-        margin-left: 280px;
+      /*  margin-left: 280px;*/
         margin-right: -35px;                    
       }
           #kura>#kurczak2>.ziarno3, .ziarno4, .ziarno5 {
@@ -539,7 +499,7 @@
         height:150px;                                     
         background-color: rgb(218, 235, 62);  
         display:flex;
-        margin-left:280px;
+      /*  margin-left:280px;*/
       }
           #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
             background-color: orangered; 
@@ -634,7 +594,7 @@
         margin-bottom: 20px;
         background-color: rgb(35, 49, 53);  
         display: flex;
-        margin-left: 280px;                                                                       
+      /*  margin-left: 280px;  */                                                                     
       }
           #firma>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
             font-size: 0.8em;
@@ -645,7 +605,7 @@
         min-height:20px;
         margin-top:5px;
         background-color: rgb(150, 173, 16);
-        margin-left: 280px;    
+     /*   margin-left: 280px;  */  
       }
           #firma>#prezes-2>.wiceprezes-2{
             padding: 16px 0;
@@ -659,7 +619,7 @@
           }
 
       /*najwieksza rozdzielczosc laptopów*/
-      @media only screen and (max-width: 1100px) {
+      @media only screen and (max-width: 1000px) {
       .menu, .intro, .header1, #rodzic3, #rodzic4, #rodzic5, #DOM, #klasa1, #kura, #firma  { 
                                 display: block;}
       }
@@ -671,16 +631,16 @@
     </style>
 </head>
 <body>
-    <!--   div class="page container_12 clearfix" -- Moze -->  
-    <div class="menu container_12">
+<div id="wrapper">    <!--   div class="page container_12 clearfix" -- Moze -->  
+    <div class="menu">             <!--bylo wczesniej div class="menu container_12"--->
             <div class="logo">    <!-- bylo grid_3 -->
               <a href=""><img src="logo-BlaBlaCar.png" alt="blablacar" height="20%" width="25%" /></a> <!-- bylo class="logo" -->
             </div>
                                       <!--  bylo <div id="navmenu">  -->
             <div class="rightnav">   <!-- bylo grid_9--> <!-- bylo <ul class="nav1">-->
               <ul>  
-              <li><a href=""><img src="search.png" alt="search button" height="2%" width="2%" style="vertical-align: middle" />  Szukaj przejazdu</a></li>
-              <li><a href=""><img src="plus.png" alt="plus button" height="2%" width="2%" style="vertical-align: middle" />  Dodaj przejazd</a></li>
+              <li><a href=""><img src="search.png" alt="search button" height="2%" width="2%" style="vertical-align: middle" /> Szukaj przejazdu</a></li>
+              <li><a href=""><img src="plus.png" alt="plus button" height="2%" width="2%" style="vertical-align: middle" /> Dodaj przejazd</a></li>
               <li><a href="">Zarejestruj się</a></li>
               <li><a href="">Zaloguj się</a></li>
               </ul>
@@ -691,18 +651,21 @@
     </div>
 <!--------------- ta czesc header1 ponizej jest napewno zle ------------------------------------------------------------------------------------------------>         
                                <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12-->  <!--  ; height:auto-->
-    <div class="header1 container_12">   <!-- BYLO style="position:relative"--> <!-- wstawiam tutaj container_12" i zobaczymy -->
-        <img class="background" src="autobus1.jpg" alt="autobus" />  <!-- w img bylo style="width:100%"-->
-        <div style="position:absolute; right:350px; top:20px;">Twój przejazd. Twój wybór.</div>  
+    <div class="header1">
+      <h1>Twój przejazd. Twój wybór.</h1>
+      <input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"><input type="datetime-local" maxlength="30"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"><input type="button" value="search">
+    </div>  
+                                                   <!--container_12"-->   <!-- BYLO style="position:relative"--> <!-- wstawiam tutaj container_12" i zobaczymy -->
+                                                   <!-- <img class="background" src="autobus1.jpg" alt="autobus" /-->  <!-- w img bylo style="width:100%"-->
+                                                   <!-- <div style="position:absolute; right:350px; top:20px;">Twój przejazd. Twój wybór.</div>  
         
-        <span class="ticket-search" style="position:absolute; right:350px; top:250px; height:300px; display:inline-block;">
-            <label class="LocationFrom"><input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"></label>
-            <label class="LocationTo"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"></label>
-            <label class="c"><input type="datetime-local" maxlength="30"></label>
-            <label class="d"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"></label>
-            <label class="button holder"><input type="button" value="search"></label>
-        </span>    <!-- h1 width:100%; height:150px;-->   
-    </div>
+                                                    <span class="ticket-search" style="position:absolute; right:350px; top:250px; height:300px; display:inline-block;">
+                                                    <label class="LocationFrom"><input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"></label>
+                                                    <label class="LocationTo"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"></label>
+                                                    <label class="c"><input type="datetime-local" maxlength="30"></label>
+                                                    <label class="d"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"></label>
+                                                    <label class="button holder"><input type="button" value="search"></label>
+                                                      </span>    <-- h1 width:100%; height:150px;-->       
        <!-- sprawdz ta strone do stworzenia panelu wyszukiwania dla biletow SKAD  i DOKAD na obrazku 
         https://www.p-programowanie.pl/strony-internetowe/strona-responsywna#podgl%C4%85d-responsywny-strony-->
 <!------------- koniec czesci header1 --------------------------------------------------------------------------------------------------------------------->
@@ -878,25 +841,6 @@
         </div>
       </div>    
   </div>
+</div>  
 </body>
 </html>
-
-
-<!-------------------- tu na dole jest dobra wersja stopki   
-                           stare dobre div class footer nav tutaj np.: tabela z wyborem Jezyka i ikony do aplikacji( facebook,itd.) </div    
-    d i v id="clear"> BlaBlaCar, 2021&copy;/div
-    d i v id="f o o t e r bottom container_12">
-            <p>BlaBlaCar to najwiekszy serwis wspolnych przejazdow. Laczymy ludzi, by mogli razem podrozowac skadkolwiek dokadkolwiek. Nie tylko z centrum wielkiego miasta./p
-    /d i v> 
-    p#clear {  /* DZIS 1 lutego 2021 dopisalam tutaj obok litere p */
-        background-color: rgb(232, 231, 233);
-        text-align: left;
-        padding: 10px 10px 10px 120px;        
-      }
-      #footer-bottom, p{
-        background-color: #cccaca; 
-        text-align:center; 
-        padding: 15px;
-        margin-top: 0px;
-        margin-bottom: 0px; 
-        font-size:1vw;     ------------>
