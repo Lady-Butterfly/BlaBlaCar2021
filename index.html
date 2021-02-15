@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                                                           <!--https://lady-butterfly.github.io/BlaBlaCar2021/ -->
 <html lang="pl-PL">    <!--dla Marcina --teraz index.html, kiedys BlaBlaCar-wersja-4 -->  <!-- https://github.com/Lady-Butterfly/BlaBlaCar2021.git MOJE KONTO I STRONA  -->
 <head>
     <meta charset= "UTF-8">
@@ -16,40 +16,39 @@
             url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff") format("woff"),
             url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff2") format("woff2"); 
       }
-
       * {
-        margin:0px 0px 0px 0px;
+        margin:0px auto 0px auto;
         padding:0px 0px 0px 0px;
-        font-family: "GTEestiProText-Regular", Helvetica;
-        box-sizing: border-box;
+        font-family: "GTEestiProText-Regular", Helvetica; 
+        box-sizing:border-box;   
       }
-      /*body {
-        font-style: normal;
-        color:rgb(136, 133, 133);
-        /*font-weight:normal;} */
+      body {
+        background-color: rgb(34, 6, 158);    /*font-style: normal;*/   /*font-weight:normal;} */
+        color:rgb(136, 133, 133);  
+        /*width:100%;*/    /*dopisalam 11lutego max-width:1000px i bylo tez width:100%; */           
+      }
       #wrapper {
-        max-width:1000px;
-        margin: 0px auto 0px auto;
+        width:100%;      /* 11 lutego godz 12.23 z width:100% zmieniam na max-width:1000px, ale to pogorszylo strone */
+        /*margin: 0px auto 0px auto;*/
+        background-color: rgb(255, 255, 255);   /* UWAGA! 11 lutego o polnocy ZMIENILAM WRAPPER NA MAX-WIDTH:1000PX, stad sa kolory granatowy wokolo !!! */     
       }
-
       .menu{
+        width:100%; /* super jest width:100% */
         background-color: rgb(197, 8, 166); 
-        width: 100%;
-        height: 70px;
-        top: 0px; 
-        margin:0px auto 0px auto;                     /* bylo: margin: 0px 0px 0px -30px;   */
-        z-index: 1;
-        position: fixed;
-      }
-                     /* .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} */
+        height:70px;
+        top:0px;            /* bylo: margin: 0px 0px 0px -30px;   */
+        z-index:1;
+        position:fixed;
+      }              /* bylo: .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} */
       .logo{
-        padding: 10px;                         /* zmienilam 170px druga pozycje na inne wartosci */
-        text-align: left;  
-        float: left;
-       margin-left:0px;                  /* margin-top: 10px; margin-bottom: 20px;  */
+        padding:10px;                         /* zmienilam 170px druga pozycje na inne wartosci */
+        /*text-align:left; */ 
+        float:left;
+        margin-left:0px;           /* margin-top: 10px; margin-bottom: 20px;  */
       }
       /* poczatek prawej nawigacji */                    /*BYLO .nav>.nav-item { float: right; padding:20px 10px 20px 10px; text-align: right;} */
-      .rightnav ul {                                    /* BYLO  width: 100%; */                      /* padding: 5px 0px -5px 0px;  */
+      .rightnav ul { 
+        float:right;                                /* BYLO  width: 100%; */                      /* padding: 5px 0px -5px 0px;  */
         padding: 10px;                                 /* bylo: padding: -20px 0px -5px 0px; */
         margin: 15px 15px;
         list-style-type: none;
@@ -60,203 +59,250 @@
         display: inline;
         padding-right: 10px; /*to sa spacje w nawigacji prawej gornej */ 
       }                                               /* right: 20px; width: 100px;     */                          
-      .rightnav ul li a{
+      /*.rightnav ul li*/a.navigation {
         text-decoration: none;  
         color: rgb(53, 193, 248);
         font-weight: bold;
       }        
-      li a:hover {                      /*kolor to taki dodatek do arkusza */
+      li a.navigation:hover {                      /*kolor to taki dodatek do arkusza */
         color: rgb(248, 39, 154);
       }                                      
-      /* koniec prawej nawigacji */
       .intro{
-        width: 100%;
-        height: 35px;
-        position: relative;
-        background-color: rgb(228, 231, 231);
+        width:100%;   /*oryginalnie bylo width:100%*/
+        height: 58px; 
+        /*bylo tu position: relative; */
+        background-color: rgb(32, 43, 43);
         color:rgb(136, 138, 137);
         text-align:center; 
-        padding:15px;  
-        margin: 70px auto 0px auto; 
-        font-size: 1em;        
-      }                                    
-      .intro>a {
+        padding-top:20px; /* dopisalam 10lutego wieczorem */ 
+        margin-top: 70px; 
+        font-size: 1em;    
+      }                                   
+        a.intro {    /* 11lutego napisalam ".intro a.intro" zamiast "a.intro" */  /* napisalam a.intro, zamiast .intro>a 10lutego wieczorem*/
         color:rgb(20, 183, 233);
+        background-color: #FDD700;
         text-decoration: none;
+        margin:0px;
+        padding:0px;
       }
       .header1 { 
-      width:100%;  
-      /*position: relative; */   
-      background-image:url("C:/projects/BlaBlaCar2021/autobus1.jpg"); 
-      background-repeat: no-repeat;  /*background-attachment:fixed; */
-      background-position: 50% 20%; 
-      background-size:cover;                                     /* nie wiem o co chodzi w tym  right: 200px; */                                
-      height:400px;                                                           /* padding: -40px; */ 
-                                                                /* overflow:visible; */        
+      width:100%; /* oryginalnie bylo width:100%;*/ 
+      position:relative; /*11lutego dopisalam position:relative */ 
+      background-image:url("C:/projects/BlaBlaCar2021/autobus2.svg"); 
+      background-repeat: no-repeat;  /*background-attachment:fixed;*/ 
+      background-position: 50% 50%;
+      background-size:cover; 
+      height:355px;     /* bylo height:355px; nie wiem o co chodzi w tym  right: 200px; */       /* padding: -40px; */     /* overflow:visible; */        
       } 
       h1{ /*dopisalam 10luty*/
-        width:100%;
-        height:100px;
+        /* oryginalnie bylo width:100%; */
+        padding-top:50px;
+        height:56px;
         color: rgb(214, 36, 36); 
         font-weight: bold;
         font-size:3em;
-        text-align: center;                         /* wykasowalam  position:absolute; */
+        text-align: center;        /*line-height:2em;*/  /* wykasowalam  position:absolute; */
       }
-     input {
-       object-position:center;
-       background-color: rgb(235, 252, 1);
-       text-align: center;
-     }
-
+       button { /* tu wczesniej byl input*/
+        /*width:100%;*/
+        font-size:1em;
+        /*oryginalnie bylo max-width: 1000px; */
+          /* dopisalam height:15% */
+       /* position:absolute;*/ /*dopisalam position:absolute; */
+       /* line-height: 30px;*/
+       /*background-color: rgb(239, 241, 234);*/
+        /*border:none;*/   
+       /* font-size:1em; */
+       /* padding:5px 10px;*/
+       justify-items: center;
+       /* display:inline-block; */
+        margin-top:200px; 
+        /*position:relative;*/
+      
+     } 
+      hr.pionowa-kreska {
+        display:inline-block; 
+        width:5px;
+        height:40px;
+        margin-bottom:-14px;
+        background-color: darkred;
+      }   
+      
 /* ------poczatek RODZIC 3 ------------ */ 
       #rodzic3 {
-        width:100%;
-        height:390px;
+        max-width:1000px;  /*11 lutego zmienilam max-width:1000px na min-width:1000px, zas 10lutego zamienilam 100% width na max-width:1000px */
+        height:400px;
         position: relative;
-        margin:-15px 0px 0px 0px;
-        background-color:rgb(206, 59, 120);
-        line-height: 0.8em;
+        margin:0px auto 0px auto; /* 11lutego zmienilam margin:0px 0px 0px 0px na margin:0px auto 0px auto; */
+        background-color:rgb(206, 59, 120);     
       }
       #rodzic3>div {
         position: absolute;
-        max-width:500px;
+        width:100%;
         max-height:400px;
         background-color:#FDD700;
-        font-size:1.1em;
+        font-size:1em;
       }
-      #dziecko1{
-        top:50px;
+      #rodzic3>#dziecko1{
+        top:5px;
+        width:50%;
+        margin-left:0px;
         /*left:280px;*/
       }
-      #dziecko2{
-        top:120px; 
-        right:310px;
+      #rodzic3>#dziecko2{
+        top:5px; 
+        width:50%;
+        float:right;
+        margin-right:0px;/* bylo oryginalnie 14 lutego line-height: 1.8em; */
+        /* oryginalnie 14lutego right:150px;*/
       }             
           #dziecko2>a{
             text-decoration: none;
+            text-align: center; 
           }                  /*  BYLO:  #dziecko2>h2 {font-size: 1em;} */    /* #dziecko2>h4 {font-size:0.5em;} */ 
-          #dziecko2>a>h5 {
+          #dziecko2>a>.dziecko2 {
             color: rgb(1, 255, 22);
             background-color:rgb(0, 183, 255);
             border-radius: 25px 25px 25px 25px;
             border:none;
-            text-align: center;
-            margin:20px 150px 0px 0px;
-            padding: 20px 25px 20px 25px;
+            margin-top:0px;
+            padding: 10px 15px 10px 15px;
           }
 /* ---------poczatek: RODZIC4 --------------------------- */          
       #rodzic4 {
         position:relative; 
-        width:100%;
+        max-width:1000px;   /* 10lutego zamienilam 100% width na 1000px */
         height:170px;
-        margin: 0px;                      /* BYLO 31.01 margin:0px 0px 0px 0px; */
+        margin: 0px auto;       /*12 lutego dopisalam auto*/               /* BYLO 31.01 margin:0px 0px 0px 0px; */
         background-color:#0faaf1;
       }
       #rodzic4 > div {
         position:absolute; 
         max-width:1000px;
-        max-height:55px;                       
+        max-height:170px;                       
         background-color:#15fd00;
       }                                 /* BYLO 31.01 padding: 5px; */   /* line-height:40px; */   
-      #dziecko3 {
-        top:30px;
-       /* left:280px;*/
-        width:280px;
-        font-size:1.6em;
+      #rodzic4>#dziecko3 {
+        display:flex;
+        margin:0px auto;/* oryginalnie bylo top:30px; left:0px; */
+        width:100%;
         font-weight: bold;
-        color: rgb(255, 5, 121);  /* BYLO:   width: auto; */
-      }                                              
-      #dziecko4 {
-        top:40px;
-        right:300px;
-        font-weight: bold;   /* BYLO:  width:auto; */
-      }                         
+          /* BYLO:   width: auto; */
+      }    
+       #rodzic4>#dziecko3>.dziecko3-1{
+        color: rgb(255, 5, 121);
+        font-size:1.6em;
+        margin-left:0px;
+       }
+      #rodzic4>#dziecko3>.dziecko3-2{
+        float:right;
+        margin-right:0px;
+        font-size:0.9em;
+      }
+      #rodzic4>#dziecko3>.dziecko3-2>a{
+        color:white;
+        text-decoration: none;
+      }
+      /*#dziecko4 {
+       margin-top:0px;
+       right:20px;
+        font-weight: bold;   /* BYLO:width:auto; *  }                       
+         
           #dziecko4>a{
             text-decoration: none;
-            background-color:#15fd00;   /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }  */
+            background-color:#15fd00;   /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*
             font-size: 0.9em; 
             color: white; 
-          }                          
-                              /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
-      #dziecko5 {
-        max-width:1100px; 
-        height: 55px;  /* ta wysokosc 55px jest idealna */
-        display: flex;   
-        bottom:30px;                                           
-       /* left: 260px;*/ 
-        margin:0px;
+          }  */         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
+      #rodzic4>#dziecko4 { /*oryginalnie bylo #dziecko4 */
+        width:100%;   
+        display: flex;          /*stare  left: 260px;*/ 
+        margin:60px auto; /*dopisalam teraz *//* oryginalnie bylo margin-top:60px; */  
       }
-          #dziecko5>a{
-            text-decoration: none;
-            margin:auto;                /* aby rozszerzyc te 3 biale tabelki, to wpisalam flex-basis w %, i zmienialam margin i padding w tym "#dziecko5 a" */
-            flex-basis: 30%;
-          }
-          #dziecko5>a>p{
-            border-radius: 5px 5px 5px 5px;
-            background-color: white;
+        #rodzic4>#dziecko4>.gwiazda1, .gwiazda2, .gwiazda3 {
+          width:29%;
+          height:55px;
+          background-color: white;
+          border-radius: 5px 5px 5px 5px;
+          text-align: center;  
+        }
+        #dziecko4  a {
+         text-decoration: none;
+        }
+        #dziecko4 p{     
             font-size: 1.2em;
-            /*margin-left:1px;*/
-            /*margin-right:1px;*/
-          }        /* ;border:none; PRZYDA SIE do dziecka5 */
+            padding:15px 15px 15px 15px;}
+/* to na chwile ukrywam #dziecko4>a{
+            text-decoration: none;             ** aby rozszerzyc te 3 biale tabelki, to wpisalam flex-basis w %, i zmienialam margin i padding w tym "#dziecko5 a" **
+            flex-basis: 30%;
+            padding:0px 2% 0 2%;
+            height: 55px;  /* ta wysokosc 55px jest idealna **
+            background-color: white;
+            border-radius: 5px 5px 5px 5px;
+          }
+          #dziecko4>a>p{     
+            font-size: 1.2em;
+            padding:5px 15px 5px 15px;} */
+                   /* ;border:none; PRZYDA SIE do dziecka5 */
 /*--------- koniec RODZIC4 ----- */
 /* --------  poczatek RODZIC5 ----------*/
       #rodzic5{
-        width:100%;
+        max-width:1000px;/* 10lutego zamienilam 100% width na 1000px */
         height:250px;
         position: relative;
-        margin:0px;
+        margin:0px auto;
         background-color:rgb(255, 187, 0); 
       } 
       #rodzic5 > div {
         position:absolute; 
         max-width:1000px;
-        max-height:250px;                      
+        max-height:100px;                      
         background-color:#ec60ff;
       }
       #rodzic5>#dziecko1{
         display: flex;
-        top: 20px;
-        font-weight: bold;
+        width:100%;
+        margin:0px auto; /* oryginalnie bylo top: 20px; */   
       }
           #rodzic5>#dziecko1>.text1 {
-            color:rgb(5, 66, 46);
+            color:rgb(116, 253, 4);
             font-size:1.7em;
+            margin-left:0px; /* dopisalam margin-left:0px w dniu 14 luty */
+            font-weight: bold;
           }
           #rodzic5>#dziecko1>.text2{
-            float:right;
-        /*    margin-left:285px;*/
+            float:right; 
+             margin-right:0px; /*    margin-left:285px;*/
             font-size: 0.9em;
           }
           #rodzic5>#dziecko1>.text2>a {
-            color: #089e0f;
+            color: #0b6268;
             text-decoration: none;  
           }
-      #rodzic5>#dziecko2{
-        display:flex;
-        top: 55px;
-       /* margin-left: 280px;*/
-        margin-right: -35px; 
-        }
+      #rodzic5>#dziecko2 {
+        display: flex;
+        width:100%;
+        margin:65px auto;     /* oryginalnie bylo top:55px */ /* stare margin-left: 280px;*/ /*stare oryginalnie bylo margin-right: -35px; */
+      }   
           #rodzic5>#dziecko2>.article1, .article2, .article3 {
             font-size: 1em;   
-            width:30%;   
-            background-color:rgb(251, 255, 0);                                 
+            width:29%;
+            background-color:rgb(86, 22, 206);                                 
           }
-          .article2 {  /* tu NIE bylo napisu #rodzic5 */
+        /*oryginalnie byl tu caly .article2 {  // tu NIE bylo napisu #rodzic5 //
           margin-left: 40px;
-          margin-right: 45px;
-          }
-          #dziecko2 h3{   /* tu NIE bylo napisu #rodzic5 */
-           color: rgb(5, 66, 46);
+          margin-right: 45px;} */
+          #dziecko2 h3 {   /* tu NIE bylo napisu #rodzic5 */
+           color: rgb(220, 243, 14);
           }
 /* -------- koniec RODZIC5 ------------------ */     
 
 /*---------POCZATEK dom ---------------------- */
       #dom{
-        width:100%;
+        max-width:1000px;   /* 10lutego zamienilam 100% width na 1000px */
         height:400px;
         position: relative;
-        margin:0px;
+        margin:0px auto;
         background-color:rgb(233, 84, 133); 
       } 
       #dom > div {
@@ -266,52 +312,40 @@
         background-color:#c027d4;
       }
       #dom>#pokoj1{
-        display: flex;
-        top:0px;
+        display: flex;  /* oryginalnie bylo top:0px */
         font-weight: bold;
-      /*  margin-left:280px;*/
+        width:100%; margin:0px auto;/*dopisalam te dwie wartosci */ /*kiedys dawno temu bylo  margin-left:280px;*/
       }
           #dom>#pokoj1>.podpokoj1 {
             color:rgb(5, 66, 46);
             font-size:1.7em;
+            margin-left:0px;
           }
       #dom>#pokoj2{
         display: flex;
-        top: 45px;                   
-      /*  margin-left: 280px;*/
-        margin-right: -35px; 
-        width:100%;
-        height: 20%;
-      }                                                                               
+        margin: 55px auto;  /*oryginalnie bylo top:45px */                   
+        width:100%;         /*  kiedys dawno temu bylo  margin-left: 280px;*//*oraz  bylo margin-right: -35px;*/
+        height: 20%;        /*oryginalnie bylo margin-left: auto; ale zamienilam na margin:55px auto*/
+      }                     /*oryginalnie bylo margin-right: auto;*/                                                                               
           #dom>#pokoj2>.sign1, .sign2, .sign3{
-            width: 30%; 
-            background-color: cadetblue;   
-            margin-right:40px;                 
+            width: 29%; 
+            background-color: cadetblue;                    
           }
-          .sign2{ 
-            margin-left: 0px;
-            margin-right:40px;
-          }
+          /* bylo .sign2{ } */
           #pokoj2 img{
-            width:20%;
+            width:33%;
             height:100%;             
           }               
-      #dom>#pokoj3{
-        display:flex;
-        top: 105px;
-    /*    margin-left: 280px;*/
-        margin-right: -35px;     /*   width:100%; */
-      }
+      #dom>#pokoj3 {
+        display:flex;            /* oryginalnie bylo top:170px */   /* oryginalnie bylo margin-right:auto;*/
+        margin: 150px auto; 
+        width:100%;/* dopisalam width:100% */     /* oryginalnie bylo margin-left: auto;*/            /* margin-right: -35px; *   /*   width:100%; */
+      }                                               
           #dom>#pokoj3>.span4, .span5, .span6 {                    
             font-size: 1em;
-            width:30%; 
-            margin-right:40px;
+            width:29%;     
             background-color: #FDD700;       
-          }
-          .span5 {      
-            margin-left: 0px;
-            margin-right:40px;
-          }
+          }    /*bylo tu  .span5 {} ale skasowalam */
           #pokoj3 h3 {
             color: rgb(5, 66, 46);                       
           }                                                                                                        
@@ -319,11 +353,12 @@
 /* -------------POCZATEK klasa1 ------------ */
 
       #klasa1{                                                 /* margin:0px; padding:5px; height: auto;  border: none;  vertical-align: baseline; */
-        max-width:100%; /* 3 lutego dodalam na chwile slowo max- */             
+        max-width:1000px; /* 12 lutego oryginalnie bylo max-width:100% */ /* 3 lutego dodalam na chwile slowo max- */             
         min-height:300px;
         max-height:450px;
-        margin-top:10px;  
-        margin-bottom:10px;
+        margin:10px auto;/* dopisalam margin:10px auto w dniu 12 lutego*/
+        /*margin-top:10px;  
+        margin-bottom:10px; */
         background-color: brown;                         
       }
       #klasa1>.pictureText-panel{
@@ -352,11 +387,11 @@
               }
                 /* ----- ponizej dotyczy panelu li.monika-picture */
                 .monika-picture-text>.monika-picture{              
-                  list-style-type: none;
+                  /*list-style-type: none; */
                   width:50%;       /* 3 lutego dopisalam display:flex i float:left, lecz float:left nie dzialalo, ale chyba dziala juz */
                   float:left;
                   background-color: cornflowerblue;
-                  margin-left: -40px;             
+                  margin-left:0px;             
                   /* min-height:300px;
                   max-height:450px; */
                 }
@@ -364,7 +399,7 @@
                       background-image:url("kolorowa-mapa.jpg"); 
                       background-repeat: no-repeat; 
                       background-size: cover; 
-                      /* position: 50% 30%; */                                                   
+                      position: 20% 30%;                                                  
                       max-width:90%;                                           
                       min-height:300px;
                       max-height:450px;
@@ -374,7 +409,7 @@
                 .monika-picture-text>.monika-text{                                                       
                   float:right;                                                          
                   width:50%;
-                  margin-right:40px;
+                  margin-right:0px;
                   margin-top:30px;
                   background-color: rgb(216, 237, 100);
                 }    
@@ -410,10 +445,10 @@
                 }
 /* -----------POCZATEK kura --------------- */
       #kura{
-        width:100%;
+        max-width:1000px; /*oryginalnie bylo width:100% */
         height:550px;
         position: relative;
-        margin:0px;
+        margin:0px auto; /* to musi byc margin:0px auto */
         background-color:rgb(5, 114, 23); 
       } 
       #kura > div {
@@ -424,19 +459,19 @@
       }
       #kura>#kurczak1{
         display: flex;
-        top: 20px;
-        font-weight: bold;
-        /*margin-left: 280px;*/                    
+        width:100%; /* dopisalam 14 lutego width:100% */
+        margin:0px auto; /*oryginalnie bylo top: 20px; */
+        font-weight: bold;    /*margin-left: 280px;*/                    
       }
           #kura>#kurczak1>.ziarno1 {
             color:rgb(5, 66, 46);
-            font-size:1.7em;                  
+            font-size:1.7em; 
+            margin-left:0px; /* dopisalam 14lutego margin-left:0px; */                 
           }
           #kura>#kurczak1>.ziarno2{
             float:right;
-            margin-left:610px;
-            font-size: 0.9em;
-            vertical-align: 150px; 
+            margin-right:0px; /* dopisalam 14 luty margin-right:0px */  /* oryginalnie bylo margin-left:610px; */
+            font-size: 0.9em;   /* oryginalnie bylo vertical-align: 150px;*/ 
           }
           #kura>#kurczak1>.ziarno2>.interaktywny-napis {
             color: #ffffff;
@@ -444,20 +479,18 @@
           }
       #kura>#kurczak2{
         display:flex;
-        top: 55px;
-      /*  margin-left: 280px;*/
-        margin-right: -35px;                    
-      }
+        width:100%;  /*dopisalam teraz */    /*oryginalnie bylo top: 55px; */
+        margin:50px auto;          /* dopisalam 14 lutego margin:50px auto */
+      }                     /*margin:0px auto; *//* dopisalam margin:0px auto w dniu 13 luty 2021*/  /*  margin-left: 280px;*/   /*margin-right: -35px; */                         
           #kura>#kurczak2>.ziarno3, .ziarno4, .ziarno5 {
             font-size: 1em;   
-            width:30%;   
+            width:29%;  
             background-color:rgb(251, 255, 0); 
-            margin-top: 15px;                                
-          }
-          .ziarno4 {  /* tu NIE bylo napisu #kura */
-            margin-left: 40px;
-            margin-right: 45px;
-          }
+            }           /* oryginalnie bylo margin-top: 15px; */                                          
+           /* stary przyklad .ziarno4 musisz pododawac-patrz obok- .ziarno4 {/* tu NIE bylo napisu #kura //margin-left: 0px; margin-right:0px;} */   
+          #kurczak2 img{
+            width:100%; 
+          }  
           #kurczak2 h3{   /* tu NIE bylo napisu #kura */
           color: rgb(50, 58, 2);
           margin-top:2px;
@@ -473,17 +506,17 @@
 
 /*---------poczatek firma ---------------- */
       #firma{
-        width:100%;
+        max-width:100%; /* oryginalnie bylo max-width:100% */
         min-height:300px;
         position: relative;
-        margin:0px;
+         margin:0px; /* auto; /* wpisalam margin:0px auto w dniu 13 luty*/
         padding:0px;
         margin-top:40px;
         margin-bottom:0px;     
         background-color:rgb(114, 5, 10); 
       }             
       #firma>#prezes-1{
-        max-width: 100%;
+        max-width: 100%; /*bylo oryginalnie max-width:100% */
         min-height:220px;
         background-color: rgb(81, 255, 255);
         margin-top:20px;
@@ -598,7 +631,7 @@
       }
           #firma>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
             font-size: 0.8em;
-            margin-left:0%;
+            margin-left:5%;
           }             
       #firma>#prezes-2{
         max-width: 1000px; /* bylo max-width:100%; w dniu 6 luty godz.23.00 */
@@ -613,21 +646,25 @@
           }
           #firma>#prezes-2>.wiceprezes-2>.page-footer-long{
             font-size: 0.8em;
-            margin-left: 0%;
+            margin-left: 5%;
             text-align: justify;
             color:rgb(65, 6, 52);
           }
 
-      /*najwieksza rozdzielczosc laptopów*/
+    /*  *najwieksza rozdzielczosc laptopów*
       @media only screen and (max-width: 1000px) {
       .menu, .intro, .header1, #rodzic3, #rodzic4, #rodzic5, #DOM, #klasa1, #kura, #firma  { 
-                                display: block;}
-      }
-      @media only screen and (max-width: 680px) {
-      /* for medium mobile phones or IPad*/
+                                display: block;}} 
+     @media(min-width:400px){
+      #rodzic3, #rodzic4, #rodzic5, #DOM, #klasa1, #kura, #firma
+      {margin-left:30px;   to chyba bedzie ogolnie dobre bo daje marginesy 
+      margin-right:30px;}    }  */
+                                
+    /*  @media only screen and (max-width: 680px) {
+      /* for medium mobile phones or IPad--*-/-
       .intro {
-              display: none;}
-      }
+              display: none;} 
+      } */
     </style>
 </head>
 <body>
@@ -639,22 +676,21 @@
                                       <!--  bylo <div id="navmenu">  -->
             <div class="rightnav">   <!-- bylo grid_9--> <!-- bylo <ul class="nav1">-->
               <ul>  
-              <li><a href=""><img src="search.png" alt="search button" height="2%" width="2%" style="vertical-align: middle" /> Szukaj przejazdu</a></li>
-              <li><a href=""><img src="plus.png" alt="plus button" height="2%" width="2%" style="vertical-align: middle" /> Dodaj przejazd</a></li>
-              <li><a href="">Zarejestruj się</a></li>
-              <li><a href="">Zaloguj się</a></li>
+              <li><a class="navigation" href=""><img src="search.png" alt="search button" height="2%" width="2%" style="vertical-align: middle" /> Szukaj przejazdu</a></li>
+              <li><a class="navigation" href=""><img src="plus.png" alt="plus button" height="2%" width="2%" style="vertical-align: middle" /> Dodaj przejazd</a></li>
+              <li><a class="navigation" href="">Zarejestruj się</a></li>
+              <li><a class="navigation" href="">Zaloguj się</a></li>
               </ul>
             </div>         
     </div>
 
-    <div class="intro">Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a href="">FAQ</a>)
+    <div class="intro">Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a class="intro" href="">FAQ</a>)
     </div>
 <!--------------- ta czesc header1 ponizej jest napewno zle ------------------------------------------------------------------------------------------------>         
                                <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12-->  <!--  ; height:auto-->
     <div class="header1">
       <h1>Twój przejazd. Twój wybór.</h1>
-      <input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"><input type="datetime-local" maxlength="30"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"><input type="button" value="search">
-    </div>  
+      <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;">Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;">Miasto docelowe</button><hr class="pionowa-kreska" /><button id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-kalendarz.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="search" style="width:10%; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button></div>  
                                                    <!--container_12"-->   <!-- BYLO style="position:relative"--> <!-- wstawiam tutaj container_12" i zobaczymy -->
                                                    <!-- <img class="background" src="autobus1.jpg" alt="autobus" /-->  <!-- w img bylo style="width:100%"-->
                                                    <!-- <div style="position:absolute; right:350px; top:20px;">Twój przejazd. Twój wybór.</div>  
@@ -674,18 +710,21 @@
         <div id="dziecko1"><img src="kierowca.jpg" alt="driver"></div>
         <div id="dziecko2">
             <h2>Dokad jedziesz?</h2>
-            <h5>Wybierz sie w najoszczedniejsza podroz swojego zycia.</h5>
-            <a href=""><h5>Dodaj przejazd</h5></a>
+            <p class="dziecko2">Wybierz sie w najoszczedniejsza podroz swojego zycia.</p>
+            <a href=""><p class="dziecko2">Dodaj przejazd</p></a>
         </div>
     </div>         
     
     <div id="rodzic4">rodzic4
-        <div id="dziecko3">Dokad chcesz jechac?</div>
-        <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>       <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
-        <div id="dziecko5">
-            <a href=""><p>Warszawa  »  Gdansk   35zl    ></p></a>
-            <a href=""><p>Lublin    »  Warszawa 15zl    ></p></a>
-            <a href=""><p>Katowice  »  Berlin   15zl    ></p></a>
+        <div id="dziecko3">
+          <span class="dziecko3-1">Dokad chcesz jechac?</span>
+          <span class="dziecko3-2"><a href="">Zobacz najpopularniejsze przejazdy</a></span>
+        </div>
+  <!--  <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>   -->    <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
+        <div id="dziecko4"><!--tu wczesniej bylo dziecko5,ale zamienilam na dziecko4-->
+          <div class="gwiazda1"><a href=""><p>Warszawa  »  Gdansk   35zl    ></p></a></div> <!--dodalam 14lutego div classy gwiazda1, gwiazda2,gwiazda3 tutaj-->
+          <div class="gwiazda2"><a href=""><p>Lublin    »  Warszawa 15zl    ></p></a></div> 
+          <div class="gwiazda3"><a href=""><p>Katowice  »  Berlin   15zl    ></p></a></div>
         </div>
     </div>  
 
@@ -711,9 +750,9 @@
             <span class="sign3"><img src="location.jpg" alt="location3" /></span>
           </div>
           <div id="pokoj3">
-            <div class="span4"><h3>Społeczność</h3>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
-            <div class="span5"><h3>Podróżuj szybciej</h3>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
-            <div class="span6"><h3>Elastyczność</h3>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
+              <div class="span4"><h3>Społeczność</h3>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
+              <div class="span5"><h3>Podróżuj szybciej</h3>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
+              <div class="span6"><h3>Elastyczność</h3>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
           </div>
     </div>
 <!------------------------------------------  
