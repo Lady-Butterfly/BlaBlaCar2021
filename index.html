@@ -88,7 +88,7 @@
       .header1 { 
       width:100%; /* oryginalnie bylo width:100%;*/ 
       position:relative; /*11lutego dopisalam position:relative */ 
-      background-image:url("C:/projects/BlaBlaCar2021/autobus3.xml");  /* background-image:url("C:/projects/BlaBlaCar2021/autobus2.svg */
+      background-image:url("autobus2.svg");  /* background-image:url("C:/projects/BlaBlaCar2021/autobus2.svg */
       background-repeat: no-repeat;  /*background-attachment:fixed;*/ 
       background-position: 50% 50%;
       background-size:cover; 
@@ -126,9 +126,8 @@
         height:40px;
         margin-bottom:-14px;
         background-color: darkred;
-      }   
-      
-/* ------poczatek RODZIC 3 ------------ */ 
+      }         
+/* ------poczatek NOWY RODZIC 3 ------------ */ 
       #rodzic3 {
         max-width:1000px;  /*11 lutego zmienilam max-width:1000px na min-width:1000px, zas 10lutego zamienilam 100% width na max-width:1000px */
         height:400px;
@@ -175,8 +174,8 @@
         font-size: 1em;
         color:silver;
         background-color: steelblue;
-        margin-top:20px;
-        margin-bottom:20px;
+        margin-top:10px;
+        margin-bottom:10px;
       }
       #rodzic3>#rodzic3-dzieci>.dziecko2 .przycisk-Dodaj-przejazd{
         color:white;
@@ -186,8 +185,12 @@
         background-color: turquoise;
         border-radius: 25px;
         padding:15px 25px;
-      
       }
+      #rodzic3>#rodzic3-dzieci>.dziecko2 .przycisk-Dodaj-przejazd:hover{
+                  color:yellow;
+                  background-color: rgb(72, 72, 173);
+                  cursor: pointer;
+      }            
       /*kasuje 15lutego #rodzic3>#dziecko1{top:5px;width:50%;margin-left:0px;}//stare left:280px;*/      
       /*kasuje 15 lutego #rodzic3>#dziecko2{top:5px; width:50%; font-size:1em;float:right;margin-right:0px;/* bylo oryginalnie 14 lutego line-height: 1.8em;//oryginalnie 14lutego right:150px;*/                  
       /* kasuje 15lutego #dziecko2>a{ text-decoration: none; text-align: center;}//dawno temu bylo:#dziecko2>h2 {font-size: 1em;}//dawno temu bylo #dziecko2>h4 {font-size:0.5em;}*/ 
@@ -380,99 +383,70 @@
             color: rgb(5, 66, 46);                       
           }                                                                                                        
 /* -------------koniec dom ----------------- */
-/* -------------POCZATEK klasa1 ------------ */
-
-      #klasa1{                                                 /* margin:0px; padding:5px; height: auto;  border: none;  vertical-align: baseline; */
-        max-width:1000px; /* 12 lutego oryginalnie bylo max-width:100% */ /* 3 lutego dodalam na chwile slowo max- */             
-        min-height:300px;
-        max-height:450px;
-        margin:10px auto;/* dopisalam margin:10px auto w dniu 12 lutego*/
-        /*margin-top:10px;  
-        margin-bottom:10px; */
-        background-color: brown;                         
+/* ------poczatek KLASA1 - WZOR Z "NOWY RODZIC 3" ------------ */ 
+      #klasa1{
+        max-width:1000px;  /*11 lutego zmienilam max-width:1000px na min-width:1000px, zas 10lutego zamienilam 100% width na max-width:1000px */
+        height:400px;
+        position: relative;
+        margin:0px auto 0px auto; /* 11lutego zmienilam margin:0px 0px 0px 0px na margin:0px auto 0px auto; */
+        background-color:rgb(206, 59, 120);     
       }
-      #klasa1>.pictureText-panel{
-        max-width:100%;              /* 3 lutego dodalam na chwile slowo max- */
-        min-height:300px;
-        max-height:450px;
-        background-color: rgb(226, 151, 52);       
+      #klasa1>div {
+        position: absolute;
+        max-width:1000px; 
+        max-height:400px;
+        background-color:#FDD700;        
       }
-          #klasa1>.pictureText-panel>.section-content {
-            max-width:1000px;
-            min-height: 300px; 
-            max-height:450px;     /* 2 lutego sprawdzalam position: relative; */                                               
-       /*     margin-left:280px;*/
-            background-color: chartreuse;
-          }
-          #klasa1>.pictureText-panel>.section-content>.monika-picture-text{
-            list-style-type: none;
-            max-width: 100%;    /* 3 lutego   skasowalam max-width:90%;  a wpisalam max-width: 100%; */              
-            min-height:300px;
-            max-height:450px;
-            background-color: rgb(46, 34, 11);                            
-          }
-              .monika-picture-text{ /* 3 lutego dopisalam .monika-picture-text */            
-                list-style-type: none;
-                max-width:100%;
-              }
-                /* ----- ponizej dotyczy panelu li.monika-picture */
-                .monika-picture-text>.monika-picture{              
-                  /*list-style-type: none; */
-                  width:50%;       /* 3 lutego dopisalam display:flex i float:left, lecz float:left nie dzialalo, ale chyba dziala juz */
-                  float:left;
-                  background-color: cornflowerblue;
-                  margin-left:0px;             
-                  /* min-height:300px;
-                  max-height:450px; */
-                }
-                    .monika-picture .monika-picture-1{
-                      background-image:url("kolorowa-mapa.jpg"); 
-                      background-repeat: no-repeat; 
-                      background-size: cover; 
-                      position: 50% 30%;                                                  
-                      max-width:90%;                                           
-                      min-height:300px;
-                      max-height:450px;
-                      list-style-type: none;                                                                                            
-                    }  
-                /* ----- ponizej dotyczy panelu li.monika-text */
-                .monika-picture-text>.monika-text{                                                       
-                  float:right;                                                          
-                  width:50%;
-                  margin-right:0px;
-                  margin-top:30px;
-                  background-color: rgb(216, 237, 100);
-                }    
-                    .monika-text .monika-text-1{
-                      font-size:1.7em;
-                      font-weight: bold;
-                      text-align: left;
-                      color: rgb(5, 66, 46);
-                      background-color: #c041d1;              
-                    }
-                      .monika-text .monika-text-1-dlugi{
-                        font-size:1em;
-                        color: rgb(112, 140, 145);
-                        text-align:left;
-                        background-color: #ec60ff;
-                      }                                            
-                .przycisk-odkryj-autobusy{
-                  color: white;
-                  text-decoration: none;
-                  border:none;
-                  display:inline-flex;  /*  font-size:1em;*/
-                  background-color:rgb(0, 183, 255);
-                  border-radius: 25px 25px 25px 25px;
-                  list-style-type: none;
-                  padding:20px 25px 20px 25px;
-                  margin:0px;                
-                }
-                .przycisk-odkryj-autobusy:hover{
+      #klasa1>#klasa1-uczniowie{
+        display: flex;
+        width:100%;
+        margin:0px auto; 
+      }
+      #klasa1>#klasa1-uczniowie>.uczen1, .uczen2{
+        width:46%; 
+      }
+      #klasa1>#klasa1-uczniowie>.uczen1{
+        background-image:url("kolorowa-mapa.jpg");
+        min-height:320px;
+        background-position: 50% 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin:24px 2%;
+        border-radius: 4px;
+        background-color: red;
+      }
+      #klasa1>#klasa1-uczniowie>.uczen2{
+        background-color: rgb(70, 15, 42); 
+        margin:24px 0px; /*musi byc to*/
+      }
+      #klasa1>#klasa1-uczniowie>.uczen2 .nr1{
+        font-size:2em;
+        font-weight: bold;
+        margin-top: 35px;
+        color:antiquewhite;
+        background-color: blue;
+      }
+      #klasa1>#klasa1-uczniowie>.uczen2 .nr2{
+        font-size: 1em;
+        color:silver;
+        background-color: steelblue;
+        margin-top:10px;
+        margin-bottom:10px;
+      }
+      #klasa1>#klasa1-uczniowie>.uczen2 .przycisk-Odkryj-autobusy{
+        color:white;
+        text-decoration: none;
+        border: none;
+        display:inline-flex;
+        background-color: turquoise;
+        border-radius: 25px;
+        padding:15px 25px;
+      }
+      #klasa1>#klasa1-uczniowie>.uczen2 .przycisk-Odkryj-autobusy:hover{
                   color:yellow;
-                  font-weight: bold;
-                  background-color: blue;
+                  background-color: rgb(72, 72, 173);
                   cursor: pointer;
-                }
+      }
 /* -----------POCZATEK kura --------------- */
       #kura{
         max-width:1000px; /*oryginalnie bylo width:100% */
@@ -736,7 +710,7 @@
        <!-- sprawdz ta strone do stworzenia panelu wyszukiwania dla biletow SKAD  i DOKAD na obrazku 
         https://www.p-programowanie.pl/strony-internetowe/strona-responsywna#podgl%C4%85d-responsywny-strony-->
 <!------------- koniec czesci header1 ---------------------------------------------------------------------------------------------------------------------> 
-    <!-- dzis 15lutego zmieniam to na inna wersje-- 
+    <!-- dzis 15lutego zmieniam DIV ID RODZIC3 NA NOWY RODZIC3-- 
       <div id="rodzic3">rodzic3
         <div id="dziecko1"><img src="kierowca.jpg" alt="driver"></div>
         <div id="dziecko2">
@@ -779,7 +753,6 @@
               <div class="article3"><h3>Wybór należy do Ciebie</h3>Jedno miejsce, jedno wyszukanie, setki wyników. Wybierz na podstawie ceny, długości podróży lub po prostu Twojego nastroju.</div>
         </div>
     </div>
-    
     <div id="dom">DOM
           <div id="pokoj1">
             <span class="podpokoj1">3 rzeczy, za które pokochasz wspólne przejazdy BlaBlaCar.</span>
@@ -795,35 +768,16 @@
               <div class="span6"><h3>Elastyczność</h3>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
           </div>
     </div>
-<!------------------------------------------  
-    <div id="klasa1">to byl rodzic3
-      <div id="dziecko1"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/kierowca.jpg" alt="driver"></div>
-      <div id="dziecko2">
-          <h2>Dokad jedziesz?</h2>
-          <h5>Wybierz sie w najoszczedniejsza podroz swojego zycia.</h5>
-          <a href=""><h5>Dodaj przejazd</h5></a>
-      </div>
-      
-  </div>  
-  ------------------------------------------>
-    <div id="klasa1">KLASA1
-      <div class="pictureText-panel">
-        <article class="section-content">
-          <ul class="monika-picture-text">
-                <li class="monika-picture">
-                  <div class="monika-picture-1"></div>     <!-- BYLO style="width:100%"-->
-                </li>
-                <li class="monika-text">
-                  <span class="monika-text-1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</span>
-                  <p class="monika-text-1-dlugi">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. 
-                                                Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
-                  <a class="przycisk-odkryj-autobusy" href="#"> Odkryj autobusy na BlaBlaCar</a>
-                </li>                                              
-          </ul>
-        </article>
-      </div>
+    <div id="klasa1">wzor z NOWY rodzic3
+      <div id="klasa1-uczniowie">
+          <div class="uczen1"></div>
+          <div class="uczen2">
+            <p class="nr1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</p>
+            <p class="nr2">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
+            <a class="przycisk-Odkryj-autobusy" href="">Odkryj autobusy na BlaBlaCar</a>
+          </div>
+      </div>    
     </div>
-
     <div id="kura">KURA
       <div id="kurczak1">
             <span class="ziarno1">Odwiedź nasz blog </span>
@@ -834,9 +788,8 @@
             <div class="ziarno4"><img src="las.jpg" alt="las" /><h3>6 patentów na komfort podróży jesienią</h3><br />Poznaj jesienne patenty podróżnych🍂<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
             <div class="ziarno5"><img src="twarz.jpg" alt="twarz" /><h3>Co zrobić, żeby znaleźć pasażerów i wypełnić wolne miejsca w samochodzie?</h3>To łatwiejsze niż myślisz… Poniżej znajdziesz nasze porady :)<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
       </div>
-  </div>
-  
-  <div id="firma">FIRMA 
+    </div>
+    <div id="firma">FIRMA 
       <div id="prezes-1">
         <div class="wiceprezes-1">
           <div class="ksiegowosc">
@@ -853,7 +806,6 @@
                   <li class="odnosnik"><a class="hiperlacze" href="">Praca w BlaBlaCar</a></li>
                 </ul>              
             </span>
-
             <span class="dzial-2">
               <div class="SelectLanguage">
                         <!-- moze --  ::before  -->
@@ -919,7 +871,7 @@
           <span class="page-footer-long">BlaBlaCar to największy serwis wspólnych przejazdów. Łączymy ludzi, by mogli razem podróżować skądkolwiek dokądkolwiek. Nie tylko z centrum wielkiego miasta.</span>
         </div>
       </div>    
-  </div>
+    </div>
 </div>  
 </body>
 </html>
