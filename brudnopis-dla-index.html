@@ -1,0 +1,248 @@
+zalacznik-do-index.html
+
+   /* poczatek "ze strony chlopaka" to ponizej 
+
+      @font-face{
+       font-family:'gt-eesti';
+       font-weight:400;
+       src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2'),
+       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff') format('woff'),
+       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.ttf') format('truetype');
+       font-style:normal;}
+       
+      @font-face{
+       font-family:'gt-eesti';
+       font-weight:500;
+       src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Medium.woff2') format('woff2'),
+       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Medium.woff') format('woff'), 
+       url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Medium.ttf') format('truetype');
+       font-style:normal;} 
+       html{font-family:gt-eesti,'Helvetica Neue',Helvetica,Arial,sans-serif;
+       quotes:'“' '”';
+       -webkit-text-size-adjust:100%;}
+        :lang(de){quotes:'„' '“';} 
+        :lang(fr){quotes:'« ' ' »';} 
+        :lang(es-ES){quotes:'«' '»';} 
+        :lang(hu){quotes:'„' '“';} 
+        :lang(pl){quotes:'„' '“';} 
+        :lang(ru){quotes:'« ' ' »';}
+    koniec "ze strony chlopaka" */
+
+
+   /* poczatek "od Martyny"- to ponizej 
+      @font-face {
+      font-family: "gt-eesti";
+      src: url("GT-Eesti.eot");
+      src: url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), 
+           url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.woff2") format("woff2"),
+           url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.woff") format("woff"),
+           url("http://blablacar.pl/fonts/gt-eesti/GT-Eesti-Pro-Display-Regular.ttf") format("truetype");}
+    * koniec "od Martyny" */
+
+      /*  src:url("http://blablacar.pl/fonts/GTEestiProText-Regular") format("ttf"),
+            url("http://blablacar.pl/fonts/GTEestiProText-Regular.eot") format("eot"), 
+            url("http://blablacar.pl/fonts/GTEestiProText-Regular.woff") format("woff"),
+            url("http://blablacar.pl/fonts/GTEestiProText-Regular.woff2") format("woff2");} */
+/* sprawdzam teraz dzialanie czcionki nowej */
+
+
+        /* @font-face {/* z internetu z ich strony page source 
+         font-family:'gt-eesti'; font-weight:400; src:url('https://cdn.blablacar.com/kairos/assets/build/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2');} */                     
+        /* img, li, a {color: rgb(22, 172, 241); text-decoration: none; z-index: 10;}  li {font-size: 1vw; margin: 0px; display: inline;   background-color:rgb(231, 181, 181); } */
+
+   /* z internetu skopiowane, moze sie kiedys przyda background-color: blue;
+                                             margin: 0px 1px 1px 0px;
+                                             border: 1px solid rgb(6, 247, 26);
+                                             border-radius: 3px;
+                                            -moz-border-radius: 5px;
+                                            -webkit-border-radius: 5px;
+                                             box-shadow: 0px 2px 3px gray;
+                                            -moz-box-shadow: 0px 2px 3px gray;
+                                            -webkit-box-shadow: 0px 2px 3px gray; */
+
+
+<!-------------------- tu na dole jest dobra wersja stopki   
+                           stare dobre div class footer nav tutaj np.: tabela z wyborem Jezyka i ikony do aplikacji( facebook,itd.) </div    
+    d i v id="clear"> BlaBlaCar, 2021&copy;/div
+    d i v id="f o o t e r bottom container_12">
+            <p>BlaBlaCar to najwiekszy serwis wspolnych przejazdow. Laczymy ludzi, by mogli razem podrozowac skadkolwiek dokadkolwiek. Nie tylko z centrum wielkiego miasta./p
+    /d i v> 
+    p#clear {  /* DZIS 1 lutego 2021 dopisalam tutaj obok litere p */
+        background-color: rgb(232, 231, 233);
+        text-align: left;
+        padding: 10px 10px 10px 120px;        
+      }
+      #footer-bottom, p{
+        background-color: #cccaca; 
+        text-align:center; 
+        padding: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px; 
+        font-size:1vw;     ------------>
+
+
+/* --------------------POCZATEK klasa1 ------------ */ wykasowane w dniu 17luty w imie nowego kodu
+
+      #klasa1{                                                 /* margin:0px; padding:5px; height: auto;  border: none;  vertical-align: baseline; */
+        max-width:1000px; /* 12 lutego oryginalnie bylo max-width:100% */ /* 3 lutego dodalam na chwile slowo max- */             
+        min-height:300px;
+        max-height:450px;
+        margin:10px auto;/* dopisalam margin:10px auto w dniu 12 lutego*/
+        /*margin-top:10px;  
+        margin-bottom:10px; */
+        background-color: brown;                         
+      }
+      #klasa1>.pictureText-panel{
+        max-width:100%;              /* 3 lutego dodalam na chwile slowo max- */
+        min-height:300px;
+        max-height:450px;
+        background-color: rgb(226, 151, 52);       
+      }
+          #klasa1>.pictureText-panel>.section-content {
+            max-width:1000px;
+            min-height: 300px; 
+            max-height:450px;     /* 2 lutego sprawdzalam position: relative; */                                               
+       /*     margin-left:280px;*/
+            background-color: chartreuse;
+          }
+          #klasa1>.pictureText-panel>.section-content>.monika-picture-text{
+            list-style-type: none;
+            max-width: 100%;    /* 3 lutego   skasowalam max-width:90%;  a wpisalam max-width: 100%; */              
+            min-height:300px;
+            max-height:450px;
+            background-color: rgb(46, 34, 11);                            
+          }
+              .monika-picture-text{ /* 3 lutego dopisalam .monika-picture-text */            
+                list-style-type: none;
+                max-width:100%;
+              }
+                /* ----- ponizej dotyczy panelu li.monika-picture */
+                .monika-picture-text>.monika-picture{              
+                  /*list-style-type: none; */
+                  width:46%;       /* 3 lutego dopisalam display:flex i float:left, lecz float:left nie dzialalo, ale chyba dziala juz */
+                  float:left;
+                  background-color: cornflowerblue;
+                  margin-left:2%; /* bylo 0px w dniu 17 luty */             
+                  /* min-height:300px;
+                  max-height:450px; */
+                }
+                    .monika-picture .monika-picture-1{
+                      background-image:url("kolorowa-mapa.jpg"); 
+                      background-repeat: no-repeat; 
+                      background-size: cover; 
+                      position: 50% 30%;                                                  
+                      max-width:90%;                                           
+                      min-height:300px;
+                      max-height:450px;
+                      list-style-type: none;                                                                                            
+                    }  
+                /* ----- ponizej dotyczy panelu li.monika-text */
+                .monika-picture-text>.monika-text{                                                       
+                  float:right;                                                          
+                  width:46%;
+                  margin-right:2%; /* bylo 0px margin-right w dniu 17lutego*/
+                  margin-top:30px;
+                  background-color: rgb(216, 237, 100);
+                }    
+                    .monika-text .monika-text-1{
+                      font-size:1.7em;
+                      font-weight: bold;
+                      text-align: left;
+                      color: rgb(5, 66, 46);
+                      background-color: #c041d1;              
+                    }
+                      .monika-text .monika-text-1-dlugi{
+                        font-size:1em;
+                        color: rgb(112, 140, 145);
+                        text-align:left;
+                        background-color: #ec60ff;
+                      }                                            
+                .przycisk-odkryj-autobusy{
+                  color: white;
+                  text-decoration: none;
+                  border:none;
+                  display:inline-flex;  /*  font-size:1em;*/
+                  background-color:rgb(0, 183, 255);
+                  border-radius: 25px 25px 25px 25px;
+                  list-style-type: none;
+                  padding:20px 25px 20px 25px;
+                  margin:0px;                
+                }
+                .przycisk-odkryj-autobusy:hover{
+                  color:yellow;
+                  background-color: rgb(72, 72, 173);
+                  cursor: pointer;
+                }
+<!------------------------------------------  
+    <div id="klasa1">to byl rodzic3
+      <div id="dziecko1"><img src="C:/Users/Monisia/Desktop/MONIKA/HTML cwiczenia/BlaBlaCar/kierowca.jpg" alt="driver"></div>
+      <div id="dziecko2">
+          <h2>Dokad jedziesz?</h2>
+          <h5>Wybierz sie w najoszczedniejsza podroz swojego zycia.</h5>
+          <a href=""><h5>Dodaj przejazd</h5></a>
+      </div>
+      
+  </div>  
+  ------------------------------------------>
+  <div id="klasa1">KLASA1
+    <div class="pictureText-panel">
+      <article class="section-content">
+        <ul class="monika-picture-text">
+              <li class="monika-picture">
+                <div class="monika-picture-1"></div>     <!-- BYLO style="width:100%"-->
+              </li>
+              <li class="monika-text">
+                <span class="monika-text-1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</span>
+                <p class="monika-text-1-dlugi">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. 
+                                              Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
+                <a class="przycisk-odkryj-autobusy" href="#"> Odkryj autobusy na BlaBlaCar</a>
+              </li>                                              
+        </ul>
+      </article>
+    </div>
+  </div>
+
+/* ----------- koniec klasa1 -------------- */  
+
+
+
+/* to ponizej dawniej nalezalo do  #rodzic3 */        
+/*kasuje 15lutego #rodzic3>#dziecko1{top:5px;width:50%;margin-left:0px;}//stare left:280px;*/      
+/*kasuje 15 lutego #rodzic3>#dziecko2{top:5px; width:50%; font-size:1em;float:right;margin-right:0px;/* bylo oryginalnie 14 lutego line-height: 1.8em;//oryginalnie 14lutego right:150px;*/                  
+/* kasuje 15lutego #dziecko2>a{ text-decoration: none; text-align: center;}//dawno temu bylo:#dziecko2>h2 {font-size: 1em;}//dawno temu bylo #dziecko2>h4 {font-size:0.5em;}*/ 
+  /*kasuje 15lutego  #dziecko2>a>.dziecko2 {
+      color: rgb(1, 255, 22);
+      background-color:rgb(0, 183, 255);
+      border-radius: 25px 25px 25px 25px;
+      border:none;
+      margin-top:0px;
+      padding: 10px 15px 10px 15px;} */    
+
+
+                                            
+/* --------- ponizej container_12 czyli dawne stare dzieje, juz nie jest wazne !
+
+                                                   <!--container_12"-->   <!-- BYLO style="position:relative"--> <!-- wstawiam tutaj container_12" i zobaczymy -->
+                                                   <!-- <img class="background" src="autobus1.jpg" alt="autobus" /-->  <!-- w img bylo style="width:100%"-->
+                                                   <!-- <div style="position:absolute; right:350px; top:20px;">Twój przejazd. Twój wybór.</div>  
+        
+                                                    <span class="ticket-search" style="position:absolute; right:350px; top:250px; height:300px; display:inline-block;">
+                                                    <label class="LocationFrom"><input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"></label>
+                                                    <label class="LocationTo"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"></label>
+                                                    <label class="c"><input type="datetime-local" maxlength="30"></label>
+                                                    <label class="d"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"></label>
+                                                    <label class="button holder"><input type="button" value="search"></label>
+                                                      </span>    <-- h1 width:100%; height:150px;-->       
+       <!-- sprawdz ta strone do stworzenia panelu wyszukiwania dla biletow SKAD  i DOKAD na obrazku 
+        https://www.p-programowanie.pl/strony-internetowe/strona-responsywna#podgl%C4%85d-responsywny-strony-->
+<!------------- koniec czesci header1 ---------------------------------------------------------------------------------------------------------------------> 
+    <!-- dzis 15lutego zmieniam DIV ID RODZIC3 NA NOWY RODZIC3-- 
+      <div id="rodzic3">rodzic3
+        <div id="dziecko1"><img src="kierowca.jpg" alt="driver"></div>
+        <div id="dziecko2">
+            <h2>Dokad jedziesz?</h2>
+            <p class="dziecko2">Wybierz sie w najoszczedniejsza podroz swojego zycia.</p>
+            <a href=""><p class="dziecko2">Dodaj przejazd</p></a>
+        </div>
+      </div>  -->
+---------------------------------------------- koniec container_12 ----------------------------------- */
