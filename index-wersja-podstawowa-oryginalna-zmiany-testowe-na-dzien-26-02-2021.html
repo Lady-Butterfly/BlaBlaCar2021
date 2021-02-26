@@ -3,6 +3,7 @@
 <head>
     <meta charset= "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="reset.css" alt="dokument reset" />  -->
     <link rel="icon" href="znaczki-blablacar.png" alt="znaczki blablacar" height="10%" width="10%" /> 
     <title>Wspolne przejazdy dla kierowcow i pasazerow podrozujacych w te sama strone | BlaBlaCar</title>
     
@@ -11,75 +12,144 @@
       @font-face {
         font-family:"GTEestiProText-Regular";
         src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.ttf");        /* src:url("https://en.bestfonts.pro/font/gt-eesti-pro"); strona zrodlowa czcionki gt-eesti */
-        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular") format("ttf"),
+        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.ttf") format("ttf"),
             url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.eot") format("eot"),
             url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff") format("woff"),
             url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff2") format("woff2"); 
       }
       * {
         margin:0px auto;
-        padding:0px 0px 0px 0px;
-        font-family: "GTEestiProText-Regular", Helvetica; 
+        padding:0px;
         box-sizing:border-box;
-           
+        font: inherit;  
+        font-size: 100%;
+       /*text-size-adjust: 100%;*/ 
+       vertical-align: baseline;
       }
       body {
         background-color: rgb(34, 6, 158);    /*font-style: normal;*/   /*font-weight:normal;} */
         color:rgb(136, 133, 133);
-        font: inherit; /* wpisane 17 lutego o polnocy */
-        /*width:100%;*/    /*dopisalam 11lutego max-width:1000px i bylo tez width:100%; */           
+        /* tu bylo font:inherit; */                                min-width:960px; /* min-width bardzo wazne!!! to pomniejsza strone tak jak chcesz :) */
+        font-family: "GTEestiProText-Regular", Helvetica; 
+      /*  width:100%; */   /*dopisalam 11lutego max-width:1000px i bylo tez width:100%; */           
       }
       #wrapper {
         width:100%;      /* 11 lutego godz 12.23 z width:100% zmieniam na max-width:1000px, ale to pogorszylo strone */
-        /*margin: 0px auto 0px auto;*/
-        background-color: rgb(255, 255, 255);   /* UWAGA! 11 lutego o polnocy ZMIENILAM WRAPPER NA MAX-WIDTH:1000PX, stad sa kolory granatowy wokolo !!! */     
+      /*  margin: 0px auto 0px auto;*/
+        background-color: rgb(255, 255, 255); 
+        min-height:600px; 
+        height:auto;                                    /* UWAGA! 11 lutego o polnocy ZMIENILAM WRAPPER NA MAX-WIDTH:1000PX, stad sa kolory granatowy wokolo !!! */     
       }
-      .menu{
-        width:100%; /* super jest width:100% */
+      #GlowneNav{
+       width:100%; background-color:#FDD700; height:70px; position:fixed; z-index:1; top:0px; box-sizing: border-box; margin:0px auto; font-size: 100%;}
+      
+    /*z sekcji6  #GlowneNav>div {
+        position:absolute; 
+        width:100%;                      
+      }*/                                                   
+      #GlowneNav>#GlowneNav-wrapper { /*tez dobrze max-width:1500px;*/ /*dopisalam max do -> */ max-height:70px;              width:100%;
+       display: /*flex*/inline-block; 
+        margin:0px auto; /* musi byc bo inaczej przestawia nawigacje */  
+        padding:15px 5px;
+        font-size:1em;                   
+        font-weight: bold;  
+        background-color: #e97c00;                
+      }
+          #GlowneNav>#GlowneNav-wrapper>.leftnav {
+            font-size:1.7em;    float:left;
+            background-color: #177686;           
+          }
+          #GlowneNav>#GlowneNav-wrapper>.leftnav>.logo{
+            width: 200px; float: left; background-color: antiquewhite;
+          }
+          #GlowneNav>#GlowneNav-wrapper>.leftnav>.logo a {
+            text-decoration: none; color: rgb(206, 2, 2); 
+          }
+          #GlowneNav>#GlowneNav-wrapper>.leftnav img {
+            height:35px; width:35px; /*margin-bottom:5px;*/}
+
+          #GlowneNav>#GlowneNav-wrapper>.rightnav{
+            float:right;                             margin-right:5%;               width:auto;
+            background-color: #58225f;
+          } 
+          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul{
+             list-style: none; float: right; padding-top: 10px;
+          }
+          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li{
+           margin-right:10px; background-color: antiquewhite; display: inline-block; 
+          }
+          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li a{
+           text-decoration: none; color: rgb(204, 2, 2);
+          }
+          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li img{
+            height:25px; width:25px; vertical-align:middle; margin-right: 10px;         margin-bottom:5px; }
+      /*.GlowneNav{                    ** bylo: .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} **
+        width:100%;** super jest width:100% **
         background-color: rgb(197, 8, 166); 
         height:70px;
-        top:0px;            /* bylo: margin: 0px 0px 0px -30px;   */
+        top:0px;           
         z-index:1;
-        position:fixed;
-      }              /* bylo: .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} */
-      .leftnav{
-        padding:10px;                         /* zmienilam 170px druga pozycje na inne wartosci */
-        /*text-align:left; */ 
-        float:left;
-        margin-left:0px;           /* margin-top: 10px; margin-bottom: 20px;  */
-      }
-      /* poczatek prawej nawigacji */                    /*BYLO .nav>.nav-item { float: right; padding:20px 10px 20px 10px; text-align: right;} */
+        position:fixed;   
+      }  
+      /*@media (max-width:500px){
+        .leftnav, .rightnav ul li {flex-direction: row; text-align: center; display: block; flex-wrap: wrap; width:20%;
+        }
+      }*zapasowe/ /*albo inne zapasowe/
+       WAZNE! zamiana tego w dniu 24lutego @media (max-width:600px){
+       .rightnav{
+          position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); justify-items:center ; text-align: center; 
+        }
+      }        
+      .leftnav {           *  https://d2vvvmpdbt3kid.cloudfront.net/build/images/blablacar_social-b99e0057e6158127626be17cb8ee8fb1.png *
+        text-align:left; background-color: #FDD700;
+        float:left;                
+        margin:2% 10%;     
+      }    
+      .leftnav .siteName {color:darkblue; font-size: 24px; background-color: darkgreen;}
+      .leftnav .siteName img {margin-right:10px;}
+      .leftnav .siteName a {text-decoration: none;} 
+      .rightnav {
+        float: right;        
+        text-align: right;             
+        margin:2% 10%;            
+        position: absolute;      
+      }                
       .rightnav ul { 
-        float:right;                                /* BYLO  width: 100%; */                      /* padding: 5px 0px -5px 0px;  */
-        padding: 10px;                                 /* bylo: padding: -20px 0px -5px 0px; */
-        margin: 15px 15px;
-        list-style-type: none;
-        text-align: right;   /* BYLO  .nav-item>a{ text-decoration: none; color: rgb(20, 183, 233); font-weight: bold;}  */   /*   Bylo: padding: 0px 2px 20px 2px; */
-        position: absolute;                
+        // kiedys BYLO  width: 100%; //                    
+        list-style-type: none;                                 
       }                   
-      .rightnav ul li {                          /* bylo: li>a */
-        display: inline;
-        padding-right: 10px; /*to sa spacje w nawigacji prawej gornej */ 
-      }                                               /* right: 20px; width: 100px;     */                          
-      /*.rightnav ul li*/a.navigation {
+      .rightnav ul li {                        
+        display:inline;      background-color: brown;
+        padding:0px 10px;*to sa spacje w nawigacji prawej gornej *
+      }                                                                     
+      a.navigation { 
         text-decoration: none;  
-        color: rgb(53, 193, 248);
+        color: rgb(9, 76, 102);
         font-weight: bold;
       }        
-      li a.navigation:hover {                      /*kolor to taki dodatek do arkusza */
-        color: rgb(248, 39, 154);
-      }                                      
-      .intro{
+      li a.navigation:hover {    
+        color: rgb(248, 39, 154);}*/  
+
+      .GlowneIntro{
         width:100%;   /*oryginalnie bylo width:100%*/
         height: 58px; 
-        /*bylo tu position: relative; */
+         position: relative; 
         background-color: rgb(32, 43, 43);
         color:rgb(136, 138, 137);
         text-align:center; 
         padding-top:20px; /* dopisalam 10lutego wieczorem */ 
-        margin-top: 70px; 
-        font-size: 1em;    
-      }                                   
+        margin-top: 70px;  
+        font-size:1em;  
+      }   
+       .GlowneIntro symbol{ /* dopisalam .GlowneIntro symbol w dniu 22luty */
+         background-color: transparent;
+         color:grey;  
+         border:1px solid grey;  
+         border-radius:100%;
+         width:20px;
+         margin-right:5px;
+         display:inline-block;
+       }                                
         a.intro {    /* 11lutego napisalam ".intro a.intro" zamiast "a.intro" */  /* napisalam a.intro, zamiast .intro>a 10lutego wieczorem*/
         color:rgb(20, 183, 233);
         background-color: #FDD700;
@@ -87,14 +157,14 @@
         margin:0px;
         padding:0px;
       }
-      .header1 { 
+      .GlownyHeader { 
       width:100%; /* oryginalnie bylo width:100%;*/ 
       position:relative; /*11lutego dopisalam position:relative */ 
       background-image:url("autobus2.svg");  /* background-image:url("C:/projects/BlaBlaCar2021/autobus2.svg */
       background-repeat: no-repeat;  /*background-attachment:fixed;*/ 
       background-position: 50% 50%;
       background-size:cover; 
-      height:355px;     /* bylo height:355px; nie wiem o co chodzi w tym  right: 200px; */       /* padding: -40px; */     /* overflow:visible; */        
+      height:355px;        /* padding: -40px; */     /* overflow:visible; */        
       } 
       h1{ /*dopisalam 10luty*/
         /* oryginalnie bylo width:100%; */
@@ -129,29 +199,28 @@
         margin-bottom:-14px;
         background-color: darkred;
       }         
-/* ------poczatek NOWY RODZIC 3 ------------ */ 
-      #rodzic3 {
+/* ------poczatek section1 (dawniej NOWY RODZIC 3) ------------ */ 
+      #section1 {
         max-width:1000px;  /*11 lutego zmienilam max-width:1000px na min-width:1000px, zas 10lutego zamienilam 100% width na max-width:1000px */
         height:400px;
         position: relative;
         margin:0px auto 0px auto; /* 11lutego zmienilam margin:0px 0px 0px 0px na margin:0px auto 0px auto; */
         background-color:rgb(206, 59, 120);     
       }
-      #rodzic3>div {
+      #section1>div {
         position: absolute;
         max-width:1000px; 
-        max-height:400px;
-        background-color:#FDD700;        
+        max-height:400px;       
       }
-      #rodzic3>#rodzic3-dzieci{
+      #section1>#section1-group{
         display: flex;
         width:100%;
-        margin:0px auto; 
+        margin:0px auto; background-color:#FDD700; 
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko1, .dziecko2{
+      #section1>#section1-group>.group1, .group2{
         width:46%; 
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko1{
+      #section1>#section1-group>.group1{
         background-image:url("kierowcaBlaBla.jpg");
         min-height:320px;
         background-position: 50% 30%;
@@ -161,25 +230,25 @@
         border-radius: 4px;
         background-color: red;
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko2{
+      #section1>#section1-group>.group2{
         background-color: rgb(70, 15, 42); 
         margin:24px 0px; /*musi byc to*/
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko2 .nr1{
+      #section1>#section1-group>.group2 .nr1{
         font-size:2em;
         font-weight: bold;
-        margin-top: 85px;
+        margin-top: 85px; /* cale section1 jest jak section5, z wyjatkiem tego 85px */
         color:antiquewhite;
         background-color: blue;
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko2 .nr2{
+      #section1>#section1-group>.group2 .nr2{
         font-size: 1em;
         color:silver;
         background-color: steelblue;
         margin-top:10px;
         margin-bottom:10px;
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko2 .przycisk-Dodaj-przejazd{
+      #section1>#section1-group>.group2 .button-Dodaj-przejazd{
         color:white;
         text-decoration: none;
         border: none;
@@ -188,83 +257,66 @@
         border-radius: 25px;
         padding:15px 25px;
       }
-      #rodzic3>#rodzic3-dzieci>.dziecko2 .przycisk-Dodaj-przejazd:hover{
+      #section1>#section1-group>.group2 .button-Dodaj-przejazd:hover{
                   color:yellow;
                   background-color: rgb(72, 72, 173);
                   cursor: pointer;
-      }            
-      /*kasuje 15lutego #rodzic3>#dziecko1{top:5px;width:50%;margin-left:0px;}//stare left:280px;*/      
-      /*kasuje 15 lutego #rodzic3>#dziecko2{top:5px; width:50%; font-size:1em;float:right;margin-right:0px;/* bylo oryginalnie 14 lutego line-height: 1.8em;//oryginalnie 14lutego right:150px;*/                  
-      /* kasuje 15lutego #dziecko2>a{ text-decoration: none; text-align: center;}//dawno temu bylo:#dziecko2>h2 {font-size: 1em;}//dawno temu bylo #dziecko2>h4 {font-size:0.5em;}*/ 
-        /*kasuje 15lutego  #dziecko2>a>.dziecko2 {
-            color: rgb(1, 255, 22);
-            background-color:rgb(0, 183, 255);
-            border-radius: 25px 25px 25px 25px;
-            border:none;
-            margin-top:0px;
-            padding: 10px 15px 10px 15px;} */
-/* ---------poczatek: RODZIC4 --------------------------- */          
-      #rodzic4 {
+      }
+/* --------- koniec section1 -------------------------------------------- */          
+/* ---------poczatek: section2 (dawny rodzic4) --------------------------- */          
+      #section2 {
         position:relative; 
         max-width:1000px;   /* 10lutego zamienilam 100% width na 1000px */
         height:170px;
         margin: 0px auto;       /*12 lutego dopisalam auto*/               /* BYLO 31.01 margin:0px 0px 0px 0px; */
         background-color:#0faaf1;
       }
-      #rodzic4 > div {
+      #section2 > div {
         position:absolute; 
         max-width:1000px;
         max-height:170px;                       
         background-color:#15fd00;
+        
       }                                 /* BYLO 31.01 padding: 5px; */   /* line-height:40px; */   
-      #rodzic4>#dziecko3 {
+      #section2>#section2-text {
         display:flex;
         margin:0px auto;/* oryginalnie bylo top:30px; left:0px; */
         width:100%;
-        font-weight: bold;
-          /* BYLO:   width: auto; */
       }    
-       #rodzic4>#dziecko3>.dziecko3-1{
-        color: rgb(255, 5, 121);
+       #section2>#section2-text>.podtekst1{
+        background-color: rgb(255, 5, 121);
         font-size:1.6em;
         margin-left:2%;
+        font-weight: bold;
        }
-      #rodzic4>#dziecko3>.dziecko3-2{
+      #section2>#section2-text>.podtekst2{
         float:right;
         margin-right:2%;
         font-size:0.9em;
+        background-color:rgb(119, 49, 49);
       }
-      #rodzic4>#dziecko3>.dziecko3-2>a{
-        color:white;
+      #section2>#section2-text>.podtekst2>a{
+        color:rgb(5, 5, 5);
         text-decoration: none;
       }
-      /*#dziecko4 {
-       margin-top:0px;
-       right:20px;
-        font-weight: bold;   /* BYLO:width:auto; *  }                       
-         
-          #dziecko4>a{
-            text-decoration: none;
-            background-color:#15fd00;   /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*
-            font-size: 0.9em; 
-            color: white; 
-          }  */         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
-      #rodzic4>#dziecko4 { /*oryginalnie bylo #dziecko4 */
+      /*#dziecko4 { margin-top:0px; right:20px; font-weight: bold;   /* BYLO:width:auto; *  }                       
+        #dziecko4>a{text-decoration: none; background-color:#15fd00; /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*font-size: 0.9em; color: white;}*/         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
+      #section2>#section2-offers { /*oryginalnie bylo #dziecko4 */
         width:100%;   
         display: flex;          /*stare  left: 260px;*/ 
         margin:60px auto; /*dopisalam teraz *//* oryginalnie bylo margin-top:60px; */  
       }
-        #dziecko4 .gwiazda1, /*#rodzic4>*/#dziecko4 .gwiazda2, /*#rodzic4>*/#dziecko4 .gwiazda3 {
+        #section2-offers .offer1, /*#rodzic4>*/#section2-offers .offer2, /*#rodzic4>*/#section2-offers .offer3 {
           width:29%;
           height:55px;
           background-color: white;
           border-radius: 5px 5px 5px 5px;
           text-align: center;  
         }
-        #dziecko4  a {
+        #section2-offers  a {
          text-decoration: none;
         }
-        #dziecko4 p{     
+        #section2-offers p{     
             font-size: 1.2em;
             padding:15px 15px 15px 15px;}
 /* to na chwile ukrywam #dziecko4>a{
@@ -275,51 +327,49 @@
             background-color: white;
             border-radius: 5px 5px 5px 5px;
           }
-          #dziecko4>a>p{     
-            font-size: 1.2em;
-            padding:5px 15px 5px 15px;} */
-                   /* ;border:none; PRZYDA SIE do dziecka5 */
-/*--------- koniec RODZIC4 ----- */
-/* --------  poczatek RODZIC5 ----------*/
-      #rodzic5{
+          #dziecko4>a>p{font-size: 1.2em; padding:5px 15px 5px 15px;} */ /* ;border:none; PRZYDA SIE do dziecka5 */
+/*--------- koniec section2 (dawny rodzic4) -------------- */
+
+/* --------  poczatek section3 (dawniej rodzic5) ----------*/
+      #section3{
         max-width:1000px;/* 10lutego zamienilam 100% width na 1000px */
         height:250px;
         position: relative;
         margin:0px auto;
         background-color:rgb(255, 187, 0); 
       } 
-      #rodzic5 > div {
+      #section3 > div {
         position:absolute; 
         max-width:1000px;
         max-height:100px;                      
         background-color:#ec60ff;
       }
-      #rodzic5>#dziecko1{
+      #section3>#section3-text{
         display: flex;
         width:100%;
         margin:0px auto; /* oryginalnie bylo top: 20px; */   
       }
-          #rodzic5>#dziecko1>.text1 {
+          #section3>#section3-text>.text1 {
             color:rgb(116, 253, 4);
             font-size:1.7em;
             margin-left:2%; /* dopisalam margin-left:0px w dniu 14 luty */
             font-weight: bold;
           }
-          #rodzic5>#dziecko1>.text2{
+          #section3>#section3-text>.text2{
             float:right; 
              margin-right:2%; /*    margin-left:285px;*/
             font-size: 0.9em;
           }
-          #rodzic5>#dziecko1>.text2>a {
+          #section3>#section3-text>.text2>a {
             color: #0b6268;
             text-decoration: none;  
           }
-      #rodzic5>#dziecko2 {
+      #section3>#section3-articles {
         display: flex;
         width:100%;
         margin:65px auto;     /* oryginalnie bylo top:55px */ /* stare margin-left: 280px;*/ /*stare oryginalnie bylo margin-right: -35px; */
       }   
-          #rodzic5>#dziecko2>.article1, .article2, .article3 {
+          #section3>#section3-articles>.article1, .article2, .article3 {
             font-size: 1em;   
             width:29%;
             background-color:rgb(86, 22, 206);                                 
@@ -327,87 +377,87 @@
         /*oryginalnie byl tu caly .article2 {  // tu NIE bylo napisu #rodzic5 //
           margin-left: 40px;
           margin-right: 45px;} */
-          #dziecko2 h3 {   /* tu NIE bylo napisu #rodzic5 */
+          #section3-articles h3 {   /* tu NIE bylo napisu #rodzic5 */
            color: rgb(220, 243, 14);
           }
-/* -------- koniec RODZIC5 ------------------ */     
+/* -------- koniec section3 (dawnego RODZIC5) ---------------------- */     
 
-/*---------POCZATEK dom ---------------------- */
-      #dom{
+/*---------POCZATEK section4 (dawniej dom) ------------------------- */
+      #section4{
         max-width:1000px;   /* 10lutego zamienilam 100% width na 1000px */
         height:400px;
         position: relative;
         margin:0px auto;
         background-color:rgb(233, 84, 133); 
       } 
-      #dom > div {
+      #section4 > div {
         position:absolute; 
         max-width:1000px;
         max-height:400px;               
         background-color:#c027d4;
       }
-      #dom>#pokoj1{
+      #section4>#section4-text{
         display: flex;  /* oryginalnie bylo top:0px */
         font-weight: bold;
         width:100%; margin:0px auto;/*dopisalam te dwie wartosci */ /*kiedys dawno temu bylo  margin-left:280px;*/
       }
-          #dom>#pokoj1>.podpokoj1 {
+          #section4>#section4-text>.podpokoj1 {
             color:rgb(5, 66, 46);
             font-size:1.7em;
             margin-left:2%;
           }
-      #dom>#pokoj2{
+      #section4>#section4-icons{
         display: flex;
         margin: 55px auto;  /*oryginalnie bylo top:45px */                   
         width:100%;         /*  kiedys dawno temu bylo  margin-left: 280px;*//*oraz  bylo margin-right: -35px;*/
         height: 20%;        /*oryginalnie bylo margin-left: auto; ale zamienilam na margin:55px auto*/
       }                     /*oryginalnie bylo margin-right: auto;*/                                                                               
-          #dom>#pokoj2>.sign1, .sign2, .sign3{
+          #section4>#section4-icons>.sign1, .sign2, .sign3{
             width: 29%; 
             background-color: cadetblue;                    
           }
           /* bylo .sign2{ } */
-          #pokoj2 img{
+          #section4-icons img.location{
             width:33%;
             height:100%;             
           }               
-      #dom>#pokoj3 {
+      #section4>#section4-articles {
         display:flex;            /* oryginalnie bylo top:170px */   /* oryginalnie bylo margin-right:auto;*/
         margin: 150px auto; 
         width:100%;/* dopisalam width:100% */     /* oryginalnie bylo margin-left: auto;*/            /* margin-right: -35px; *   /*   width:100%; */
       }                                               
-          #dom>#pokoj3>.span4, .span5, .span6 {                    
+          #section4>#section4-articles>.article4, .article5, .article6 {                    
             font-size: 1em;
             width:29%;     
             background-color: #FDD700;       
-          }    /*bylo tu  .span5 {} ale skasowalam */
-          #pokoj3 h3 {
+          }    /*bylo tu  .article5 {} ale skasowalam */
+          #section4-articles h3 {
             color: rgb(5, 66, 46);                       
           }                                                                                                        
-/* -------------koniec dom ----------------- */
-/* ------poczatek KLASA1 - WZOR Z "NOWY RODZIC 3" ------------ */ 
-      #klasa1{
+/* -------------koniec section4 (dawniej dom) ------------------------------- */
+/* ------poczatek section5 czyli KLASA1 - WZOR Z "NOWY RODZIC 3" ------------ */ 
+      #section5{
         max-width:1000px;  /*11 lutego zmienilam max-width:1000px na min-width:1000px, zas 10lutego zamienilam 100% width na max-width:1000px */
         height:400px;
         position: relative;
         margin:0px auto 0px auto; /* 11lutego zmienilam margin:0px 0px 0px 0px na margin:0px auto 0px auto; */
         background-color:rgb(206, 59, 120);     
       }
-      #klasa1>div {
+      #section5>div {
         position: absolute;
         max-width:1000px; 
         max-height:400px;
         background-color:#FDD700;        
       }
-      #klasa1>#klasa1-uczniowie{
+      #section5>#section5-group{
         display: flex;
         width:100%;
         margin:0px auto; 
       }
-      #klasa1>#klasa1-uczniowie>.uczen1, .uczen2{
+      #section5>#section5-group>.group1, .group2{
         width:46%; 
       }
-      #klasa1>#klasa1-uczniowie>.uczen1{
+      #section5>#section5-group>.group1{
         background-image:url("kolorowa-mapa.jpg");
         min-height:320px;
         background-position: 50% 30%;
@@ -417,25 +467,25 @@
         border-radius: 4px;
         background-color: red;
       }
-      #klasa1>#klasa1-uczniowie>.uczen2{
+      #section5>#section5-group>.group2{
         background-color: rgb(70, 15, 42); 
-        margin:24px 0px; /*musi byc to*/
+        margin:24px 0px; /*musi byc to*/ 
       }
-      #klasa1>#klasa1-uczniowie>.uczen2 .nr1{
+      #section5>#section5-group>.group2 .nr1{
         font-size:2em;
         font-weight: bold;
         margin-top: 35px;
         color:antiquewhite;
         background-color: blue;
       }
-      #klasa1>#klasa1-uczniowie>.uczen2 .nr2{
+      #section5>#section5-group>.group2 .nr2{
         font-size: 1em;
         color:silver;
         background-color: steelblue;
         margin-top:10px;
         margin-bottom:10px;
       }
-      #klasa1>#klasa1-uczniowie>.uczen2 .przycisk-Odkryj-autobusy{
+      #section5>#section5-group>.group2 .button-Odkryj-autobusy{
         color:white;
         text-decoration: none;
         border: none;
@@ -444,74 +494,75 @@
         border-radius: 25px;
         padding:15px 25px;
       }
-      #klasa1>#klasa1-uczniowie>.uczen2 .przycisk-Odkryj-autobusy:hover{
+      #section5>#section5-group>.group2 .button-Odkryj-autobusy:hover{
                   color:yellow;
                   background-color: rgb(72, 72, 173);
                   cursor: pointer;
       }
-/* -----------POCZATEK kura --------------- */
-      #kura{
+/* ----------- koniec section5 (czyli dawniej Nowy rodzic 3) ----------------- */      
+/* -----------POCZATEK section6 (dawniej kura)-------------------------------- */
+      #section6{
         max-width:1000px; /*oryginalnie bylo width:100% */
-        height:550px;
+        height:500px;
         position: relative;
         margin:0px auto; /* to musi byc margin:0px auto */
         background-color:rgb(5, 114, 23); 
       } 
-      #kura > div {
+      #section6 > div {
         position:absolute; 
         max-width:1000px;
-        max-height:550px;                      
-        background-color:#58225f;
+        max-height:500px;                      
+        background-color:#58225f; 
       }
-      #kura>#kurczak1{
+      #section6>#section6-text{
         display: flex;
-        width:100%; /* dopisalam 14 lutego width:100% */
-        margin:0px auto; /*oryginalnie bylo top: 20px; */
-        font-weight: bold;    /*margin-left: 280px;*/                    
+        width:100%;
+        margin:0px auto;                      /*oryginalnie bylo top: 20px; */
+        font-weight: bold;  /*margin-left: 280px;*/                    
       }
-          #kura>#kurczak1>.ziarno1 {
+          #section6>#section6-text>.text1 {
             color:rgb(5, 66, 46);
             font-size:1.7em; 
-            margin-left:2%; /* dopisalam 14lutego margin-left:0px; */                 
+            margin-left:2%;                
           }
-          #kura>#kurczak1>.ziarno2{
-            float:right;
+          #section6>#section6-text>.text2{
+            float:right;     
             margin-right:2%; /* dopisalam 14 luty margin-right:0px */  /* oryginalnie bylo margin-left:610px; */
             font-size: 0.9em;   /* oryginalnie bylo vertical-align: 150px;*/ 
           }
-          #kura>#kurczak1>.ziarno2>.interaktywny-napis {
+          #section6>#section6-text>.text2>.interaktywny-napis {
             color: #ffffff;
             text-decoration: none; 
           }
-      #kura>#kurczak2{
-        display:flex;
+      #section6>#section6-moreInfo{
+        display:flex; 
         width:100%;  /*dopisalam teraz */    /*oryginalnie bylo top: 55px; */
         margin:50px auto;          /* dopisalam 14 lutego margin:50px auto */
       }                     /*margin:0px auto; *//* dopisalam margin:0px auto w dniu 13 luty 2021*/  /*  margin-left: 280px;*/   /*margin-right: -35px; */                         
-          #kura>#kurczak2>.ziarno3, .ziarno4, .ziarno5 {
+          #section6>#section6-moreInfo>.info1, .info2, .info3 {
             font-size: 1em;   
-            width:29%;  
-            background-color:rgb(251, 255, 0); 
+            width:29%;
+            background-color:rgb(251, 255, 0);  
             }           /* oryginalnie bylo margin-top: 15px; */                                          
            /* stary przyklad .ziarno4 musisz pododawac-patrz obok- .ziarno4 {/* tu NIE bylo napisu #kura //margin-left: 0px; margin-right:0px;} */   
-          #kurczak2 img{
+          #section6-moreInfo img.photo{
             width:100%; 
           }  
-          #kurczak2 h3{   /* tu NIE bylo napisu #kura */
-          color: rgb(50, 58, 2);
+          #section6-moreInfo h3{   /* tu NIE bylo napisu #kura */
+          color: rgb(50, 58, 2);  
           margin-top:2px;
           margin-bottom:3px;                          
           }
-          #kurczak2 .Przeczytaj-wiecej{
-            color:rgb(14, 207, 241);
+          #section6-moreInfo .button-Przeczytaj-wiecej{
+            color:rgb(14, 207, 241);  
             text-decoration: none;
             font-size: 1.2em;
             font-weight: bold;
           }
-/* -------- koniec kura ------------------ */     
+/* -------- koniec section6 (dawniej kura) ------------------ */     
 
-/*---------poczatek firma ---------------- */
-      #firma{
+/*---------poczatek section7 (dawniej firma) ---------------- */
+      #section7{
         max-width:100%; 
         min-height:300px;
         position: relative;
@@ -521,63 +572,66 @@
         margin-bottom:0px;     
         background-color:rgb(114, 5, 10); 
       }             
-      #firma>#prezes-1{
+      #section7>#prezes-1{
         max-width: 100%; 
         min-height:220px;
         background-color: rgb(81, 255, 255);
         margin-top:20px;
         margin-bottom:20px;                   
       }          
-      #firma>#prezes-1>.wiceprezes-1{
+      #section7>#prezes-1>.wiceprezes-1{
         max-width:1000px; /*15 lutego o 23.35 bylo oryginalnie bylo max-width:100% */
         min-height:180px;       
         background-color: rgb(110, 81, 75);  
          /* dopisalam teraz 15lutego */        
       } 
-      #firma>#prezes-1>.wiceprezes-1>.ksiegowosc{
+      #section7>#prezes-1>.wiceprezes-1>.ksiegowosc{
         max-width:1000px; 
         height:150px;                                     
         background-color: rgb(218, 235, 62);  
         display:flex;
         margin:0px 2%; /* dopisalam to 15lutego margin:0px 2% */                          /* stare bardzo margin-left:280px;*/
       }
-          #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
+          #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
             background-color: orangered; 
             height:110px;
+            width:75%; /*width:75%; dopisalam 20lutego*/
           }
-              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja{
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja{
                 list-style: none;
                 column-count: 3;
                 flex-grow: 3;
                 flex-shrink: 0;   
-                padding-left:0px;             /* dopisalam padding:0px; w dniu 8luty o 13.00 */
+                padding-left:0px;
+                            /* dopisalam padding:0px; w dniu 8luty o 13.00 */
               }
-              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik{              
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik{              
                 margin-bottom:20px;
                 background-color: rgb(51, 131, 151);    
                                                                     
               }
-              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik>.hiperlacze{
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik>.hiperlacze{
                 text-decoration: none;
                 font-size: 1em;
               }
-          #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2{
+          #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2{
             background-color: purple; 
             column-count:1;
             flex-grow: 1;  
             height:140px;
             text-align: left;   
             flex:1; /* dopisalam flex:1 w dniu 8luty 0 12.40 */                                                                           
+            width:25%; /*width:25%; dopisalam 20lutego */
           }
-              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage{
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage{
                 height:60px;
                 background-color: rgb(52, 235, 52);
                 margin-top:0px; /*zmienilam 15lutego na 0px */
                 margin-bottom:5px;                                                            
-                max-width: 340px; /* dodalam teraz i sprawdzam */                                           
-                position: relative; /* dodalam teraz i sprawdzam*/
+                max-width: 340px;                                          
+                position: relative; 
               }    
-/*terazPisze*/#firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select{ /* zamiast select to tu bylo #SelectLanguageID */
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select{ /* zamiast select to tu bylo #SelectLanguageID */
                 width:100%;
                 height:48px;
                 font-size:1em;
@@ -588,14 +642,13 @@
                 z-index:1;
                 background-color:palevioletred; /* bylo transparent; */                                                                                                                     
               }
-/*terazPisze*/#firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select label{  /* dodalam >select */
+/*terazPisze*/#section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select label{  /* dodalam >select */
                 position:absolute;                                                          
                 top:0px;
                 left:0px;
                 right:45px;
                 z-index: 1;            
-                background-color: purple;
-                                                                    
+                background-color: purple;                                                                    
               }
             /* byl taki kod #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage */                                               
             /* byl taki kod #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>label */
@@ -615,19 +668,22 @@
                               /* dopisalam zatem  z-index:1 i juz kolor sie zmienia */                        
               }
       /* -----------ponizej jest kod na pasek do witryn ikonek ------- */
-              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn{                                                          
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn{                                                          
                 list-style: none;
                 column-count: 4;   
                 flex-grow: 4; 
                 margin-top:10px; 
-                padding:0px;                                                
-                background-color: rgb(11, 13, 107);
+                width:80%;
+                margin-left:0px; 
+                /*padding:0px;*/                                                
+                background-color: rgb(11, 88, 8);
+                              
               }
-              #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn>.witryna{
-                background-color: rgb(221, 38, 38);                                                                                                                                                                                                                                                                                                
+              #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn>.witryna{
+                background-color: rgb(255, 255, 255);                                                                                                                                                                                                                                                                                                           
                 } 
       /* ------------ koniec kodu na pasek do witryn ikonek ----------- */
-      #firma>#prezes-1>.wiceprezes-1>.sekretariat{
+      #section7>#prezes-1>.wiceprezes-1>.sekretariat{
         max-width:1000px; 
         height:20px; 
         margin-top:20px;
@@ -636,28 +692,39 @@
         display: flex;
       /*  margin-left: 280px;  */                                                                     
       }
-          #firma>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
+          #section7>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
             font-size: 0.8em;
             margin-left:2%;
           }             
-      #firma>#prezes-2{
+      #section7>#section7-includeFooter{
         max-width: 1000px; /* bylo max-width:100%; w dniu 6 luty godz.23.00 */
         min-height:20px;
         margin-top:5px;
         background-color: rgb(150, 173, 16);
      /*   margin-left: 280px;  */  
       }
-          #firma>#prezes-2>.wiceprezes-2{
+          #section7>#section7-includeFooter>.footer-text{
             padding: 16px 0;
             background:violet;
           }
-          #firma>#prezes-2>.wiceprezes-2>.page-footer-long{
+          #section7>#section7-includeFooter>.footer-text>.page-footer-long{
             font-size: 0.8em;
-            margin-left: 2%;
+            margin:0px 2%;
             text-align: center;
             color:rgb(65, 6, 52);
           }
 
+         
+          
+          @media (max-width:1024px){
+             #section1-group, #section2-text, #section2-offers, #section4-text, #section4-icons, #section4-articles, #section5-group, #section6-text, #section6-moreInfo/*, .dzial-1, .dzial-2, .sekretariat, .page-footer-long*/{
+              width:750px;
+            }
+          }
+         /* @media (max-width:1024px){
+            #section3{
+              width:750px;
+              margin:0px auto;}   } */
     /*  *najwieksza rozdzielczosc laptopów*
       @media only screen and (max-width: 1000px) {
       .menu, .intro, .header1, #rodzic3, #rodzic4, #rodzic5, #DOM, #klasa1, #kura, #firma  { 
@@ -676,136 +743,113 @@
 </head>
 <body>
 <div id="wrapper">    <!--   div class="page container_12 clearfix" -- Moze -->  
-    <div class="menu">             <!--bylo wczesniej div class="menu container_12"--->
-            <div class="leftnav">    <!-- bylo grid_3 -->
-              <a href=""><img src="logo-BlaBlaCar.png" alt="blablacar" height="20%" width="25%" /></a> <!-- bylo class="logo" -->
-            </div>
-                                      <!--  bylo <div id="navmenu">  -->
-            <div class="rightnav">   <!-- bylo grid_9--> <!-- bylo <ul class="nav1">-->
-              <ul>  
-              <li><a class="navigation" href=""><img src="search.png" alt="search button" height="2%" width="2%" style="vertical-align: middle" /> Szukaj przejazdu</a></li>
-              <li><a class="navigation" href=""><img src="plus.png" alt="plus button" height="2%" width="2%" style="vertical-align: middle" /> Dodaj przejazd</a></li>
-              <li><a class="navigation" href="">Zarejestruj się</a></li>
-              <li><a class="navigation" href="">Zaloguj się</a></li>
-              </ul>
-            </div>         
-    </div>
 
-    <div class="intro">Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a class="intro" href="">FAQ</a>)
+    <div id="GlowneNav">   
+      <div id="GlowneNav-wrapper">          <!--bylo wczesniej div class="menu container_12"--->
+        <span class="leftnav"><!-- bylo grid_3 -->
+              <span class="logo"><a href="#"><img src="znaczki-blablacar.png" alt="apostrofy-blablacar" />BlaBlaCar</a></span> 
+        </span>                                    
+        <span class="rightnav">   <!-- bylo grid_9--> 
+          <ul>  
+            <li><a href="#"><img src="search.png" alt="search button" />Szukaj przejazdu</a></li>
+            <li><a href="#"><img src="plus.png" alt="plus button" />Dodaj przejazd</a></li>
+            <li><a href="#">Zarejestruj się</a></li>
+            <li><a href="#">Zaloguj się</a></li>
+          </ul>
+        </span>
+      </div>         
     </div>
-<!--------------- ta czesc header1 ponizej jest napewno zle ------------------------------------------------------------------------------------------------>         
-                               <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12-->  <!--  ; height:auto-->
-    <div class="header1">
-      <h1>Twój przejazd. Twój wybór.</h1>
-      <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;"> 	&#9675;  Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;"> 	&#9675;  Miasto docelowe</button><hr class="pionowa-kreska" /><button id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px; vertical-align: middle;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-fotel.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="search" style="width:10%; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button></div>  
-                                                   <!--container_12"-->   <!-- BYLO style="position:relative"--> <!-- wstawiam tutaj container_12" i zobaczymy -->
-                                                   <!-- <img class="background" src="autobus1.jpg" alt="autobus" /-->  <!-- w img bylo style="width:100%"-->
-                                                   <!-- <div style="position:absolute; right:350px; top:20px;">Twój przejazd. Twój wybór.</div>  
-        
-                                                    <span class="ticket-search" style="position:absolute; right:350px; top:250px; height:300px; display:inline-block;">
-                                                    <label class="LocationFrom"><input type="text" id="LocationFrom" placeholder="Miasto wyjazdu" maxlength="30"></label>
-                                                    <label class="LocationTo"><input type="text" id="LocationTo" placeholder="Miasto docelowe" maxlength="30"></label>
-                                                    <label class="c"><input type="datetime-local" maxlength="30"></label>
-                                                    <label class="d"><input type="search" id="search" placeholder="Pasazerowie" maxlength="30"></label>
-                                                    <label class="button holder"><input type="button" value="search"></label>
-                                                      </span>    <-- h1 width:100%; height:150px;-->       
-       <!-- sprawdz ta strone do stworzenia panelu wyszukiwania dla biletow SKAD  i DOKAD na obrazku 
-        https://www.p-programowanie.pl/strony-internetowe/strona-responsywna#podgl%C4%85d-responsywny-strony-->
-<!------------- koniec czesci header1 ---------------------------------------------------------------------------------------------------------------------> 
-    <!-- dzis 15lutego zmieniam DIV ID RODZIC3 NA NOWY RODZIC3-- 
-      <div id="rodzic3">rodzic3
-        <div id="dziecko1"><img src="kierowca.jpg" alt="driver"></div>
-        <div id="dziecko2">
-            <h2>Dokad jedziesz?</h2>
-            <p class="dziecko2">Wybierz sie w najoszczedniejsza podroz swojego zycia.</p>
-            <a href=""><p class="dziecko2">Dodaj przejazd</p></a>
-        </div>
-      </div>  -->
     
-    <div id="rodzic3">NOWY rodzic3
-      <div id="rodzic3-dzieci">
-          <div class="dziecko1"></div>
-          <div class="dziecko2">
+    <div class="GlowneIntro"><symbol>!</symbol>Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a class="intro" href="#">FAQ</a>)
+    </div>        
+         <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12--> 
+    <div class="GlownyHeader">
+      <h1>Twój przejazd. Twój wybór.</h1>
+      <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;"> 	&#9675;  Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;"> 	&#9675;  Miasto docelowe</button><hr class="pionowa-kreska" /><button id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px; vertical-align: middle;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-fotel.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="search" style="width:10%; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button>
+    </div>      
+    <div id="section1">section1 <!--section1 to NOWY rodzic3,a ten tak naprawde to byl dawniej rodzic3-->
+      <div id="section1-group">
+          <div class="group1"></div>
+          <div class="group2">
             <p class="nr1">Dokad jedziesz?</p>
             <p class="nr2">Wybierz sie w najoszczedniejsza podroz swojego zycia.</p>
-            <a class="przycisk-Dodaj-przejazd" href="">Dodaj przejazd</a>
+            <a class="button-Dodaj-przejazd" href="#">Dodaj przejazd</a>
           </div>
       </div>    
     </div>
-    <div id="rodzic4">rodzic4
-        <div id="dziecko3">
-          <span class="dziecko3-1">Dokad chcesz jechac?</span>
-          <span class="dziecko3-2"><a href="">Zobacz najpopularniejsze przejazdy</a></span>
-        </div>
-  <!--  <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>   -->    <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
-        <div id="dziecko4"><!--tu wczesniej bylo dziecko5,ale zamienilam na dziecko4-->
-          <div class="gwiazda1"><a href=""><p>Warszawa  »  Gdansk   35zl    ></p></a></div> <!--dodalam 14lutego div classy gwiazda1, gwiazda2,gwiazda3 tutaj-->
-          <div class="gwiazda2"><a href=""><p>Lublin    »  Warszawa 15zl    ></p></a></div> 
-          <div class="gwiazda3"><a href=""><p>Katowice  »  Berlin   15zl    ></p></a></div>
+    <div id="section2">section2<!--section2 to dawniej rodzic4-->
+        <div id="section2-text">
+          <span class="podtekst1">Dokad chcesz jechac?</span>
+          <span class="podtekst2"><a href="#">Zobacz najpopularniejsze przejazdy</a></span>
+        </div>                                         <!--  <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>   -->    <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
+        <div id="section2-offers">         <!--tu wczesniej bylo dziecko5,ale zamienilam na dziecko4-->
+          <div class="offer1"><a href="#"><p>Warszawa » Gdansk 35zl ></p></a></div> <!--dodalam 14lutego div classy gwiazda1, gwiazda2,gwiazda3 tutaj-->
+          <div class="offer2"><a href="#"><p>Lublin » Warszawa 15zl ></p></a></div> 
+          <div class="offer3"><a href="#"><p>Katowice » Berlin 15zl ></p></a></div>
         </div>
     </div>  
-    <div id="rodzic5">rodzic5
-        <div id="dziecko1">
+    <div id="section3">section3<!--section3 to dawniej rodzic5 -->
+        <div id="section3-text"><!--to byl element dziecko-->
               <span class="text1">Skąd chcesz. Dokąd chcesz. Czym chcesz.</span>
-              <span class="text2"><a href="">Dowiedz sie wiecej</a></span>
+              <span class="text2"><a href="#">Dowiedz sie wiecej</a></span>
         </div>
-        <div id="dziecko2">
+        <div id="section3-articles"><!--to byl element dziecko-->
               <div class="article1"><h3>Autobusem</h3>Ponad 100 przewoźników w jednym miejscu. Bilety dostępne online kilka tygodni przed datą podróży.</div>
               <div class="article2"><h3>Samochodem</h3>Kierowcy z BlaBlaCar jeżdżą wszędzie. Dosłownie w tysiące miejsc. Wszędzie tam, gdzie prowadzi droga.</div>
               <div class="article3"><h3>Wybór należy do Ciebie</h3>Jedno miejsce, jedno wyszukanie, setki wyników. Wybierz na podstawie ceny, długości podróży lub po prostu Twojego nastroju.</div>
         </div>
     </div>
-    <div id="dom">DOM
-          <div id="pokoj1">
+    <div id="section4">section4<!--section4 to dawniej dom-->
+          <div id="section4-text"><!--to byl pokoj1-->
             <span class="podpokoj1">3 rzeczy, za które pokochasz wspólne przejazdy BlaBlaCar.</span>
           </div>
-          <div id="pokoj2">
-            <span class="sign1"><img src="location.jpg" alt="location1" /></span>
-            <span class="sign2"><img src="location.jpg" alt="location2" /></span>
-            <span class="sign3"><img src="location.jpg" alt="location3" /></span>
+          <div id="section4-icons"><!-- to byl pokoj2-->
+            <span class="sign1"><img src="location.jpg" alt="location1" class="location" /></span>
+            <span class="sign2"><img src="location.jpg" alt="location2" class="location" /></span>
+            <span class="sign3"><img src="location.jpg" alt="location3" class="location" /></span>
           </div>
-          <div id="pokoj3">
-              <div class="span4"><h3>Społeczność</h3>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
-              <div class="span5"><h3>Podróżuj szybciej</h3>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
-              <div class="span6"><h3>Elastyczność</h3>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
+          <div id="section4-articles"><!--to byl pokoj3-->
+              <div class="article4"><h3>Społeczność</h3>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
+              <div class="article5"><h3>Podróżuj szybciej</h3>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
+              <div class="article6"><h3>Elastyczność</h3>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
           </div>
     </div>
-    <div id="klasa1">wzor z NOWY rodzic3
-      <div id="klasa1-uczniowie">
-          <div class="uczen1"></div>
-          <div class="uczen2">
+    <div id="section5">section5<!--section5 to dawna klasa1 czyli obecnie wzor z ,,section1"czyli z dawnego: NOWY rodzic3 -->
+      <div id="section5-group">
+          <div class="group1"></div>
+          <div class="group2">
             <p class="nr1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</p>
             <p class="nr2">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
-            <a class="przycisk-Odkryj-autobusy" href="">Odkryj autobusy na BlaBlaCar</a>
+            <a class="button-Odkryj-autobusy" href="">Odkryj autobusy na BlaBlaCar</a>
           </div>
       </div>    
     </div>
-    <div id="kura">KURA
-      <div id="kurczak1">
-            <span class="ziarno1">Odwiedź nasz blog </span>
-            <span class="ziarno2"><a class="interaktywny-napis" href=""> Odwiedź nasz blog</a></span>
+    <div id="section6">section6<!--section6 to  dawniej kura -->
+      <div id="section6-text"><!-- to byl kurczak1-->
+            <span class="text1">Odwiedź nasz blog</span>
+            <span class="text2"><a class="interaktywny-napis" href="#"> Odwiedź nasz blog</a></span>
       </div>
-      <div id="kurczak2">
-            <div class="ziarno3"><img src="przytulaski.jpg" alt="przytulaski" /><h3>Czy rozwiązanie problemu wykluczenia transportowego istnieje już od lat?</h3>Serwis BlaBlaCar chce pokazać, jak łatwo, szybko i wygodnie można znaleźć transport jeszcze bliżej siebie.<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
-            <div class="ziarno4"><img src="las.jpg" alt="las" /><h3>6 patentów na komfort podróży jesienią</h3><br />Poznaj jesienne patenty podróżnych🍂<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
-            <div class="ziarno5"><img src="twarz.jpg" alt="twarz" /><h3>Co zrobić, żeby znaleźć pasażerów i wypełnić wolne miejsca w samochodzie?</h3>To łatwiejsze niż myślisz… Poniżej znajdziesz nasze porady :)<br /><a href="" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+      <div id="section6-moreInfo"><!--to byl kurczak2-->
+            <div class="info1"><img src="przytulaski.jpg" alt="przytulaski" class="photo" /><h3>Czy rozwiązanie problemu wykluczenia transportowego istnieje już od lat?</h3>Serwis BlaBlaCar chce pokazać, jak łatwo, szybko i wygodnie można znaleźć transport jeszcze bliżej siebie.<br /><a href="#" class="button-Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="info2"><img src="las.jpg" alt="las" class="photo" /><h3>6 patentów na komfort podróży jesienią</h3><br />Poznaj jesienne patenty podróżnych🍂<br /><a href="#" class="button-Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="info3"><img src="twarz.jpg" alt="twarz" class="photo" /><h3>Co zrobić, żeby znaleźć pasażerów i wypełnić wolne miejsca w samochodzie?</h3>To łatwiejsze niż myślisz… Poniżej znajdziesz nasze porady :)<br /><a href="#" class="button-Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
       </div>
     </div>
-    <div id="firma">FIRMA 
+    <div id="section7"><!-- dawniej to byla firma --> 
       <div id="prezes-1">
         <div class="wiceprezes-1">
           <div class="ksiegowosc">
             <span class="dzial-1">  
                 <ul class="dolna-nawigacja">
-                  <li class="odnosnik"><a class="hiperlacze" href="">Jak to działa?</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Autobusy</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Wszystkie połączenia autobusowe</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">O nas</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Często zadawane pytania (FAQ)</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Kontakt</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Regulamin</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Prasa</a></li>
-                  <li class="odnosnik"><a class="hiperlacze" href="">Praca w BlaBlaCar</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Jak to działa?</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Autobusy</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Wszystkie połączenia autobusowe</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">O nas</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Często zadawane pytania (FAQ)</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Kontakt</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Regulamin</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Prasa</a></li>
+                  <li class="odnosnik"><a class="hiperlacze" href="#">Praca w BlaBlaCar</a></li>
                 </ul>              
             </span>
             <span class="dzial-2">
@@ -868,8 +912,8 @@
           </div>
         </div>
       </div>
-      <div id="prezes-2">
-        <div class="wiceprezes-2">
+      <div id="section7-includeFooter"><!-- to byl prezes-2-->
+        <div class="footer-text"><!--to byl wiceprezes-2-->
           <span class="page-footer-long">BlaBlaCar to największy serwis wspólnych przejazdów. Łączymy ludzi, by mogli razem podróżować skądkolwiek dokądkolwiek. Nie tylko z centrum wielkiego miasta.</span>
         </div>
       </div>    
