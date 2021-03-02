@@ -3,7 +3,7 @@
 <head>
     <meta charset= "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="reset.css" alt="dokument reset" />  -->
+    <!-- NIE MAM TU TEGO PLIKU <link rel="stylesheet" href="reset.css" alt="dokument reset" />  -->
     <link rel="icon" href="znaczki-blablacar.png" alt="znaczki blablacar" height="10%" width="10%" /> 
     <title>Wspolne przejazdy dla kierowcow i pasazerow podrozujacych w te sama strone | BlaBlaCar</title>
     
@@ -41,8 +41,8 @@
         height:auto;                                    /* UWAGA! 11 lutego o polnocy ZMIENILAM WRAPPER NA MAX-WIDTH:1000PX, stad sa kolory granatowy wokolo !!! */     
       }
       #GlowneNav{
-       width:100%; background-color:#FDD700; height:70px; position:fixed; z-index:1; top:0px; box-sizing: border-box; margin:0px auto; font-size: 100%;}
-      
+       width:100%; background-color:#FDD700; height:70px; position:fixed; z-index:1; top:0px; box-sizing: border-box; margin:0px auto; font-size: 100%;
+      }
     /*z sekcji6  #GlowneNav>div {
         position:absolute; 
         width:100%;                      
@@ -52,37 +52,37 @@
         margin:0px auto; /* musi byc bo inaczej przestawia nawigacje */  
         padding:15px 5px;
         font-size:1em;                   
-        font-weight: bold;  
+        font-weight: normal;  
         background-color: #e97c00;                
       }
           #GlowneNav>#GlowneNav-wrapper>.leftnav {
-            font-size:1.7em;    float:left;
+            font-size:1.9em;    float:left;
             background-color: #177686;           
           }
           #GlowneNav>#GlowneNav-wrapper>.leftnav>.logo{
-            width: 200px; float: left; background-color: antiquewhite;
+            width: 200px; float: left; background-color: antiquewhite;       margin-left:120px;
           }
           #GlowneNav>#GlowneNav-wrapper>.leftnav>.logo a {
             text-decoration: none; color: rgb(206, 2, 2); 
           }
           #GlowneNav>#GlowneNav-wrapper>.leftnav img {
-            height:35px; width:35px; /*margin-bottom:5px;*/}
-
+            height:35px; width:35px; /*margin-bottom:5px;*/
+          }
           #GlowneNav>#GlowneNav-wrapper>.rightnav{
-            float:right;                             margin-right:5%;               width:auto;
+            float:right;                                                       margin-right:5%;   /*width:auto;*/
             background-color: #58225f;
           } 
           #GlowneNav>#GlowneNav-wrapper>.rightnav>ul{
-             list-style: none; float: right; padding-top: 10px;
+             list-style: none; float: right; /*padding-top: 10px;*/
           }
           #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li{
-           margin-right:10px; background-color: antiquewhite; display: inline-block; 
+            display: inline-block; margin-top:10px; margin-right:10px; background-color: antiquewhite;
           }
           #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li a{
            text-decoration: none; color: rgb(204, 2, 2);
           }
           #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li img{
-            height:25px; width:25px; vertical-align:middle; margin-right: 10px;         margin-bottom:5px; }
+            height:25px; width:25px; vertical-align:middle; margin-right: 10px;/* margin-bottom:5px;*/}
       /*.GlowneNav{                    ** bylo: .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} **
         width:100%;** super jest width:100% **
         background-color: rgb(197, 8, 166); 
@@ -157,48 +157,94 @@
         margin:0px;
         padding:0px;
       }
-      .GlownyHeader { 
+      #GlownyHeader { 
       width:100%; /* oryginalnie bylo width:100%;*/ 
       position:relative; /*11lutego dopisalam position:relative */ 
       background-image:url("autobus2.svg");  /* background-image:url("C:/projects/BlaBlaCar2021/autobus2.svg */
       background-repeat: no-repeat;  /*background-attachment:fixed;*/ 
       background-position: 50% 50%;
       background-size:cover; 
-      height:355px;        /* padding: -40px; */     /* overflow:visible; */        
+      height:355px;       /* padding: -40px; */     /* overflow:visible; */     
       } 
-      h1{ /*dopisalam 10luty*/
+      #GlownyHeader>h1.title{ /*dopisalam 10luty*/
         /* oryginalnie bylo width:100%; */
-        padding-top:50px;
-        height:56px;
+         padding:50px 0px;                              /* dopisane 1 marca */width:100%;max-width: 1000px; background-color: #FDD700;
+        /* skasowalam 1 marca height:56px;*/                     height:9vh; display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;
         color: rgb(214, 36, 36); 
-        font-weight: bold;
+        font-weight: bold; 
         font-size:3em;
         text-align: center;        /*line-height:2em;*/  /* wykasowalam  position:absolute; */
       }
-       button { /* tu wczesniej byl input*/
-        /*width:100%;*/
-        font-size:1em;
-        /*oryginalnie bylo max-width: 1000px; */
-          /* dopisalam height:15% */
-       /* position:absolute;*/ /*dopisalam position:absolute; */
-       /* line-height: 30px;*/
-       /*background-color: rgb(239, 241, 234);*/
-        /*border:none;*/   
-       /* font-size:1em; */
-       /* padding:5px 10px;*/
-       justify-items: center;
-       /* display:inline-block; */
-        margin-top:200px; 
-        /*position:relative;*/
-      
-     } 
-      hr.pionowa-kreska {
+      #GlownyHeader>.searchbox {
+        /*padding-top:150px;*/ margin-top:20vh; 
+        width:100%; max-width:1000px; 
+        min-height:13.5vh;
+        display:flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      #GlownyHeader>.searchbox>.search-panel{
+        box-sizing: border-box;                                     border:none;
+        padding:8px 0px 8px 8px;           
+        width:928px;
+        border-radius: 16px;
+        height: 56px;
+        display:flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position:relative; 
+        background-color: #ffffff;
+      }
+     
+      #GlownyHeader>.searchbox>.search-panel input{
+        
+        width:240px;                                              text-align: left;
+        padding-left: 8px;                                        box-sizing: border-box;
+        line-height: 18px;
+        display:flex;
+        border:none;
+        margin:0px auto; 
+      }
+      #GlownyHeader>.searchbox>.search-panel hr.kreska{
+        background-color: darkred;              
+        border:none;
+        width:2px;                                
+        height:40px;
+        margin:0px 8px;   
+      }
+
+      #GlownyHeader>.searchbox>.search-panel button.loop {
+        height: 56px;                             border-radius: 0px 16px 16px 0px;
+        color:white; 
+        background-color :blue;                width:120px;               
+        margin:0px auto; 
+        border:none;                              line-height: 18px;
+                                                  padding-right: 8px;                                                
+      }
+      /* dobre button { // tu wczesniej byl input//
+        //width:100%;//
+                                                              dobre    font-size:1em;      // margin-top:18vh;//
+        //oryginalnie bylo max-width: 1000px; //
+          // dopisalam height:15% //
+       // position:absolute;// /*dopisalam position:absolute; //
+       // line-height: 30px;//
+       //background-color: rgb(239, 241, 234);//
+        //border:none;//   
+       // font-size:1em; //
+       // padding:5px 10px;//
+                                                                dobre         justify-items: center;                           
+       // display:inline-block; //
+                                                                dobre          margin-top:150px ;                            
+        //position:relative;//
+      } */ 
+     /* hr.kreska {
         display:inline-block; 
         width:5px;
         height:40px;
         margin-bottom:-14px;
-        background-color: darkred;
-      }         
+        background-color: darkred;               border:none;
+      }   */      
 /* ------poczatek section1 (dawniej NOWY RODZIC 3) ------------ */ 
       #section1 {
         max-width:1000px;  /*11 lutego zmienilam max-width:1000px na min-width:1000px, zas 10lutego zamienilam 100% width na max-width:1000px */
@@ -593,35 +639,34 @@
         margin:0px 2%; /* dopisalam to 15lutego margin:0px 2% */                          /* stare bardzo margin-left:280px;*/
       }
           #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
-            background-color: orangered; 
-            height:110px;
-            width:75%; /*width:75%; dopisalam 20lutego*/
+            background-color: #ff4500; 
+            height:110px;                               
+            width:75%; 
           }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja{
-                list-style: none;
-                column-count: 3;
-                flex-grow: 3;
-                flex-shrink: 0;   
+                list-style:none;       margin:0px auto; /* dopisalam 26luty */
+                column-count:3;
+                flex-grow:3;  
+                flex-shrink:0;   
                 padding-left:0px;
-                            /* dopisalam padding:0px; w dniu 8luty o 13.00 */
               }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik{              
                 margin-bottom:20px;
                 background-color: rgb(51, 131, 151);    
-                                                                    
+                 font-size: 1em;                                            
               }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik>.hiperlacze{
                 text-decoration: none;
-                font-size: 1em;
+                color:lightblue;
               }
           #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2{
-            background-color: purple; 
+            background-color: purple;                 margin:0px auto; /* dopisalam 26luty */
             column-count:1;
             flex-grow: 1;  
             height:140px;
             text-align: left;   
             flex:1; /* dopisalam flex:1 w dniu 8luty 0 12.40 */                                                                           
-            width:25%; /*width:25%; dopisalam 20lutego */
+            width:30%; /*bylo width:25%;*/
           }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage{
                 height:60px;
@@ -762,11 +807,23 @@
     
     <div class="GlowneIntro"><symbol>!</symbol>Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a class="intro" href="#">FAQ</a>)
     </div>        
-         <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12--> 
-    <div class="GlownyHeader">
-      <h1>Twój przejazd. Twój wybór.</h1>
-      <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;"> 	&#9675;  Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;"> 	&#9675;  Miasto docelowe</button><hr class="pionowa-kreska" /><button id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px; vertical-align: middle;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-fotel.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="search" style="width:10%; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button>
+          <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12--> 
+    <div id="GlownyHeader">
+      <h1 class="title">Twój przejazd. Twój wybór.</h1>
+      <div class="searchbox">
+        <form action class="search-panel" method="POST">
+            <input type="text" id="from" placeholder="&#9675;  Miasto wyjazdu" required /><hr class="kreska" />           
+            <input type="text" id="to" placeholder="&#9675;  Miasto docelowe" required /><hr class="kreska" />
+            <input type="date" id="date" placeholder="Dzisiaj" required /><hr class="kreska" />
+            <input type="text" id="passengers" placeholder="1 Pasażer" required/>
+            <button type="submit" class="loop" method="get" required>Szukaj</button>
+        </form>
+      </div>
     </div>      
+    <!--stare   <div class="GlownyHeader">         a tu tylko zapasy img <img class="ikona1" src="ikona-kalendarz.svg" /> <img class="ikona2" src="ikona-fotel.svg" />
+                  <h1>Twój przejazd. Twój wybór.</h1>
+                  <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;"> 	&#9675;  Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;"> 	&#9675;  Miasto docelowe</button><hr class="pionowa-kreska" /><button type="text" id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px; vertical-align: middle;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button type="text" id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-fotel.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="submit" style="width:10%; height:56px; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button>
+                </div> -->
     <div id="section1">section1 <!--section1 to NOWY rodzic3,a ten tak naprawde to byl dawniej rodzic3-->
       <div id="section1-group">
           <div class="group1"></div>
