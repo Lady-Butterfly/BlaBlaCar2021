@@ -171,7 +171,7 @@
          padding:50px 0px;                              /* dopisane 1 marca */width:100%;max-width: 1000px; background-color: #FDD700;
         /* skasowalam 1 marca height:56px;*/                     height:9vh; display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;
         color: rgb(214, 36, 36); 
-        font-weight: bold; 
+        font-weight: bold;                                       
         font-size:3em;
         text-align: center;        /*line-height:2em;*/  /* wykasowalam  position:absolute; */
       }
@@ -201,26 +201,34 @@
         
         width:240px;                                              text-align: left;
         padding-left: 8px;                                        box-sizing: border-box;
-        line-height: 18px;
+        line-height: 18px;                                        padding-right:8px;
         display:flex;
         border:none;
         margin:0px auto; 
       }
+      .searchbox>.search-panel input:hover{
+        cursor:pointer; height:56px; border:none; color:rgb(107, 10, 10); 
+        background-color: #0098fd;
+      }
+      .search-panel input symbol{
+        padding-left:2px;
+        padding-right:2px;
+      }
       #GlownyHeader>.searchbox>.search-panel hr.kreska{
-        background-color: darkred;              
+        background-color: rgb(88, 86, 86);              
         border:none;
         width:2px;                                
         height:40px;
-        margin:0px 8px;   
+        margin:0px 8px; 
       }
 
       #GlownyHeader>.searchbox>.search-panel button.loop {
         height: 56px;                             border-radius: 0px 16px 16px 0px;
         color:white; 
-        background-color :blue;                width:120px;               
-        margin:0px auto; 
+        background-color: rgb(0, 175, 245);         width:120px;               
+        margin:0px auto;                           justify-content: center; -webkit-box-pack: center; cursor:pointer;
         border:none;                              line-height: 18px;
-                                                  padding-right: 8px;                                                
+                                                  padding: 0px;                                                
       }
       /* dobre button { // tu wczesniej byl input//
         //width:100%;//
@@ -348,23 +356,39 @@
       /*#dziecko4 { margin-top:0px; right:20px; font-weight: bold;   /* BYLO:width:auto; *  }                       
         #dziecko4>a{text-decoration: none; background-color:#15fd00; /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*font-size: 0.9em; color: white;}*/         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
       #section2>#section2-offers { /*oryginalnie bylo #dziecko4 */
-        width:100%;   
-        display: flex;          /*stare  left: 260px;*/ 
-        margin:60px auto; /*dopisalam teraz *//* oryginalnie bylo margin-top:60px; */  
+        width:100%;                                               /*justify-content: center; -webkit-box-align: center;*/
+        display: flex;          /*stare  left: 260px;*/           
+        margin-top:60px; /*bylo oryginalnie margin:60px auto;*/ padding:0px;
       }
         #section2-offers .offer1, /*#rodzic4>*/#section2-offers .offer2, /*#rodzic4>*/#section2-offers .offer3 {
-          width:29%;
-          height:55px;
-          background-color: white;
-          border-radius: 5px 5px 5px 5px;
-          text-align: center;  
+          width:29%;                                          /*padding-right: 24px !important; padding-left: 24px !important;*/
+          height:55px;                                             display:flex; 
+          background-color: white;                           
+          border-radius: 5px 5px 5px 5px;                                          
+          text-align: center;                      
         }
-        #section2-offers  a {
-         text-decoration: none;
+        #section2-offers .item-clickable {      
+         display:flex;  -webkit-box-align: center; align-items: center; line-height: 20px; color: rgb(5, 71, 82);  
         }
-        #section2-offers p{     
-            font-size: 1.2em;
-            padding:15px 15px 15px 15px;}
+        #section2-offers a{
+        text-decoration: none;
+        }
+        /*#section2-offers p.city, p.price {                                     
+          display:inline-block;  }*/
+          /*  padding:15px 15px 15px 15px;}*/
+          #section2-offers p.city{
+            font-size: 18px;
+          }
+          #section2-offers p.price{
+            margin-left: 32px; text-align: right; display:flex; font-size:22px; font-weight: bold;                                             
+          }
+          #section2-offers img.arrow{
+            display:inline-flex;   /*vertical-align: center;*/ margin:0px 8px; width:0.9em; height:0.9em;      
+          }
+          /*#section2-offers>a>*/.bracket{ display:inline-flex; margin-left: 16px;
+            -webkit-box-align: center;        width:1.4em; height:1.4em;
+            align-items: center;
+          }
 /* to na chwile ukrywam #dziecko4>a{
             text-decoration: none;             ** aby rozszerzyc te 3 biale tabelki, to wpisalam flex-basis w %, i zmienialam margin i padding w tym "#dziecko5 a" **
             flex-basis: 30%;
@@ -762,7 +786,7 @@
          
           
           @media (max-width:1024px){
-             #section1-group, #section2-text, #section2-offers, #section4-text, #section4-icons, #section4-articles, #section5-group, #section6-text, #section6-moreInfo/*, .dzial-1, .dzial-2, .sekretariat, .page-footer-long*/{
+             .searchbox, form.search-panel, #section1-group, #section2-text, #section2-offers, #section4-text, #section4-icons, #section4-articles, #section5-group, #section6-text, #section6-moreInfo/*, .dzial-1, .dzial-2, .sekretariat, .page-footer-long*/{
               width:750px;
             }
           }
@@ -812,15 +836,15 @@
       <h1 class="title">Twój przejazd. Twój wybór.</h1>
       <div class="searchbox">
         <form action class="search-panel" method="POST">
-            <input type="text" id="from" placeholder="&#9675;  Miasto wyjazdu" required /><hr class="kreska" />           
-            <input type="text" id="to" placeholder="&#9675;  Miasto docelowe" required /><hr class="kreska" />
-            <input type="date" id="date" placeholder="Dzisiaj" required /><hr class="kreska" />
-            <input type="text" id="passengers" placeholder="1 Pasażer" required/>
-            <button type="submit" class="loop" method="get" required>Szukaj</button>
+            <symbol>&#9675;</symbol><input type="text" id="from" placeholder="Miasto wyjazdu" required /><hr class="kreska" />           
+            <symbol>&#9675;</symbol><input type="text" id="to" placeholder="Miasto docelowe" required /><hr class="kreska" />
+            <symbol class="icon-img"><img src="ikona-kalendarz.svg"></symbol><input type="date" id="date" placeholder="Dzisiaj" required /><hr class="kreska" />
+            <symbol class="icon-img"><img src="ikona-fotel.svg"></symbol><input type="text" id="passengers" placeholder="1 Pasażer" required/>
+            </symbol><button type="submit" class="loop" method="get" required><symbol><img src="loop.svg"></symbol></button>
         </form>
       </div>
     </div>      
-    <!--stare   <div class="GlownyHeader">         a tu tylko zapasy img <img class="ikona1" src="ikona-kalendarz.svg" /> <img class="ikona2" src="ikona-fotel.svg" />
+    <!--stare   <div class="GlownyHeader">         
                   <h1>Twój przejazd. Twój wybór.</h1>
                   <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;"> 	&#9675;  Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;"> 	&#9675;  Miasto docelowe</button><hr class="pionowa-kreska" /><button type="text" id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px; vertical-align: middle;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button type="text" id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-fotel.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="submit" style="width:10%; height:56px; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button>
                 </div> -->
@@ -840,9 +864,9 @@
           <span class="podtekst2"><a href="#">Zobacz najpopularniejsze przejazdy</a></span>
         </div>                                         <!--  <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>   -->    <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
         <div id="section2-offers">         <!--tu wczesniej bylo dziecko5,ale zamienilam na dziecko4-->
-          <div class="offer1"><a href="#"><p>Warszawa » Gdansk 35zl ></p></a></div> <!--dodalam 14lutego div classy gwiazda1, gwiazda2,gwiazda3 tutaj-->
-          <div class="offer2"><a href="#"><p>Lublin » Warszawa 15zl ></p></a></div> 
-          <div class="offer3"><a href="#"><p>Katowice » Berlin 15zl ></p></a></div>
+          <div class="offer1"><a type="button" class="item-clickable" href="#"><p class="city">Warszawa</p><img src="strzalka.svg" class="arrow"><p class="city">Gdansk</p><p class="price">35zl</p><img src="nawias-zamykajacy.svg" class="bracket"></a></div>
+          <div class="offer2"><a type="button" class="item-clickable" href="#"><p class="city">Lublin</p><img src="strzalka.svg" class="arrow"><p class="city">Warszawa</p><p class="price">15zl</p><img src="nawias-zamykajacy.svg" class="bracket"></a></div> 
+          <div class="offer3"><a type="button" class="item-clickable" href="#"><p class="city">Katowice</p><img src="strzalka.svg" class="arrow"><p class="city">Berlin</p><p class="price">60zl</p><img src="nawias-zamykajacy.svg" class="bracket"></a></div>
         </div>
     </div>  
     <div id="section3">section3<!--section3 to dawniej rodzic5 -->
