@@ -318,7 +318,7 @@
         position:relative; 
         /*max-width:1000px;*/    width:100%;/* 10lutego zamienilam 100% width na 1000px */
         height:217px;         background-color:rgb(5, 71, 82);        
-        margin: 0px auto;                     
+        margin: 24px auto;                     
       }
       #section2 > div {
         position:relative; 
@@ -334,7 +334,7 @@
         color: white;
         font-size:30px;
         margin-left:2%;
-        font-weight: bold;
+        font-weight: bold; 
        }
       #section2>#section2-text>.podtekst2{
         float:right;   
@@ -344,45 +344,70 @@
       }
       #section2>#section2-text>.podtekst2>a{
         text-decoration: none;                      color: rgb(0, 175, 245); background-color: transparent;
-      }
-      /*#dziecko4 { margin-top:0px; right:20px; font-weight: bold;   /* BYLO:width:auto; *  }                       
-        #dziecko4>a{text-decoration: none; background-color:#15fd00; /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*font-size: 0.9em; color: white;}*/         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */
+      }                                                                               /*#dziecko4 { margin-top:0px; right:20px; font-weight: bold;   /* BYLO:width:auto; *  }                       
+                                                                                      #dziecko4>a{text-decoration: none; background-color:#15fd00; /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*font-size: 0.9em; color: white;}*/         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */     
       #section2>#section2-offers { /*oryginalnie bylo #dziecko4 */
-        /*width:100%;*/      max-width:1000px; width:100%; /* width:1000px; */      /*justify-content: center; -webkit-box-align: center;*/
+        width:100%;     max-width:1000px; /* width:1000px; */      /*justify-content: center; -webkit-box-align: center;*/
         display: flex;                    
-        margin:0px auto;    padding:12px 0px 24px 0px;
+        /*margin:0px auto;*/                    
+        padding:24px 0px 24px 0px;                margin-left: auto; margin-right: auto;
       }
-        #section2-offers .offer1, /*#rodzic4>*/#section2-offers .offer2, /*#rodzic4>*/#section2-offers .offer3 {
-          width:29%;                                          /*padding-right: 24px !important; padding-left: 24px !important;*/
-          /*height:55px;*/                                             display:flex; 
-          background-color: white;                            
-          border-radius: 5px 5px 5px 5px;                                          
-          text-align: center;                      
+      #section2>#section2-offers .offer   /*, /*#rodzic4>***#section2-offers .offer...*/ {
+          width:29%;     /*height:55px;*/  
+          display:flex; 
+          background-color: white;                    /*padding:16px; skasowalam na korzysc a.clickable */ box-sizing: border-box;
+          border-radius: 5px 5px 5px 5px;                                      
+          text-align: center;                                    
         }
-        #section2-offers .item-clickable {      
-         display:flex;  -webkit-box-align: center; align-items: center; min-height: 4.75em; color: rgb(5, 71, 82); 
-                                                                         line-height: 20px; font-size: 18px; padding-top: 16px;padding-bottom: 16px; 
+        #section2>#section2-offers a.clickable {      
+         display:inline-flex;                            -webkit-box-align: center; align-items: center; /*min-height: 4.75em;*/ color: rgb(5, 71, 82); 
+         background-color: #8fad07;                        line-height: 20px; font-size: 18px;
+         width:300px;                                    border-radius: 5px 5px 5px 5px; 
+         width:100%;                                    padding:32px 16px;                /*justify-content: center; */
         }
         #section2-offers a{
         text-decoration: none;
+        }                          /* ZAPASOWE z innej section display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;*/
+        #section2>#section2-offers span{
+          display: inline-block; margin:0px;
         }
-        /*#section2-offers p.city, p.price {                                     
-          display:inline-block;  }*/
-          /*  padding:15px 15px 15px 15px;}*/
+        #section2>#section2-offers .leftWrapper{          
+          display:flex;        /*   flex-grow:1;*/ align-items: flex-start;
+          margin:0px;
+          background-color: #cf1515;
+        } 
+        #section2>#section2-offers>.leftWrapper p.city{
+          margin:0px; font-size: 18px;
+        }
+          #section2-offers img.arrow{
+           /* display:inline-flex; */  margin:0px 8px; width:0.9em; height:0.9em;      
+          }
+        #section2>#section2-offers .rightWrapper{
+          display:flex; /*float:right;*//* text-align: center;*/align-items: flex-end;
+          margin:0px 0px 0px 16px;                    
+          background-color: yellow;
+        }
+        #section2>#section2-offers>.rightWrapper>p.price{
+          margin:0px; font-size:22px; 
+          font-weight: bold;
+        }
+        #section2-offers img.bracket{ 
+          /*display:inline-flex;*/  width:1.4em; height:1.4em; margin:0px 0px 0px 16px;
+          } 
+        /* to ponizej jest dobre w razie cos                //#section2-offers p.city, p.price {  display:inline-block;  }//
           #section2-offers p.city{
-            font-size: 18px;
+            font-size: 18px; }
+          #section2-offers img.arrow{
+            display:inline-flex;   //vertical-align: center;// margin:0px 8px; width:0.9em; height:0.9em;      
           }
           #section2-offers p.price{
             margin-left: 32px; text-align: right; display:flex; font-size:22px; font-weight: bold;                                             
           }
-          #section2-offers img.arrow{
-            display:inline-flex;   /*vertical-align: center;*/ margin:0px 8px; width:0.9em; height:0.9em;      
-          }
-          /*#section2-offers>a>*/.bracket{ display:inline-flex; margin-left: 16px;
+          //#section2-offers>a>//.bracket{ display:inline-flex; margin-left: 16px;
             -webkit-box-align: center;        width:1.4em; height:1.4em;
             align-items: center;
-          }
-/* to na chwile ukrywam #dziecko4>a{
+          }  dotad jest dobre */
+         /* STARE  ukrywam #dziecko4>a{
             text-decoration: none;             ** aby rozszerzyc te 3 biale tabelki, to wpisalam flex-basis w %, i zmienialam margin i padding w tym "#dziecko5 a" **
             flex-basis: 30%;
             padding:0px 2% 0 2%;
@@ -631,19 +656,17 @@
 /*---------poczatek section7 (dawniej firma) ---------------- */
       #section7{
         max-width:100%; 
-        min-height:300px;
+        min-height:300px; 
         position: relative;
         /*margin:0px;*/ /* auto; /* wpisalam margin:0px auto w dniu 13 luty*/
         /* padding:0px; */                          
-        margin-top:24px;
+        margin-top:24px;      background-color: #EDEDED;  
         margin-bottom:0px;     
       }             
       #section7>#prezes-1{
         max-width: 100%; 
-        min-height:220px;                                 padding-top:24px;
-        background-color: #EDEDED;           
-        margin-top:24px;
-        margin-bottom:20px;                   
+        min-height:220px;                                 padding-top:24px;         
+        margin-top:24px;/*margin-bottom:20px; */                   
       }          
       #section7>#prezes-1>.wiceprezes-1{
         max-width:1000px; /*15 lutego o 23.35 bylo oryginalnie bylo max-width:100% */
@@ -654,7 +677,7 @@
         height:150px;                                     
         background-color: rgb(218, 235, 62);  
         display:flex;
-        margin:0px 2%; /* dopisalam to 15lutego margin:0px 2% */                          /* stare bardzo margin-left:280px;*/
+        margin:0px 2%;
       }
           #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
             background-color: #ff4500; 
@@ -721,14 +744,11 @@
                 position: absolute;
                 top:8px;
                 left: 9px;
-                width: 100%;
-                                     /*bylo  white-space: nowrap; */
-                                     /*bylo  overflow: hidden; */
+                width: 100%;                     /*bylo  white-space: nowrap; */         /*bylo  overflow: hidden; */
                 font-size: 0.7em;
                 color:#cf1515;   
                 background-color: darkblue; 
-                z-index: 1;   /* <--- tu obok cos jest NIE TAK bo kolor sie nie zmienia, a powinien */
-                              /* dopisalam zatem  z-index:1 i juz kolor sie zmienia */                        
+                z-index: 1;   /* dopisalam zatem  z-index:1 i juz kolor sie zmienia */                        
               }
       /* -----------ponizej jest kod na pasek do witryn ikonek ------- */
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn{                                                          
@@ -739,8 +759,7 @@
                 width:80%;
                 margin-left:0px; 
                 /*padding:0px;*/                                                
-                background-color: rgb(11, 88, 8);
-                              
+                background-color: transparent;                       
               }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn>.witryna{
                 background-color: rgb(255, 255, 255);                                                                                                                                                                                                                                                                                                           
@@ -749,32 +768,27 @@
       #section7>#prezes-1>.wiceprezes-1>.sekretariat{
         max-width:1000px; 
         height:20px; 
-        margin-top:20px;
-        margin-bottom: 20px;
-        background-color: rgb(35, 49, 53);  
-        display: flex;
-      /*  margin-left: 280px;  */                                                                     
+        margin-top:10px;  background-color: tomato;
+        margin-bottom: 0px;
+        display: flex;                                                                   
       }
           #section7>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
             font-size: 0.8em;
             margin-left:2%;
           }             
       #section7>#section7-includeFooter{
-        max-width: 1000px; /* bylo max-width:100%; w dniu 6 luty godz.23.00 */
-        min-height:20px;
-        margin-top:5px;
-        background-color: rgb(150, 173, 16);
-     /*   margin-left: 280px;  */  
+        max-width: 1000px;  width:100%;/* bylo max-width:100%; w dniu 6 luty godz.23.00 */
+        max-height:20px;    background-color: rgb(31, 109, 11);
+        margin:0px auto;  
       }
           #section7>#section7-includeFooter>.footer-text{
-            padding: 16px 0;
-            background:violet;
+            padding: 16px 0px; background-color: violet;
           }
           #section7>#section7-includeFooter>.footer-text>.page-footer-long{
-            font-size: 0.8em;
+            font-size: 0.8em; background-color: yellow;
             margin:0px 2%;
             text-align: center;
-            color:rgb(65, 6, 52);
+            color:rgb(133, 131, 131); 
           }
 
          
@@ -853,14 +867,14 @@
       </div>    
     </div>
     <div id="section2"><!--section2 to dawniej rodzic4-->
-        <div id="section2-text">
+        <div id="section2-text">                          <!--a type="button"-->
           <span class="podtekst1">Dokad chcesz jechac?</span>
           <span class="podtekst2"><a href="#">Zobacz najpopularniejsze przejazdy</a></span>
         </div>                                         <!--  <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>   -->    <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
         <div id="section2-offers">         <!--tu wczesniej bylo dziecko5,ale zamienilam na dziecko4-->
-          <div class="offer1"><a type="button" class="item-clickable" href="#"><p class="city">Warszawa</p><img src="strzalka.svg" class="arrow"><p class="city">Gdansk</p><p class="price">35zl</p><img src="nawias-zamykajacy.svg" class="bracket"></a></div>
-          <div class="offer2"><a type="button" class="item-clickable" href="#"><p class="city">Lublin</p><img src="strzalka.svg" class="arrow"><p class="city">Warszawa</p><p class="price">15zl</p><img src="nawias-zamykajacy.svg" class="bracket"></a></div> 
-          <div class="offer3"><a type="button" class="item-clickable" href="#"><p class="city">Katowice</p><img src="strzalka.svg" class="arrow"><p class="city">Berlin</p><p class="price">60zl</p><img src="nawias-zamykajacy.svg" class="bracket"></a></div>
+          <div class="offer"><a class="clickable" href="#"><span class="leftWrapper"><p class="city">Warszawa</p><img src="strzalka.svg" class="arrow"><p class="city">Gdansk</p></span><span class="rightWrapper"><p class="price">35zl</p><img class="bracket" src="nawias-zamykajacy.svg" /></span></a></div>
+          <div class="offer"><a class="clickable" href="#"><span class="leftWrapper"><p class="city">Lublin</p><img src="strzalka.svg" class="arrow"><p class="city">Warszawa</p></span><span class="rightWrapper"><p class="price">15zl</p><img class="bracket" src="nawias-zamykajacy.svg" /></span></a></div> 
+          <div class="offer"><a class="clickable" href="#"><span class="leftWrapper"><p class="city">Katowice</p><img src="strzalka.svg" class="arrow"><p class="city">Berlin</p></span><span class="rightWrapper"><p class="price">60zl</p><img class="bracket" src="nawias-zamykajacy.svg" /></span></a></div>
         </div>
     </div>  
     <div id="section3">section3<!--section3 to dawniej rodzic5 -->
@@ -895,7 +909,7 @@
           <div class="group2">
             <p class="nr1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</p>
             <p class="nr2">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
-            <a class="button-Odkryj-autobusy" href="">Odkryj autobusy na BlaBlaCar</a>
+            <a class="button-Odkryj-autobusy" href="#">Odkryj autobusy na BlaBlaCar</a>
           </div>
       </div>    
     </div>
