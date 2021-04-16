@@ -10,13 +10,17 @@
     <style type="text/css">
 
       @font-face {
-        font-family:"GTEestiProText-Regular";
-        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.ttf");        /* src:url("https://en.bestfonts.pro/font/gt-eesti-pro"); strona zrodlowa czcionki gt-eesti */
-        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.ttf") format("ttf"),
-            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.eot") format("eot"),
-            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff") format("woff"),
-            url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular.woff2") format("woff2"); 
+        font-family:"GTEestiProText-Regular", "1450-font";
+        src:url("GTEestiProText-Regular") format("truetype");
+        src:url("C:/projects/BlaBlaCar2021/fonts/GTEestiProText-Regular") format("ttf");
+        src:url("1450-font") format("otf");
+        src:url("https://fontsisland.com/font/gteestiprotext-regular.otf") format("otf");
       }
+      /*src:url("https://en.bestfonts.pro/font/gt-eesti-pro"); strona zrodlowa czcionki gt-eesti 
+        src:url("https://en.bestfonts.pro/font/gt-eesti-pro") format("ttf");
+        src:url("https://en.bestfonts.pro/font/gt-eesti-pro") format("EmbeddedOpenType");
+        src:url("https://en.bestfonts.pro/font/gt-eesti-pro") format("woff");
+        src:url("https://en.bestfonts.pro/font/gt-eesti-pro") format("woff2"); */
       * {
         margin:0px auto;
         padding:0px;
@@ -26,62 +30,67 @@
        /*text-size-adjust: 100%;*/ 
        vertical-align: baseline;
       }
-      body {
-        background-color: rgb(34, 6, 158);    /*font-style: normal;*/   /*font-weight:normal;} */
+      body {   /*font-style: normal;*/   /*font-weight:normal;} */
         color:rgb(136, 133, 133);
         /* tu bylo font:inherit; */                                min-width:960px; /* min-width bardzo wazne!!! to pomniejsza strone tak jak chcesz :) */
-        font-family: "GTEestiProText-Regular", Helvetica; 
+        font-family: "GTEestiProText-Regular", "1450-font", Helvetica; 
       /*  width:100%; */   /*dopisalam 11lutego max-width:1000px i bylo tez width:100%; */           
       }
       #wrapper {
-        width:100%;      /* 11 lutego godz 12.23 z width:100% zmieniam na max-width:1000px, ale to pogorszylo strone */
+        width:100%;      /* z width:100% zmieniam na max-width:1000px, ale to pogorszylo strone */
       /*  margin: 0px auto 0px auto;*/
         background-color: rgb(255, 255, 255); 
         min-height:600px; 
-        height:auto;                                    /* UWAGA! 11 lutego o polnocy ZMIENILAM WRAPPER NA MAX-WIDTH:1000PX, stad sa kolory granatowy wokolo !!! */     
+        height:auto;                                        
       }
       #GlowneNav{
-       width:100%; background-color:#ffffff; height:70px; position:fixed; z-index:1; top:0px; box-sizing: border-box; margin:0px auto; font-size: 100%;
+       width:100%; 
+       background-color:#ffffff; 
+       height:70px; 
+       position:fixed; 
+       z-index:1; 
+       top:0px; 
+       box-sizing: border-box; 
+       margin:0px auto;                        
+       font-size: 100%;   /* bezcelowo wpisane display:flex; align-items: center; -webkit-box-align: center;*/
+      }                                                  
+      #GlowneNav>.GlowneNav-wrapper {  
+      max-width:1400px;
+      height:70px;             
+      width:100%;
+      display:inline-block;
+      margin:0px auto; /* musi byc */  
+      padding:15px 20px;
+      font-size:1em;                   
+      font-weight: bold;                 
       }
-    /*z sekcji6  #GlowneNav>div {
-        position:absolute; 
-        width:100%;                      
-      }*/                                                   
-      #GlowneNav>#GlowneNav-wrapper { /*tez dobrze max-width:1500px;*/ /*dopisalam max do -> */ max-height:70px;              width:100%;
-       display: /*flex*/inline-block; 
-        margin:0px auto; /* musi byc bo inaczej przestawia nawigacje */  
-        padding:15px 5px;
-        font-size:1em;                   
-        font-weight: normal;  
-        background-color: #ffffff;                
-      }
-          #GlowneNav>#GlowneNav-wrapper>.leftnav {
-            font-size:1.9em;    float:left;          
+          #GlowneNav>.GlowneNav-wrapper>.leftnav {
+            /*width: 200px;*/ font-size:1.9em; 
           }
-          #GlowneNav>#GlowneNav-wrapper>.leftnav>.logo{
-            width: 200px; float: left; background-color: rgb(255, 255, 255);       margin-left:120px;
+          #GlowneNav>.GlowneNav-wrapper>.leftnav a {
+            text-decoration:none; color: rgb(52, 82, 65); 
           }
-          #GlowneNav>#GlowneNav-wrapper>.leftnav>.logo a {
-            text-decoration: none; color: rgb(5, 71, 82); 
+          #GlowneNav>.GlowneNav-wrapper>.leftnav img {
+            height:35px; width:35px; 
           }
-          #GlowneNav>#GlowneNav-wrapper>.leftnav img {
-            height:35px; width:35px; /*margin-bottom:5px;*/
-          }
-          #GlowneNav>#GlowneNav-wrapper>.rightnav{
-            float:right;                                                       margin-right:5%;   /*width:auto;*/
-            background-color: #ffffff;
+          #GlowneNav>.GlowneNav-wrapper>.rightnav{
+            float:right;                                         
           } 
-          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul{
-             list-style: none; float: right; /*padding-top: 10px;*/
+          #GlowneNav>.GlowneNav-wrapper>.rightnav>ul{
+             list-style: none;
           }
-          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li{
-            display: inline-block; margin-top:10px; margin-right:10px; background-color: rgb(255, 255, 255);
+          #GlowneNav>.GlowneNav-wrapper>.rightnav>ul li{
+            display: inline-block; margin-top:10px; margin-right:10px; 
           }
-          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li a{
+          #GlowneNav>.GlowneNav-wrapper>.rightnav>ul li a{
            text-decoration: none; color: rgb(0, 175, 245);
           }
-          #GlowneNav>#GlowneNav-wrapper>.rightnav>ul li img{
-            height:25px; width:25px; vertical-align:middle; margin-right: 10px;/* margin-bottom:5px;*/}
+          #GlowneNav>.GlowneNav-wrapper>.rightnav>ul li img{
+            height:25px; width:25px; vertical-align:middle; margin-right: 10px;}
+
+            @media (min-width:1073px){
+            .leftnav{ padding-left:100px; margin-right:auto; }
+            }
       /*.GlowneNav{                    ** bylo: .container_12 { margin-left: auto; margin-right: auto;  width: 960px;} **
         width:100%;** super jest width:100% **
         background-color: rgb(197, 8, 166); 
@@ -113,12 +122,11 @@
         margin:2% 10%;            
         position: absolute;      
       }                
-      .rightnav ul { 
-        // kiedys BYLO  width: 100%; //                    
+      .rightnav ul {                     
         list-style-type: none;                                 
       }                   
       .rightnav ul li {                        
-        display:inline;      background-color: brown;
+        display:inline; 
         padding:0px 10px;*to sa spacje w nawigacji prawej gornej *
       }                                                                     
       a.navigation { 
@@ -129,18 +137,18 @@
       li a.navigation:hover {    
         color: rgb(248, 39, 154);}*/  
 
-      .GlowneIntro{
-        width:100%;   /*oryginalnie bylo width:100%*/
+      .CoronavirusInfo{
+        width:100%; 
         height: 58px; 
          position: relative; 
         background-color: #ededed !important;
         color:rgb(112, 140, 145);
         text-align:center; 
-        padding-top:20px; /* dopisalam 10lutego wieczorem */ 
+        padding-top:20px; 
         margin-top: 70px;  
         font-size:1em;  
       }   
-       .GlowneIntro symbol{ /* dopisalam .GlowneIntro symbol w dniu 22luty */
+       .CoronavirusInfo symbol{
          background-color: transparent;
          color:grey;  
          border:1px solid grey;  
@@ -164,10 +172,11 @@
       background-size:cover; 
       height:355px;       /* padding: -40px; */     /* overflow:visible; */     
       } 
-      #GlownyHeader>h1.title{ /*dopisalam 10luty*/
-        /* oryginalnie bylo width:100%; */
-         padding:50px 0px;                              /* dopisane 1 marca */width:100%;max-width: 1000px;
-        /* skasowalam 1 marca height:56px;*/                     height:9vh; display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;
+      #GlownyHeader>h1.title{
+        padding:50px 0px;                                      
+        width:100%;
+        max-width: 1000px;
+        height:9vh; display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;
         color: rgb(255, 255, 255); background-color: transparent;
         font-weight: bold;                                       
         font-size:3.5em;
@@ -177,13 +186,14 @@
         /*padding-top:150px;*/ margin-top:20vh; 
         width:100%; max-width:1000px; 
         min-height:13.5vh;
-        display:flex;
+        display:flex;  
         flex-direction: column;
         -webkit-box-pack: center;
         justify-content: center;
       }
       #GlownyHeader>.searchbox>.search-panel{
-        box-sizing: border-box;                                     border:none;
+        box-sizing: border-box;                                     
+        border:none;
         padding:8px 0px 8px 8px;           
         width:928px;
         border-radius: 16px;
@@ -192,41 +202,81 @@
         -webkit-box-align: center;
         align-items: center;
         position:relative; 
-        background-color: #ffffff;
+        background-color: #ffffff;      
       }
+
      
-      #GlownyHeader>.searchbox>.search-panel input{
+
+      #GlownyHeader>.searchbox>.search-panel span.journey{
+        display:inline-flex;  margin:0px auto; width:300px; /*width bylo oryginalnie 260px *//*oryginalnie bylo display:flex*/ text-align:left;
+      }
+      .search-panel span.journey symbol{
+        padding-left:2px;      border-radius: 50%;   border:2px solid rgb(112, 140, 145); border-width: 4px; width:18px;  height:18px;
+        padding-right:2px;      /*display:inline-flex; dopisalam display 25.marca*/                                                      margin:0px auto;
+      }
+
+      /* na chwile kasuje #GlownyHeader>.searchbox>*/.search-panel span.journey input[type="text"]{
+             text-align:left; padding-right:0px; padding-left: 0px;box-sizing: border-box;border:none;                                    margin:0px auto;
+                   /*flex-direction: row;*/line-height: 18px; /*te wszystkie tutaj wartosci skopiowalam z ,,nizej"*/
+      }  
+
+      /*JAKIS STARSZY ZAPIS #GlownyHeader>.searchbox>.search-panel input{
         color:rgb(112, 140, 145);
         width:240px;                                              text-align: left;
         padding-left: 8px;                                        box-sizing: border-box;
         line-height: 18px;                                        padding-right:8px;
         display:flex; 
-        border:none;
+        border:none;          
+        margin:0px auto; 
+      } */
+      
+      #GlownyHeader>.searchbox>.search-panel input[type="text"]{
+        width:150px;            
+        color:rgb(112, 140, 145);
+                                                      /*text-align: left;*/
+        padding-left: 0px; /*bylo padding 8px */                  box-sizing: border-box;
+        line-height: 18px;                                        padding-right:0px; /*bylo padding:8px */
+        display:flex; 
+        border:none;          
+        margin:0px auto; 
+      }
+      /*#GlownyHeader>.searchbox>.search-panel input[type="text"]:last-child{
+        width:100px;
+      } ??? co z tym?*/
+      #GlownyHeader>.searchbox>.search-panel input[type="date"]{
+        width:200px;
+        color:rgb(112, 140, 145);
+                         text-align: left;
+        padding-left: 0px; /*bylo padding:8px*/                   box-sizing: border-box;
+        line-height: 18px;                                        padding-right:0px;/*bylo padding:8px */
+        display:flex; 
+        border:none;          
         margin:0px auto; 
       }
       .searchbox>.search-panel input:hover{
-        cursor:pointer; height:56px; border:none; color:rgb(107, 10, 10); 
-        background-color: #0098fd;
+        cursor:pointer; /*height:56px;*/ border:none;
       }
-      .search-panel input symbol{
-        padding-left:2px;
-        padding-right:2px;
-      }
-      #GlownyHeader>.searchbox>.search-panel hr.kreska{
-        background-color: rgb(88, 86, 86);              
+     
+      /*#GlownyHeader>.searchbox>*/.search-panel hr.kreska{
+        background-color: rgb(211, 208, 208);              
         border:none;
-        width:2px;                                
+        width:1px;                                
         height:40px;
-        margin:0px 8px; 
+        margin:0px 4px; 
       }
-
       #GlownyHeader>.searchbox>.search-panel button.loop {
-        height: 56px;                             border-radius: 0px 16px 16px 0px;
-        color:white; 
-        background-color: rgb(0, 175, 245);         width:120px;               
-        margin:0px auto;                           justify-content: center; -webkit-box-pack: center; cursor:pointer;
-        border:none;                              line-height: 18px;
-                                                  padding: 0px;                                                
+        height: 56px;                             
+        border-radius: 0px 16px 16px 0px;
+        color:white;                
+        flex-grow: 1;
+        background-color: rgb(0, 175, 245);        
+         width:101px;               
+        /*margin:0px auto;  */                         
+        justify-content: center; 
+        -webkit-box-pack: center; cursor:pointer;
+        border:none;
+        line-height: 18px;
+        padding: 0px;                                                
       }
       /* dobre button { // tu wczesniej byl input//
         //width:100%;//
@@ -300,7 +350,7 @@
         margin-top:10px;
         margin-bottom:10px;
       }
-      #section1>#section1-group>.group2 .button-Dodaj-przejazd{
+      #section1>#section1-group>.group2 .Dodaj-przejazd{
         color:white;
         text-decoration: none;
         border: none;
@@ -309,90 +359,101 @@
         border-radius: 25px;
         padding:15px 25px;
       }
-      #section1>#section1-group>.group2 .button-Dodaj-przejazd:hover{
+      #section1>#section1-group>.group2 .Dodaj-przejazd:hover{
                   cursor: pointer;
       }
 /* --------- koniec section1 -------------------------------------------- */          
 /* ---------poczatek: section2 (dawny rodzic4) --------------------------- */          
       #section2 {
-        position:relative; 
-        /*max-width:1000px;*/    width:100%;/* 10lutego zamienilam 100% width na 1000px */
-        height:217px;         background-color:rgb(5, 71, 82);        
-        margin: 24px auto;                     
+       position:relative;
+        /*kiedys bylo max-width:1000px;*/    width:100%;/* 10lutego zamienilam 100% width na 1000px */
+        /*height:217px; */background-color:rgb(5, 71, 82);   
+        /*margin-top: 24px;*/   
+       margin-bottom: 24px;       /*margin:0px auto; */            padding:0px 24px;
       }
       #section2 > div {
-        position:relative; 
-        max-width:1000px;       margin: 0px auto;/* width:100%;*/
-        max-height:200px;                   
-      }                                 /* BYLO 31.01 padding: 5px; */   /* line-height:40px; */   
+        position:relative; background-color:rgb(119, 207, 47);
+        /*padding:0px 24px;*/ /*margin: 0px auto;*/    /*width:100%;*/ 
+        max-width:1016px;       
+      }   
       #section2>#section2-text {
-        display:flex;                  padding:24px 0px 12px 0px;
-        margin:0px auto;/* oryginalnie bylo top:30px; left:0px; */
-        /*width:100%;*/ max-width:1000px;  width:100%;      /*width:1000px;*/
+        display:flex;    /*padding-top:24px; padding-bottom:24px;*/ width:100%; PADDING:24px 0px; 
+        /*margin:0px auto;*//* oryginalnie bylo top:30px; left:0px; */ /*max-width:1016px; */ /*width:1000px;*/
       }    
-       #section2>#section2-text>.podtekst1{
-        color: white;
-        font-size:30px;
-        margin-left:2%;
-        font-weight: bold; 
+      #section2>#section2-text>.text1{
+        color: white; margin:0px auto 0px 0px;
+        font-size:30px;                                   
+        font-weight: bold;   /*padding:0px 0px 0px 0px;*/
        }
-      #section2>#section2-text>.podtekst2{
-        float:right;   
-        margin-right:2%;
-        font-size:1em;
-        background-color:transparent;
+      #section2>#section2-text>.text2{
+        font-size:1em;   
+        background-color:transparent;margin:0px 0px 0px auto;
       }
-      #section2>#section2-text>.podtekst2>a{
-        text-decoration: none;                      color: rgb(0, 175, 245); background-color: transparent;
+      #section2>#section2-text>.text2>a{
+        text-decoration: none;  color: rgb(0, 175, 245);                 
       }                                                                               /*#dziecko4 { margin-top:0px; right:20px; font-weight: bold;   /* BYLO:width:auto; *  }                       
                                                                                       #dziecko4>a{text-decoration: none; background-color:#15fd00; /* BYLO 1 LUTEGO: #dziecko4>a>p{ background-color:#15fd00; font-size: 0.9em; color: white; }*font-size: 0.9em; color: white;}*/         /* aby zrobic ten panel #dziecko5 to zobacz na ta strone https://webkod.pl/kurs-css/lekcje/dzial-1/elastyczny-uklad-elementow-html */     
       #section2>#section2-offers { /*oryginalnie bylo #dziecko4 */
-        width:100%;     max-width:1000px; /* width:1000px; */      /*justify-content: center; -webkit-box-align: center;*/
-        display: flex;                    
-        /*margin:0px auto;*/                    
-        padding:24px 0px 24px 0px;                margin-left: auto; margin-right: auto;
+        /*width:100%;*/  padding:0px;  /*max-width:1016px;*/ /* width:1000px; */      /*justify-content: center; -webkit-box-align: center;*/
+        display: flex;                 
+        /*margin:0px auto; */                          
       }
-      #section2>#section2-offers .offer   /*, /*#rodzic4>***#section2-offers .offer...*/ {
-          width:29%;     /*height:55px;*/  
-          display:flex; 
-          background-color: white;                    /*padding:16px; skasowalam na korzysc a.clickable */ box-sizing: border-box;
-          border-radius: 5px 5px 5px 5px;                                      
-          text-align: center;                                    
-        }
-        #section2>#section2-offers a.clickable {      
-         display:inline-flex;                            -webkit-box-align: center; align-items: center; /*min-height: 4.75em;*/ color: rgb(5, 71, 82); 
-         background-color: #8fad07;                        line-height: 20px; font-size: 18px;
-         width:300px;                                    border-radius: 5px 5px 5px 5px; 
-         width:100%;                                    padding:32px 16px;                /*justify-content: center; */
+      #section2>#section2-offers>.offer:nth-child(1){margin:0px;}
+      #section2>#section2-offers>.offer:nth-child(3){margin:0px;} 
+      #section2>#section2-offers>.offer:nth-child(2){
+        margin:0px 16px;
+        }  
+      /*#section2>#section2-offers .offer{width:32%; 
+      }  //, #rodzic4>***#section2-offers .offer...// {
+          width:33%;     /*height:55px;//  
+          display:flex;               
+          background-color: white;                                             //padding:16px; skasowalam na korzysc a.clickable // 
+          box-sizing: border-box;                    
+          border-radius: 5px 5px 5px 5px;           justify-content: center;         //justify-items:center ;-webkit-box-align: center; align-items: center;//
+          text-align: center;                                   
+        } */
+        #section2>#section2-offers a.clickable {    
+        justify-content: center;
+        justify-items:center;
+        text-align: center;
+        display:inline-block;            
+        -webkit-box-align: center; 
+        align-items: center; /*min-height: 4.75em;*/ 
+        color: rgb(5, 71, 82); 
+        background-color: rgb(247, 226, 43);                        
+        line-height: 20px; 
+        font-size: 18px; 
+        width:328px;             
+        border-radius: 10px;           
+        padding:32px 16px;      /*width:100%;*/  /* width:32%;*//* display:flex; */        /* margin:0px auto; */                                   
         }
         #section2-offers a{
         text-decoration: none;
-        }                          /* ZAPASOWE z innej section display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;*/
+        }
+                               /* ZAPASOWE z innej section display:flex; justify-content: center;align-items: flex-start; -webkit-box-align: center;*/
         #section2>#section2-offers span{
-          display: inline-block; margin:0px;
+        display: inline-flex;  /*margin:0px; */   
         }
         #section2>#section2-offers .leftWrapper{          
-          display:flex;        /*   flex-grow:1;*/ align-items: flex-start;
-          margin:0px;
-          background-color: #cf1515;
+          /*oryginalnie bylo display:flex; */    float:left;   /* align-items: flex-start; */                               
+         /* margin:0px; */    /*line-height:1em;*/
         } 
         #section2>#section2-offers>.leftWrapper p.city{
-          margin:0px; font-size: 18px;
+          /*margin:0px; */ /*vertical-align: baseline;*/ margin-top:0px; margin-bottom: 0px; 
         }
           #section2-offers img.arrow{
-           /* display:inline-flex; */  margin:0px 8px; width:0.9em; height:0.9em;      
+           /* display:inline-flex; */  margin:0px 8px;   width:18px; height:18px;
           }
-        #section2>#section2-offers .rightWrapper{
-          display:flex; /*float:right;*//* text-align: center;*/align-items: flex-end;
-          margin:0px 0px 0px 16px;                    
-          background-color: yellow;
+        #section2>#section2-offers .rightWrapper{                     
+         /* oryginalnie bylo display:flex;*/ float:right;/* text-align: center;*/  /*align-items: flex-start; */
+          /*margin:0px 16px 0px 16px;*/    font-weight: bold;  font-size:22px;
         }
-        #section2>#section2-offers>.rightWrapper>p.price{
-          margin:0px; font-size:22px; 
-          font-weight: bold;
+        #section2>#section2-offers>.rightWrapper p.price{
+          /*margin:0px; */  margin-top:0px; bottom: 0px;
+          /*vertical-align: baseline;*/
         }
         #section2-offers img.bracket{ 
-          /*display:inline-flex;*/  width:1.4em; height:1.4em; margin:0px 0px 0px 16px;
+          /*display:inline-flex;*/   margin:0px 0px 0px 16px; /*width:22px;*/ height:22px;
           } 
         /* to ponizej jest dobre w razie cos                //#section2-offers p.city, p.price {  display:inline-block;  }//
           #section2-offers p.city{
@@ -416,6 +477,63 @@
             border-radius: 5px 5px 5px 5px;
           }
           #dziecko4>a>p{font-size: 1.2em; padding:5px 15px 5px 15px;} */ /* ;border:none; PRZYDA SIE do dziecka5 */
+          
+      #section2>#section2-check{
+      /*display: block;*/  padding:8px 0px 24px; /*margin-left: auto;*/
+      text-align: right;  /*padding:10px 0px 24px 0px; margin-left:auto;*/ /*padding-top:10px; padding-bottom: 24px;*/
+      }
+      #section2>#section2-check>.text2{ 
+      font-weight: bold;    
+      font-size: 0.9em;  
+      }
+      #section2>#section2-check>.text2>a {
+      text-decoration: none;   
+      color: rgb(0, 175, 245);
+      }
+
+      @media (max-width: 800px){
+      #section2-offers{
+      /* justify-items:center ;-webkit-box-align: center; */
+      width:100%; /*margin-left:auto; margin-right:auto;*/
+      flex-direction: column; align-items: center;/*padding:0px 24px; margin:0px; */}  
+      }
+      @media (max-width: 800px){
+      #section2>#section2-offers>.offer:nth-child(2){
+      margin:16px 0px;}
+      }
+      @media (max-width: 800px){
+      a.clickable {
+      width:100%; padding:0px; margin:0px; background-color: #cf1515;}
+      } 
+       @media (max-width: 800px){
+      .offer {
+      max-width:700px; margin-left:auto; margin-right:auto; align-items: center;}
+      }
+      @media (min-width:800px){
+        #section2-offers{max-width:1016px; flex-direction: row;}
+      }
+      @media (min-width: 800px){
+      a.clickable {
+      width:100%; padding:0px; margin:0px;}
+      } 
+      @media (max-width:1072px){
+        a.clickable { width:304px; padding:0px; margin:0px;
+      }}
+      /*--dopisane 23marca 2021 */
+      /*@media (max-width: 1060px){
+      .offer {
+      //width:100%; margin-left:auto; margin-right:auto; // padding:0px; margin:0px;}
+      }*/
+      /*@media (max-width: 1060px){
+      #section2-offers{
+      margin-left:auto; margin-right:auto; max-width:1016px;}}
+
+      @media(  max-width:1060px){
+        a.clickable { width:304px;
+      }}*/
+      @media(  min-width:1073px){
+        a.clickable { width:328px;
+      }}
 /*--------- koniec section2 (dawny rodzic4) -------------- */
 
 /* --------  poczatek section3 (dawniej rodzic5) ----------*/
@@ -423,7 +541,9 @@
         max-width:1000px;/* 10lutego zamienilam 100% width na 1000px */
         height:200px;
         position: relative;
-        margin:24px auto;
+        /*margin:24px auto;*/
+        margin-top:0px;
+        margin-bottom:0px;
         background-color:rgb(255, 255, 255); 
       } 
       #section3 > div {
@@ -440,12 +560,12 @@
           #section3>#section3-text>.text1 {
             color:rgb(5, 71, 82);
             font-size:30px;
-            margin-left:2%; /* dopisalam margin-left:0px w dniu 14 luty */
+            margin-left:2%;
             font-weight: bold;
           }
           #section3>#section3-text>.text2{
             float:right; 
-             margin-right:2%; /*    margin-left:285px;*/
+             margin-right:2%; 
             font-size: 1em;
           }
           #section3>#section3-text>.text2>a {
@@ -455,9 +575,9 @@
       #section3>#section3-articles {
         display: flex;
         width:100%;
-        margin:65px auto;     /* oryginalnie bylo top:55px */ /* stare margin-left: 280px;*/ /*stare oryginalnie bylo margin-right: -35px; */
+        margin:65px auto;     /* oryginalnie bylo top:55px */ /*stare oryginalnie bylo margin-right: -35px; */
       }   
-          #section3>#section3-articles>.article1, .article2, .article3 {
+          #section3>#section3-articles>.article {
             font-size: 1em;   
             width:29%;
             background-color:rgb(255, 255, 255);                                 
@@ -500,7 +620,7 @@
         width:100%;         /*  kiedys dawno temu bylo  margin-left: 280px;*//*oraz  bylo margin-right: -35px;*/
         height: 20%;        /*oryginalnie bylo margin-left: auto; ale zamienilam na margin:55px auto*/
       }                     /*oryginalnie bylo margin-right: auto;*/                                                                               
-          #section4>#section4-icons>.sign1, .sign2, .sign3{
+          #section4>#section4-icons>.sign{
             width: 29%; 
             background-color: rgb(255, 255, 255);                    
           }
@@ -514,13 +634,17 @@
         margin: 150px auto 50px auto; 
         width:100%;/* dopisalam width:100% */     /* oryginalnie bylo margin-left: auto;*/            /* margin-right: -35px; *   /*   width:100%; */
       }                                               
-          #section4>#section4-articles>.article4, .article5, .article6 {                    
+          #section4>#section4-articles>.article {                    
             font-size: 1em;
             width:29%;     
             background-color: #ffffff;       
-          }    /*bylo tu  .article5 {} ale skasowalam */
+          }   
           #section4-articles h2 {
-           color: rgb(5, 71, 82); font-weight: bold; line-height: 18px; padding-top:8px; padding-bottom:4px;
+           color: rgb(5, 71, 82); 
+           font-weight: bold; 
+           line-height: 18px; 
+           padding-top:8px; 
+           padding-bottom:4px;
           }                                                                                                        
 /* -------------koniec section4 (dawniej dom) ------------------------------- */
 /* ------poczatek section5 czyli KLASA1 - WZOR Z "NOWY RODZIC 3" ------------ */ 
@@ -573,7 +697,7 @@
         margin-top:10px;
         margin-bottom:10px;
       }
-      #section5>#section5-group>.group2 .button-Odkryj-autobusy{
+      #section5>#section5-group>.group2 .Odkryj-autobusy{
         color:white;
         text-decoration: none;
         border: none;
@@ -582,7 +706,7 @@
         border-radius: 25px;
         padding:15px 25px;
       }
-      #section5>#section5-group>.group2 .button-Odkryj-autobusy:hover{
+      #section5>#section5-group>.group2 .Odkryj-autobusy:hover{
                   color:rgb(255, 0, 55);
                   background-color: rgb(72, 72, 173);
                   cursor: pointer;
@@ -593,7 +717,7 @@
         max-width:1000px; /*oryginalnie bylo width:100% */
         height:500px;
         position: relative;
-        margin:0px auto; /* to musi byc margin:0px auto */
+        margin:24px auto; 
         background-color:rgb(255, 255, 255);  
       } 
       #section6 > div {
@@ -605,18 +729,18 @@
       #section6>#section6-text{
         display: flex;
         width:100%;
-        margin:0px auto;                      /*oryginalnie bylo top: 20px; */
-        font-weight: bold;  /*margin-left: 280px;*/                    
+        margin:0px auto;                     
+        font-weight: bold;                      
       }
           #section6>#section6-text>.text1 {
             color: rgb(5, 71, 82);
-            font-size:1.7em; 
+            font-size:1.7em;                
             margin-left:2%;                
           }
           #section6>#section6-text>.text2{
             float:right;       
-            margin-right:2%; /* dopisalam 14 luty margin-right:0px */  /* oryginalnie bylo margin-left:610px; */
-            font-size: 0.9em;   /* oryginalnie bylo vertical-align: 150px;*/ 
+            margin-right:2%;
+            font-size: 0.9em; 
           }
           #section6>#section6-text>.text2 .interaktywny-napis{
             color:rgb(0, 175, 245); background-color: transparent; 
@@ -626,19 +750,18 @@
           }
       #section6>#section6-moreInfo{
         display:flex; 
-        width:100%;  /*dopisalam teraz */    /*oryginalnie bylo top: 55px; */
-        margin:50px auto;          /* dopisalam 14 lutego margin:50px auto */
-      }                     /*margin:0px auto; *//* dopisalam margin:0px auto w dniu 13 luty 2021*/  /*  margin-left: 280px;*/   /*margin-right: -35px; */                         
-          #section6>#section6-moreInfo>.info1, .info2, .info3 {
+        width:100%; 
+        margin:50px auto 0px auto; 
+      }                                           
+          #section6>#section6-moreInfo>.info {
             font-size: 1em;   
             width:29%;
             background-color:rgb(255, 255, 255);  
-            }           /* oryginalnie bylo margin-top: 15px; */                                          
-           /* stary przyklad .ziarno4 musisz pododawac-patrz obok- .ziarno4 {/* tu NIE bylo napisu #kura //margin-left: 0px; margin-right:0px;} */   
+            }                                         
           #section6-moreInfo img.photo{
             width:100%; 
           }  
-          #section6-moreInfo h2{   /* tu NIE bylo napisu #kura */
+          #section6-moreInfo h2{ 
           color: rgb(5, 71, 82); 
           line-height: 20px;  
           font-size:18px; 
@@ -646,25 +769,25 @@
           padding-top:8px; 
           padding-bottom:4px;                      
           }
-          #section6-moreInfo .button-Przeczytaj-wiecej{
+          #section6-moreInfo .Przeczytaj-wiecej{
             color: rgb(0, 175, 245);
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1em;
           }
 /* -------- koniec section6 (dawniej kura) ------------------ */     
 
 /*---------poczatek section7 (dawniej firma) ---------------- */
       #section7{
-        max-width:100%; 
+        max-width:100%;
         min-height:300px; 
         position: relative;
         /*margin:0px;*/ /* auto; /* wpisalam margin:0px auto w dniu 13 luty*/
         /* padding:0px; */                          
         margin-top:24px;      background-color: #EDEDED;  
-        margin-bottom:0px;     
+       /* margin-bottom:0px; */    
       }             
       #section7>#prezes-1{
-        max-width: 100%; 
+        max-width: 100%;
         min-height:220px;                                 padding-top:24px;         
         margin-top:24px;/*margin-bottom:20px; */                   
       }          
@@ -768,7 +891,7 @@
       #section7>#prezes-1>.wiceprezes-1>.sekretariat{
         max-width:1000px; 
         height:20px; 
-        margin-top:10px;  background-color: tomato;
+        margin-top:10px; 
         margin-bottom: 0px;
         display: flex;                                                                   
       }
@@ -777,24 +900,24 @@
             margin-left:2%;
           }             
       #section7>#section7-includeFooter{
-        max-width: 1000px;  width:100%;/* bylo max-width:100%; w dniu 6 luty godz.23.00 */
-        max-height:20px;    background-color: rgb(31, 109, 11);
-        margin:0px auto;  
+      /*  max-width: 1000px;  width:100%;*//* bylo max-width:100%; w dniu 6 luty godz.23.00 */
+        max-height:60px;    background-color: rgb(198, 201, 198);
+       /* margin:0px auto;  */
       }
           #section7>#section7-includeFooter>.footer-text{
-            padding: 16px 0px; background-color: violet;
+            padding: 16px 0px;   max-width:1000px; /*width:100%;*/
           }
           #section7>#section7-includeFooter>.footer-text>.page-footer-long{
-            font-size: 0.8em; background-color: yellow;
-            margin:0px 2%;
-            text-align: center;
+            font-size: 0.8em; 
+            margin:0px 2% auto;      
+            text-align: center; align-items: center;
             color:rgb(133, 131, 131); 
           }
 
          
           
           @media (max-width:1024px){
-             .searchbox, form.search-panel, #section1-group, #section2-text, #section2-offers, #section4-text, #section4-icons, #section4-articles, #section5-group, #section6-text, #section6-moreInfo/*, .dzial-1, .dzial-2, .sekretariat, .page-footer-long*/{
+             .searchbox, form.search-panel, #section1-group,/*#section2-text, #section2-offers,*/ #section4-text, #section4-icons, #section4-articles, #section5-group, #section6-text, #section6-moreInfo/*, .dzial-1, .dzial-2, .sekretariat, .page-footer-long*/{
               width:750px;
             }
           }
@@ -822,10 +945,8 @@
 <div id="wrapper">    <!--   div class="page container_12 clearfix" -- Moze -->  
 
     <div id="GlowneNav">   
-      <div id="GlowneNav-wrapper">          <!--bylo wczesniej div class="menu container_12"--->
-        <span class="leftnav"><!-- bylo grid_3 -->
-              <span class="logo"><a href="#"><img src="znaczki-blablacar.png" alt="apostrofy-blablacar" />BlaBlaCar</a></span> 
-        </span>                                    
+      <div class="GlowneNav-wrapper">          <!--bylo wczesniej div class="menu container_12"--->
+        <span class="leftnav"><a href="#"><img src="znaczki-blablacar.png" alt="apostrofy-blablacar" />BlaBlaCar</a></span> <!-- bylo grid_3 ---->                                    
         <span class="rightnav">   <!-- bylo grid_9--> 
           <ul>  
             <li><a href="#"><img src="search.png" alt="search button" />Szukaj przejazdu</a></li>
@@ -836,22 +957,51 @@
         </span>
       </div>         
     </div>
-    
-    <div class="GlowneIntro"><symbol>!</symbol>Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a class="intro" href="#">FAQ</a>)
+<!--wersja podtsawowa
+    <div id="GlowneNav">   
+      <div id="GlowneNav-wrapper">          --bylo wczesniej div class="menu container_12"---
+        <span class="leftnav">     -- bylo grid_3 --
+          <span class="logo"><a href="#"><img src="znaczki-blablacar.png" alt="apostrofy-blablacar" />BlaBlaCar</a></span> 
+    </span>                                    
+    <span class="rightnav">   -- bylo grid_9-- 
+      <ul>  
+        <li><a href="#"><img src="search.png" alt="search button" />Szukaj przejazdu</a></li>
+        <li><a href="#"><img src="plus.png" alt="plus button" />Dodaj przejazd</a></li>
+        <li><a href="#">Zarejestruj się</a></li>
+        <li><a href="#">Zaloguj się</a></li>
+      </ul>
+    </span>
+  </div>         
+</div>
+-->    
+    <div class="CoronavirusInfo"><symbol>!</symbol>Koronawirus: w celu uzyskania najnowszych informacji, przeczytaj nasze często zadawane pytania (<a class="intro" href="#">FAQ</a>)
     </div>        
           <!--tu BYLO wczesniej <div class="header container_12"-->  <!-- bylo: wrapper grid_12--> 
     <div id="GlownyHeader">
-      <h1 class="title">Twój przejazd. Twój wybór.</h1>
+      <h1 class="title">Twój przejazd. Twój wybór.</h1>      <!-- &#9675;-->
       <div class="searchbox">
         <form action class="search-panel" method="POST">
-            <symbol>&#9675;</symbol><input type="text" id="from" placeholder="Miasto wyjazdu" required /><hr class="kreska" />           
-            <symbol>&#9675;</symbol><input type="text" id="to" placeholder="Miasto docelowe" required /><hr class="kreska" />
-            <symbol class="icon-img"><img src="ikona-kalendarz.svg"></symbol><input type="date" id="date" placeholder="Dzisiaj" required /><hr class="kreska" />
-            <symbol class="icon-img"><img src="ikona-fotel.svg"></symbol><input type="text" id="passengers" placeholder="1 Pasażer" required/>
-            </symbol><button type="submit" class="loop" method="get" required><symbol><img src="loop.svg"></symbol></button>
+            <span class="journey"><symbol></symbol><input type="text" id="from" placeholder="Miasto wyjazdu" maxlength="50" required /></span><hr class="kreska" />           
+            <span class="journey"><symbol></symbol><input type="text" id="to" placeholder="Miasto docelowe" maxlength="50" required /></span><hr class="kreska" />
+            <img src="ikona-kalendarz.svg" alt="ikona kalendarz" /><input type="date" id="date" placeholder="Dzisiaj" maxlength="20" required /><hr class="kreska" />
+            <img src="ikona-fotel.svg" alt="ikona fotel" /><input type="text" id="passengers" placeholder="1 Pasażer" maxlength="20" required />
+            <button type="submit" class="loop" method="get" required><img src="loop.svg" alt="lupa" /></button>
         </form>
       </div>
-    </div>      
+    </div>   
+    
+    <!--div id="GlownyHeader"
+      <h1 class="title">Twój przejazd. Twój wybór.</h1>      <-- &#9675;----
+      <div class="searchbox"
+        <form action class="search-panel" method="POST"
+            <symbol></symbol><input type="text" id="from" placeholder="Miasto wyjazdu" required /><hr class="kreska" /          
+            <symbol></symbol><input type="text" id="to" placeholder="Miasto docelowe" required /><hr class="kreska" /
+            <symbol class="icon-img"><img src="ikona-kalendarz.svg" /></symbol><input type="date" id="date" placeholder="Dzisiaj" required /><hr class="kreska" /
+            <symbol class="icon-img"><img src="ikona-fotel.svg" /></symbol><input type="text" id="passengers" placeholder="1 Pasażer" required/
+            <button type="submit" class="loop" method="get" required><symbol><img src="loop.svg" /></symbol></button
+        </form
+      </div
+    </div -->
     <!--stare   <div class="GlownyHeader">         
                   <h1>Twój przejazd. Twój wybór.</h1>
                   <button type="text" id="skad" style="width:10%; margin-left:25%; padding:20px 5px 20px 5px; border:none; border-radius:16px 0px 0px 16px;"> 	&#9675;  Miasto wyjazdu</button><hr class="pionowa-kreska" /><button type="text" id="dokad" style="width:10%; padding:20px 5px 20px 5px; border:none;"> 	&#9675;  Miasto docelowe</button><hr class="pionowa-kreska" /><button type="text" id="date" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona1" src="ikona-kalendarz.svg" style="width:11%; height:11%; margin:-10px 2px 0px 0px; vertical-align: middle;" /> Dzisiaj</button><hr class="pionowa-kreska" /><button type="text" id="passengers" style="width:10%; padding:20px 5px 20px 5px; border:none;"><img class="ikona2" src="ikona-fotel.svg" height="11%" width="11%" style="margin:-10px 2px 0px 0px;" /> 1 Pasażer </button><button type="submit" style="width:10%; height:56px; padding:20px 5px 20px 5px; border:none; border-radius:0px 16px 16px 0px; color:white; background-color:blue;">Szukaj</button>
@@ -862,66 +1012,69 @@
           <div class="group2">
             <p class="nr1">Dokad jedziesz?</p>
             <p class="nr2">Wybierz sie w najoszczedniejsza podroz swojego zycia.</p>
-            <a class="button-Dodaj-przejazd" href="#">Dodaj przejazd</a>
+            <a class="Dodaj-przejazd" href="#">Dodaj przejazd</a>
           </div>
       </div>    
     </div>
     <div id="section2"><!--section2 to dawniej rodzic4-->
         <div id="section2-text">                          <!--a type="button"-->
-          <span class="podtekst1">Dokad chcesz jechac?</span>
-          <span class="podtekst2"><a href="#">Zobacz najpopularniejsze przejazdy</a></span>
+          <span class="text1">Dokad chcesz jechac?</span>
+          <span class="text2"><a href="#">Zobacz najpopularniejsze przejazdy</a></span>
         </div>                                         <!--  <div id="dziecko4"><a href="">Zobacz najpopularniejsze przejazdy</a></div>   -->    <!-- BYLO 1 LUTEGO  <a href=""><p>Zobacz najpopularniejsze przejazdy</p></a></div> -->
         <div id="section2-offers">         <!--tu wczesniej bylo dziecko5,ale zamienilam na dziecko4-->
           <div class="offer"><a class="clickable" href="#"><span class="leftWrapper"><p class="city">Warszawa</p><img src="strzalka.svg" class="arrow"><p class="city">Gdansk</p></span><span class="rightWrapper"><p class="price">35zl</p><img class="bracket" src="nawias-zamykajacy.svg" /></span></a></div>
           <div class="offer"><a class="clickable" href="#"><span class="leftWrapper"><p class="city">Lublin</p><img src="strzalka.svg" class="arrow"><p class="city">Warszawa</p></span><span class="rightWrapper"><p class="price">15zl</p><img class="bracket" src="nawias-zamykajacy.svg" /></span></a></div> 
           <div class="offer"><a class="clickable" href="#"><span class="leftWrapper"><p class="city">Katowice</p><img src="strzalka.svg" class="arrow"><p class="city">Berlin</p></span><span class="rightWrapper"><p class="price">60zl</p><img class="bracket" src="nawias-zamykajacy.svg" /></span></a></div>
         </div>
+        <div id="section2-check">      
+          <span class="text2"><a href="#">Zobacz najpopularniejsze przejazdy</a></span>
+    </div>
     </div>  
-    <div id="section3">section3<!--section3 to dawniej rodzic5 -->
+    <div id="section3"><!--section3--><!--section3 to dawniej rodzic5 -->
         <div id="section3-text"><!--to byl element dziecko-->
               <span class="text1">Skąd chcesz. Dokąd chcesz. Czym chcesz.</span>
               <span class="text2"><a href="#">Dowiedz sie wiecej</a></span>
         </div>
         <div id="section3-articles"><!--to byl element dziecko-->
-              <div class="article1"><h2>Autobusem</h2>Ponad 100 przewoźników w jednym miejscu. Bilety dostępne online kilka tygodni przed datą podróży.</div>
-              <div class="article2"><h2>Samochodem</h2>Kierowcy z BlaBlaCar jeżdżą wszędzie. Dosłownie w tysiące miejsc. Wszędzie tam, gdzie prowadzi droga.</div>
-              <div class="article3"><h2>Wybór należy do Ciebie</h2>Jedno miejsce, jedno wyszukanie, setki wyników. Wybierz na podstawie ceny, długości podróży lub po prostu Twojego nastroju.</div>
+              <div class="article"><h2>Autobusem</h2>Ponad 100 przewoźników w jednym miejscu. Bilety dostępne online kilka tygodni przed datą podróży.</div>
+              <div class="article"><h2>Samochodem</h2>Kierowcy z BlaBlaCar jeżdżą wszędzie. Dosłownie w tysiące miejsc. Wszędzie tam, gdzie prowadzi droga.</div>
+              <div class="article"><h2>Wybór należy do Ciebie</h2>Jedno miejsce, jedno wyszukanie, setki wyników. Wybierz na podstawie ceny, długości podróży lub po prostu Twojego nastroju.</div>
         </div>
     </div>
-    <div id="section4">section4<!--section4 to dawniej dom-->
+    <div id="section4"><!--section4--><!--section4 to dawniej dom-->
           <div id="section4-text"><!--to byl pokoj1-->
             <span class="podpokoj1">3 rzeczy, za które pokochasz wspólne przejazdy BlaBlaCar.</span>
           </div>
           <div id="section4-icons"><!-- to byl pokoj2-->
-            <span class="sign1"><img src="location.jpg" alt="location1" class="location" /></span>
-            <span class="sign2"><img src="location.jpg" alt="location2" class="location" /></span>
-            <span class="sign3"><img src="location.jpg" alt="location3" class="location" /></span>
+            <span class="sign"><img src="location.jpg" alt="location1" class="location" /></span>
+            <span class="sign"><img src="location.jpg" alt="location2" class="location" /></span>
+            <span class="sign"><img src="location.jpg" alt="location3" class="location" /></span>
           </div>
           <div id="section4-articles"><!--to byl pokoj3-->
-              <div class="article4"><h2>Społeczność</h2>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
-              <div class="article5"><h2>Podróżuj szybciej</h2>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
-              <div class="article6"><h2>Elastyczność</h2>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
+              <div class="article"><h2>Społeczność</h2>Poświęcamy czas i wysiłek, aby lepiej poznać naszych użytkowników. Wszystkie profile i oceny są weryfikowane. Dzięki temu wiesz, z kim podróżujesz.</div>
+              <div class="article"><h2>Podróżuj szybciej</h2>Nie trać czasu na podróż do centrum miasta, umów się z kierowcą w swojej okolicy.</div>
+              <div class="article"><h2>Elastyczność</h2>Wpisz swój dokładny adres, żeby znaleźć przejazd idealny dla siebie. Wybierz, z kim chcesz podróżować. I zarezerwuj miejsce!</div>
           </div>
     </div>
-    <div id="section5">section5<!--section5 to dawna klasa1 czyli obecnie wzor z ,,section1"czyli z dawnego: NOWY rodzic3 -->
+    <div id="section5"><!--section5--><!--section5 to dawna klasa1 czyli obecnie wzor z ,,section1"czyli z dawnego: NOWY rodzic3 -->
       <div id="section5-group">
           <div class="group1"></div>
           <div class="group2">
             <p class="nr1">Nowy sposób podróżowania z BlaBlaCar: autobusem!</p>
             <p class="nr2">W tym tygodniu albo za miesiąc. Na spotkanie z kimś, kogo kochasz albo aby odkryć nowe miejsce. Z dużą rodziną albo z dużym bagażem. Do Paryża, Amsterdamu albo kilkuset innych europejskich miast.</p>
-            <a class="button-Odkryj-autobusy" href="#">Odkryj autobusy na BlaBlaCar</a>
+            <a class="Odkryj-autobusy" href="#">Odkryj autobusy na BlaBlaCar</a>
           </div>
       </div>    
     </div>
-    <div id="section6">section6<!--section6 to  dawniej kura -->
+    <div id="section6"><!--section6--><!--section6 to  dawniej kura -->
       <div id="section6-text"><!-- to byl kurczak1-->
             <span class="text1">Odwiedź nasz blog</span>
             <span class="text2"><a class="interaktywny-napis" href="#"> Odwiedź nasz blog</a></span>
       </div>
       <div id="section6-moreInfo"><!--to byl kurczak2-->
-            <div class="info1"><img src="przytulaski.jpg" alt="przytulaski" class="photo" /><h2>Czy rozwiązanie problemu wykluczenia transportowego istnieje już od lat?</h2>Serwis BlaBlaCar chce pokazać, jak łatwo, szybko i wygodnie można znaleźć transport jeszcze bliżej siebie.<br /><a href="#" class="button-Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
-            <div class="info2"><img src="las.jpg" alt="las" class="photo" /><h2>6 patentów na komfort podróży jesienią</h2><br />Poznaj jesienne patenty podróżnych🍂<br /><a href="#" class="button-Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
-            <div class="info3"><img src="twarz.jpg" alt="twarz" class="photo" /><h2>Co zrobić, żeby znaleźć pasażerów i wypełnić wolne miejsca w samochodzie?</h2>To łatwiejsze niż myślisz… Poniżej znajdziesz nasze porady :)<br /><a href="#" class="button-Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="info"><img src="przytulaski.jpg" alt="przytulaski" class="photo" /><h2>Czy rozwiązanie problemu wykluczenia transportowego istnieje już od lat?</h2>Serwis BlaBlaCar chce pokazać, jak łatwo, szybko i wygodnie można znaleźć transport jeszcze bliżej siebie.<br /><a href="#" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="info"><img src="las.jpg" alt="las" class="photo" /><h2>6 patentów na komfort podróży jesienią</h2><br />Poznaj jesienne patenty podróżnych🍂<br /><a href="#" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
+            <div class="info"><img src="twarz.jpg" alt="twarz" class="photo" /><h2>Co zrobić, żeby znaleźć pasażerów i wypełnić wolne miejsca w samochodzie?</h2>To łatwiejsze niż myślisz… Poniżej znajdziesz nasze porady :)<br /><a href="#" class="Przeczytaj-wiecej">Przeczytaj wiecej</a></div>
       </div>
     </div>
     <div id="section7"><!-- dawniej to byla firma --> 
