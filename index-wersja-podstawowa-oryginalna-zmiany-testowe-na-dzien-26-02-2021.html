@@ -779,36 +779,36 @@
 /*---------poczatek section7 (dawniej firma) ---------------- */
       #section7{
         max-width:100%;
-        min-height:300px; 
+        min-height:240px; 
         position: relative;
         /*margin:0px;*/ /* auto; /* wpisalam margin:0px auto w dniu 13 luty*/
         /* padding:0px; */                          
-        margin-top:24px;      background-color: #EDEDED;  
+        margin-top:48px;      background-color: #EDEDED; 
        /* margin-bottom:0px; */    
       }             
       #section7>#prezes-1{
         max-width: 100%;
-        min-height:220px;                                 padding-top:24px;         
+        min-height:220px;                                 padding-top:48px;         
         margin-top:24px;/*margin-bottom:20px; */                   
       }          
       #section7>#prezes-1>.wiceprezes-1{
-        max-width:1000px; /*15 lutego o 23.35 bylo oryginalnie bylo max-width:100% */
+        max-width:1000px;
         min-height:180px;                 
       } 
       #section7>#prezes-1>.wiceprezes-1>.ksiegowosc{
         max-width:1000px; 
         height:150px;                                     
-        background-color: rgb(218, 235, 62);  
+        background-color: #EDEDED;  
         display:flex;
         margin:0px 2%;
       }
           #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1{
-            background-color: #ff4500; 
+            background-color: #EDEDED;
             height:110px;                               
             width:75%; 
           }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja{
-                list-style:none;       margin:0px auto; /* dopisalam 26luty */
+                list-style:none;       margin:0px auto; 
                 column-count:3;
                 flex-grow:3;  
                 flex-shrink:0;   
@@ -816,26 +816,26 @@
               }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik{              
                 margin-bottom:20px;
-                background-color: rgb(51, 131, 151);    
-                 font-size: 1em;                                            
+                background-color: #EDEDED;    
+                 font-size: 0.9em;                                            
               }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-1>.dolna-nawigacja>.odnosnik>.hiperlacze{
                 text-decoration: none;
-                color:lightblue;
+                color: #054752; font-weight: bolder;
               }
           #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2{
-            background-color: purple;                 margin:0px auto; /* dopisalam 26luty */
+            background-color: #EDEDED;                margin:0px auto;
             column-count:1;
             flex-grow: 1;  
             height:140px;
             text-align: left;   
-            flex:1; /* dopisalam flex:1 w dniu 8luty 0 12.40 */                                                                           
+            flex:1;                                                                           
             width:30%; /*bylo width:25%;*/
           }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage{
                 height:60px;
-                background-color: rgb(52, 235, 52);
-                margin-top:0px; /*zmienilam 15lutego na 0px */
+                background-color: #EDEDED;   
+                margin-top:0px; 
                 margin-bottom:5px;                                                            
                 max-width: 340px;                                          
                 position: relative; 
@@ -843,21 +843,21 @@
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select{ /* zamiast select to tu bylo #SelectLanguageID */
                 width:100%;
                 height:48px;
-                font-size:1em;
-                color:#054752;
-                border-radius: 4px;
+                font-size:0.9em;
+                color: #054752;   font-weight: bolder;
+                border-radius: 4px;   border: 1px solid #d1d0d0;
                 padding:18px 8px 0px;
                 position:relative;
                 z-index:1;
-                background-color:palevioletred; /* bylo transparent; */                                                                                                                     
+                background-color:white; /* bylo transparent; */                                                                                                                     
               }
 /*terazPisze*/#section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>select label{  /* dodalam >select */
-                position:absolute;                                                          
+                position:absolute;                                                           
                 top:0px;
-                left:0px;
-                right:45px;
-                z-index: 1;            
-                background-color: purple;                                                                    
+                left:0px;   
+                right:45px;  
+                z-index: 1;        
+                background-color:#EDEDED; ;                                                                    
               }
             /* byl taki kod #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage */                                               
             /* byl taki kod #firma>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.SelectLanguage>label */
@@ -867,13 +867,14 @@
                 position: absolute;
                 top:8px;
                 left: 9px;
-                width: 100%;                     /*bylo  white-space: nowrap; */         /*bylo  overflow: hidden; */
-                font-size: 0.7em;
-                color:#cf1515;   
-                background-color: darkblue; 
+                width: 80%;                     /*bylo  white-space: nowrap; */         /*bylo  overflow: hidden; */
+                font-size: 0.7em; 
+                font-weight:bolder;
+                color:rgb(114, 113, 113);   
+                background-color: white; 
                 z-index: 1;   /* dopisalam zatem  z-index:1 i juz kolor sie zmienia */                        
               }
-      /* -----------ponizej jest kod na pasek do witryn ikonek ------- */
+      /* -----------ponizej jest kod na pasek do ikonek Facebook, Insta ------- */
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn{                                                          
                 list-style: none;
                 column-count: 4;   
@@ -885,32 +886,33 @@
                 background-color: transparent;                       
               }
               #section7>#prezes-1>.wiceprezes-1>.ksiegowosc>.dzial-2>.pasek-do-witryn>.witryna{
-                background-color: rgb(255, 255, 255);                                                                                                                                                                                                                                                                                                           
+                background-color: #EDEDED;                                                                                                                                                                                                                                                                                                           
                 } 
-      /* ------------ koniec kodu na pasek do witryn ikonek ----------- */
+      /* ------------ koniec kodu na pasek do ikonek ----------- */
       #section7>#prezes-1>.wiceprezes-1>.sekretariat{
         max-width:1000px; 
-        height:20px; 
+        min-height:20px; 
         margin-top:10px; 
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         display: flex;                                                                   
       }
           #section7>#prezes-1>.wiceprezes-1>.sekretariat>.copyright-text{                                                           
-            font-size: 0.8em;
+            font-size: 0.7em; font-weight: bolder;
             margin-left:2%;
           }             
       #section7>#section7-includeFooter{
-      /*  max-width: 1000px;  width:100%;*//* bylo max-width:100%; w dniu 6 luty godz.23.00 */
-        max-height:60px;    background-color: rgb(198, 201, 198);
+      /*  max-width: 1000px;  width:100%;*/
+      min-height:50px; line-height:20px; background-color: rgb(210, 214, 210);
        /* margin:0px auto;  */
       }
           #section7>#section7-includeFooter>.footer-text{
             padding: 16px 0px;   max-width:1000px; /*width:100%;*/
           }
           #section7>#section7-includeFooter>.footer-text>.page-footer-long{
-            font-size: 0.8em; 
+            font-size: 0.7em; font-weight: bolder;
             margin:0px 2% auto;      
-            text-align: center; align-items: center;
+            text-align: center; 
+            align-items: center;
             color:rgb(133, 131, 131); 
           }
 
